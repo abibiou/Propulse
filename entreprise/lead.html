@@ -1,0 +1,214 @@
+<!DOCTYPE html>
+
+<html class="light" lang="fr"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&amp;family=Manrope:wght@400;500;600;700&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<script id="tailwind-config">
+      tailwind.config = {
+        darkMode: "class",
+        theme: {
+          extend: {
+            colors: {
+              "tertiary": "#000000",
+              "on-primary-container": "#858383",
+              "surface-container-high": "#eae8e0",
+              "on-secondary-container": "#4c6a63",
+              "on-background": "#1b1c17",
+              "background": "#fbf9f1",
+              "on-surface": "#1b1c17",
+              "inverse-surface": "#30312c",
+              "on-tertiary-container": "#977f6d",
+              "primary-container": "#1c1b1b",
+              "on-secondary-fixed-variant": "#2e4c45",
+              "secondary-fixed-dim": "#accdc4",
+              "on-tertiary-fixed-variant": "#574333",
+              "surface-container-low": "#f5f4ec",
+              "surface-container-highest": "#e4e3db",
+              "primary-fixed-dim": "#c8c6c5",
+              "on-secondary-fixed": "#00201b",
+              "primary": "#000000",
+              "on-tertiary-fixed": "#27180b",
+              "on-tertiary": "#ffffff",
+              "on-primary": "#ffffff",
+              "tertiary-container": "#27180b",
+              "surface": "#fbf9f1",
+              "secondary": "#46645d",
+              "outline-variant": "#c4c7c7",
+              "tertiary-fixed-dim": "#dec1ac",
+              "on-error-container": "#93000a",
+              "outline": "#747878",
+              "surface-container-lowest": "#ffffff",
+              "inverse-primary": "#c8c6c5",
+              "on-surface-variant": "#444748",
+              "tertiary-fixed": "#fbddc7",
+              "surface-tint": "#5f5e5e",
+              "on-error": "#ffffff",
+              "inverse-on-surface": "#f3f1e9",
+              "error": "#ba1a1a",
+              "surface-bright": "#fbf9f1",
+              "error-container": "#ffdad6",
+              "surface-variant": "#e4e3db",
+              "surface-dim": "#dcdad2",
+              "on-primary-fixed": "#1c1b1b",
+              "primary-fixed": "#e5e2e1",
+              "on-secondary": "#ffffff",
+              "secondary-fixed": "#c8eae0",
+              "surface-container": "#f0eee6",
+              "on-primary-fixed-variant": "#474646",
+              "secondary-container": "#c8eae0"
+            },
+            fontFamily: {
+              "headline": ["Plus Jakarta Sans"],
+              "body": ["Manrope"],
+              "label": ["Manrope"]
+            },
+            borderRadius: {"DEFAULT": "1rem", "lg": "2rem", "xl": "3rem", "full": "9999px"},
+          },
+        },
+      }
+    </script>
+<style>
+        .material-symbols-outlined {
+            font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24;
+        }
+        body { font-family: 'Manrope', sans-serif; }
+        h1, h2, h3 { font-family: 'Plus Jakarta Sans', sans-serif; }
+    </style>
+</head>
+<body class="bg-background text-on-background min-h-screen flex flex-col">
+<!-- Top Navigation Shell -->
+<header class="bg-[#fbf9f1] dark:bg-zinc-950 flex justify-between items-center w-full px-8 py-4 max-w-full sticky top-0 z-50">
+<div class="text-2xl font-bold tracking-tighter text-[#141414] dark:text-white">Propulse</div>
+<nav class="hidden md:flex items-center gap-8">
+<a class="font-['Plus_Jakarta_Sans'] tracking-tight text-sm font-semibold text-zinc-500 dark:text-zinc-400 hover:text-[#141414] dark:hover:text-zinc-200 transition-colors" href="#">Mes annonces</a>
+<a class="font-['Plus_Jakarta_Sans'] tracking-tight text-sm font-semibold text-[#141414] dark:text-white border-b-2 border-[#141414] dark:border-white pb-1" href="#">Mes leads</a>
+<a class="font-['Plus_Jakarta_Sans'] tracking-tight text-sm font-semibold text-zinc-500 dark:text-zinc-400 hover:text-[#141414] dark:hover:text-zinc-200 transition-colors" href="#">Facturation</a>
+</nav>
+<div class="flex items-center gap-4">
+<button class="material-symbols-outlined text-on-surface hover:opacity-80 transition-opacity p-2">notifications</button>
+<div class="w-10 h-10 rounded-full overflow-hidden bg-surface-container-high">
+<img alt="User profile" class="w-full h-full object-cover" data-alt="close-up portrait of a professional man in a minimalist office setting with soft natural light" src="https://lh3.googleusercontent.com/aida-public/AB6AXuDkUD9eNEtSprwifmNg1YWSdu9yBcyB8uVLH3a4Shnen2UacqccAfijyrn-SEd8vjKimZBC6hebkV6O4kq5UTiEsF7qWbF-p0Qag2dBqOCSPKCnAC0s1eUuD0ogM3K7Y8UFsUGPeT0XQ6nzN-vUrbPJPp76l7qQmuRf4d6KWBZYqS6iwNgXrib9WMT7-Y4XaWnHz5P96GDPmeS1xZYOSffAB8aRUsw40g3sYkMFm2--_4KCj4Ho8sjW-9DVdmkwi2Jqoq5NXZQq2IpP"/>
+</div>
+</div>
+</header>
+<main class="flex-grow px-8 py-12 max-w-7xl mx-auto w-full">
+<!-- Breadcrumb & Status -->
+<div class="flex flex-col md:flex-row md:items-end justify-between gap-6 mb-12">
+<div>
+<nav class="flex items-center gap-2 text-on-primary-container text-sm mb-4">
+<span class="hover:text-primary cursor-pointer">Mes leads</span>
+<span class="material-symbols-outlined text-xs">chevron_right</span>
+<span class="text-on-surface font-medium">Refonte site e-commerce Shopify</span>
+</nav>
+<h1 class="text-4xl md:text-5xl font-extrabold tracking-tight leading-none mb-2">Jean-Pierre M.</h1>
+<p class="text-on-primary-container font-medium">Expert Shopify &amp; Architecte Web</p>
+</div>
+<div class="flex items-center gap-4">
+<div class="bg-secondary-fixed text-on-secondary-fixed px-6 py-2 rounded-full text-xs font-bold tracking-widest uppercase">
+                    NOUVEAU
+                </div>
+<a href="leadnegociation.html" class="inline-block">
+    <button class="bg-gradient-to-r from-primary to-primary-container text-on-primary px-8 py-4 rounded-full font-bold shadow-lg hover:scale-95 transition-transform duration-200 flex items-center gap-2">
+        <span class="material-symbols-outlined text-lg" data-icon="check_circle">check_circle</span>
+        Marquer comme contacté
+    </button>
+</a>
+</div>
+</div>
+<!-- Bento Grid Layout -->
+<div class="grid grid-cols-1 md:grid-cols-12 gap-6">
+<!-- Left Column: Profile Card -->
+<div class="md:col-span-4 space-y-6">
+<div class="bg-surface-container-lowest rounded-lg p-8 shadow-sm">
+<div class="w-24 h-24 rounded-xl overflow-hidden mb-6 mx-auto">
+<img alt="Jean-Pierre M." class="w-full h-full object-cover" data-alt="professional headshot of a middle-aged man with glasses, smiling warmly against a blurred neutral architectural background" src="https://lh3.googleusercontent.com/aida-public/AB6AXuDcwbZugDP9SYV4AAjyxxWT9MAN3MMg0ysti4B0VmM2_Si9klJGTLQ-3ee2a-5QBLU_mXRRw4dA7hIMaotB0wHTnG8s2yM0UdcHqAcx68Zz2oK1M111jwVZxehAgA3xG_FAR_mTsJCOtRxeSIfSEdwO0vIg0d_e7ntA5nY_gcp8moLOFP0pGifvJFbQ8nlk10gI2Mtga1-ghFegdHDRzrcWUOoXS5-9wqoC2cRsvzg_T6v6pHsy81cu6po0hnEl7CWNZ84U-SHpQwbs"/>
+</div>
+<div class="text-center mb-8">
+<h3 class="text-xl font-bold mb-1">Jean-Pierre M.</h3>
+<p class="text-on-primary-container text-sm">Paris, France (Remote)</p>
+</div>
+<div class="space-y-4 pt-6 border-t border-surface-container">
+<div class="flex items-center justify-between text-sm">
+<span class="text-on-primary-container">Disponibilité</span>
+<span class="font-bold text-on-surface">Immédiate</span>
+</div>
+<div class="flex items-center justify-between text-sm">
+<span class="text-on-primary-container">Expérience</span>
+<span class="font-bold text-on-surface">8 ans</span>
+</div>
+<div class="pt-4">
+<a class="flex items-center justify-center gap-2 w-full py-3 rounded-md bg-surface-container-low text-on-surface font-semibold hover:bg-surface-container-high transition-colors" href="#">
+<span class="material-symbols-outlined text-xl">link</span>
+                                Profil LinkedIn
+                            </a>
+</div>
+</div>
+</div>
+<!-- Competencies Card -->
+<div class="bg-surface-container-low rounded-lg p-8">
+<h3 class="text-lg font-bold mb-6">Compétences</h3>
+<div class="flex flex-wrap gap-2">
+<span class="bg-surface-container-lowest px-4 py-2 rounded-full text-xs font-semibold">Liquid / Shopify</span>
+<span class="bg-surface-container-lowest px-4 py-2 rounded-full text-xs font-semibold">React.js</span>
+<span class="bg-surface-container-lowest px-4 py-2 rounded-full text-xs font-semibold">UI/UX Design</span>
+<span class="bg-surface-container-lowest px-4 py-2 rounded-full text-xs font-semibold">SEO E-commerce</span>
+<span class="bg-surface-container-lowest px-4 py-2 rounded-full text-xs font-semibold">Node.js</span>
+</div>
+</div>
+</div>
+<!-- Right Column: Message & Details -->
+<div class="md:col-span-8 space-y-6">
+<!-- Message Section -->
+<div class="bg-surface-container-lowest rounded-lg p-10 relative overflow-hidden">
+<div class="absolute top-0 right-0 p-8 opacity-5 select-none pointer-events-none">
+<span class="material-symbols-outlined text-9xl">format_quote</span>
+</div>
+<h3 class="text-2xl font-bold mb-8 flex items-center gap-3">
+<span class="material-symbols-outlined text-primary">chat_bubble</span>
+                        Note du rapporteur
+                    </h3>
+<div class="prose prose-zinc max-w-none text-on-surface leading-relaxed text-lg">
+<p>
+                            "Jean-Pierre a accompagné la refonte de 'Luxe &amp; Co' l'année dernière avec un succès retentissant. Sa maîtrise de Shopify est chirurgicale, particulièrement sur l'optimisation des temps de chargement et l'implémentation de solutions de paiement complexes."
+                        </p>
+<p class="mt-4">
+                            Il recherche actuellement un projet d'envergure pour le second semestre. Sa capacité à comprendre les enjeux business au-delà du simple code en fait un lead de très haute qualité pour votre mission de refonte e-commerce.
+                        </p>
+</div>
+<div class="mt-10 flex items-center gap-4 p-4 bg-secondary-container/30 rounded-lg">
+<span class="material-symbols-outlined text-on-secondary-container">info</span>
+<p class="text-on-secondary-container text-sm font-medium">
+                            Jean-Pierre a déjà validé les termes techniques de l'annonce.
+                        </p>
+</div>
+</div>
+<!-- Details Grid -->
+<div class="grid grid-cols-1 sm:grid-cols-2 gap-6">
+<div class="bg-surface-container-high rounded-lg p-8">
+<h4 class="text-xs font-bold text-on-primary-container tracking-widest uppercase mb-4">TJM Souhaité</h4>
+<p class="text-3xl font-extrabold text-on-surface">650€ <span class="text-sm font-medium opacity-60">/ jour</span></p>
+</div>
+<div class="bg-tertiary-fixed rounded-lg p-8">
+<h4 class="text-xs font-bold text-on-tertiary-fixed-variant tracking-widest uppercase mb-4">Engagement</h4>
+<p class="text-3xl font-extrabold text-on-tertiary-fixed">Temps plein</p>
+</div>
+</div>
+</div>
+</div>
+</main>
+<!-- Footer Shell -->
+<footer class="bg-[#fbf9f1] dark:bg-zinc-950 border-t border-zinc-200/20 dark:border-zinc-800/20 py-8 flex flex-col md:flex-row justify-between items-center px-8 w-full">
+<div class="font-['Manrope'] text-xs text-zinc-500 dark:text-zinc-400 mb-4 md:mb-0">
+            © 2024 Propulse Enterprise. Tous droits réservés.
+        </div>
+<div class="flex gap-8">
+<a class="font-['Manrope'] text-xs text-zinc-500 dark:text-zinc-400 hover:text-[#141414] dark:hover:text-white hover:underline transition-colors" href="#">Support</a>
+<a class="font-['Manrope'] text-xs text-zinc-500 dark:text-zinc-400 hover:text-[#141414] dark:hover:text-white hover:underline transition-colors" href="#">Conditions</a>
+<a class="font-['Manrope'] text-xs text-zinc-500 dark:text-zinc-400 hover:text-[#141414] dark:hover:text-white hover:underline transition-colors" href="#">Confidentialité</a>
+</div>
+</footer>
+</body></html>

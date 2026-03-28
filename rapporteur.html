@@ -1,0 +1,452 @@
+<!DOCTYPE html>
+
+<html class="scroll-smooth" lang="fr"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>Propulse - Devenir Rapporteur d'Affaires</title>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700;800&amp;family=Manrope:wght@400;500;600;700&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script id="tailwind-config">
+      tailwind.config = {
+        darkMode: "class",
+        theme: {
+          extend: {
+            colors: {
+              "brand-offwhite": "#FFFDF5",
+              "brand-black": "#141414",
+              "brand-green": "#D4F6EC",
+              "brand-orange": "#FFE1CB",
+              "brand-blue": "#DEF2FE",
+              "brand-violet": "#E2DBF9",
+              "primary": "#141414",
+              "on-primary": "#ffffff",
+              "background": "#FFFDF5",
+              "on-background": "#141414",
+            },
+            fontFamily: {
+              "headline": ["Poppins", "sans-serif"],
+              "body": ["Manrope", "sans-serif"],
+            },
+            borderRadius: {"DEFAULT": "1rem", "lg": "2rem", "xl": "3rem", "full": "9999px"},
+          },
+        },
+      }
+    </script>
+<style>
+      .material-symbols-outlined {
+        font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24;
+      }
+      .glass-effect {
+        background: rgba(255, 255, 255, 0.85);
+        backdrop-filter: blur(12px);
+        -webkit-backdrop-filter: blur(12px);
+      }
+      .asymmetric-grid {
+        display: grid;
+        grid-template-columns: 1.2fr 0.8fr;
+      }
+      @media (max-width: 768px) {
+        .asymmetric-grid {
+          grid-template-columns: 1fr;
+        }
+      }
+    </style>
+</head>
+<body class="bg-brand-offwhite text-brand-black font-body selection:bg-brand-blue selection:text-brand-black">
+<!-- TopNavBar -->
+<nav class="fixed top-0 w-full z-50 glass-header no-border transition-colors duration-300">
+<div class="flex justify-between items-center w-full px-8 py-6 max-w-[1440px] mx-auto">
+<a href="index.html" class="text-2xl font-extrabold tracking-tighter text-primary font-headline block w-fit">
+    Propulse
+</a>
+<div class="hidden md:flex items-center gap-10">
+<a class="text-primary font-headline font-bold tracking-tight text-primary/60 hover:text-primary transition-opacity" href="#" style="">Comment ça marche</a>
+<a class="text-primary font-headline font-bold tracking-tight text-primary/60 hover:text-primary transition-opacity" href="./page publiques/rapporteur.html" style="">Rapporteurs</a>
+<a class="text-primary font-headline font-bold tracking-tight text-primary/60 hover:text-primary transition-opacity" href="#" style="">Entreprises</a>
+<a class="text-primary font-headline font-bold tracking-tight text-primary/60 hover:text-primary transition-opacity" href="#" style="">Entreprises</a>
+<a class="text-primary font-headline font-bold tracking-tight text-primary/60 hover:text-primary transition-opacity" href="#" style="">À propos</a>
+</div>
+<div class="flex items-center gap-4">
+<button class="px-6 py-2.5 rounded-full font-headline font-bold text-sm text-primary hover:opacity-80 transition-all active:scale-95" style="">Se connecter</button>
+<a href="inscription.html" class="inline-block">
+    <button class="px-6 py-2.5 rounded-full font-headline font-bold text-sm bg-primary text-on-primary hover:opacity-90 transition-all active:scale-95">
+        S'inscrire gratuitement
+    </button>
+</a>
+</div>
+</div>
+</nav>
+<main class="pt-20">
+<!-- Hero Section -->
+<section class="max-w-7xl mx-auto px-6 pt-16 pb-24 lg:pt-32 lg:pb-40">
+<div class="asymmetric-grid gap-16 items-center">
+<div class="space-y-10">
+<span class="inline-flex items-center gap-2 px-4 py-2 bg-brand-green text-brand-black rounded-full text-xs font-bold tracking-widest uppercase">
+<span class="material-symbols-outlined text-sm" style="font-variation-settings: 'FILL' 1;">lightbulb</span>
+                    Monétisez votre réseau
+                </span>
+<h1 class="text-5xl lg:text-7xl font-extrabold font-headline leading-[1.1] tracking-tighter text-brand-black">
+                    Votre réseau vaut <br/> de l'argent. <br/>
+<span class="text-zinc-500">Il est temps de le savoir.</span>
+</h1>
+<p class="text-xl text-zinc-600 max-w-xl leading-relaxed">
+                    Propulse vous permet de recommander des contacts qualifiés à des entreprises en recherche de talents et d'expertises, tout en étant rémunéré à chaque succès.
+                </p>
+<div class="flex flex-wrap gap-4 pt-4">
+<button class="px-10 py-5 bg-brand-black text-white rounded-full font-bold text-lg hover:shadow-xl transition-all">
+                        Rejoindre gratuitement
+                    </button>
+<button class="px-10 py-5 bg-white border border-brand-black/10 text-brand-black rounded-full font-bold text-lg hover:bg-zinc-50 transition-all">
+                        Voir les opportunités
+                    </button>
+</div>
+</div>
+<div class="relative group">
+<div class="absolute -inset-4 bg-brand-orange rounded-3xl -rotate-2 opacity-60 blur-2xl group-hover:rotate-1 transition-transform duration-500"></div>
+<img class="relative rounded-3xl shadow-2xl w-full object-cover aspect-[4/5] hover:scale-[1.01] transition-all duration-700" data-alt="Modern professional woman working in a bright office space with greenery" src="https://lh3.googleusercontent.com/aida-public/AB6AXuCJiy3Tzprk7JMWdCd_vijiw4a2Nl7DvvIG1pfXLpYiYryUvcFMm81CSGzFsfR2HnvoUARh6NaFIvQNArWYISoJVeKd_wb3V3eeTTqf0SUMACiQovPul42jxc-hc91nBkSYQprSnt5MKP0a1WCeMJzA4CW2I8B4nzGz2NbeooZUvw0-AWjKDP17xCKMD6AC8i0e2EVCdyrDMtwmkMat23nNbPh2Af6Fa7KsY-XonWMgr9AA-LlSVTyYClcU6o35fKa-45z9lIVhTEUN"/>
+<div class="absolute -bottom-8 -left-8 glass-effect p-6 rounded-2xl shadow-xl border border-white/50">
+<div class="flex items-center gap-4">
+<div class="w-12 h-12 bg-brand-green rounded-full flex items-center justify-center">
+<span class="material-symbols-outlined text-brand-black">payments</span>
+</div>
+<div>
+<p class="text-[10px] font-bold text-zinc-500 uppercase tracking-wider">Dernier gain</p>
+<p class="text-2xl font-black font-headline text-brand-black">+850,00 €</p>
+</div>
+</div>
+</div>
+</div>
+</div>
+</section>
+<!-- Chiffres Clés -->
+<section class="py-20 px-6">
+<div class="max-w-7xl mx-auto grid grid-cols-2 lg:grid-cols-4 gap-8">
+<div class="bg-brand-blue/30 p-8 rounded-2xl text-center transform hover:-translate-y-2 transition-transform duration-300">
+<p class="text-4xl font-black font-headline text-brand-black mb-2">2400€</p>
+<p class="text-xs font-bold text-zinc-500 uppercase tracking-widest">Commission moyenne</p>
+</div>
+<div class="bg-brand-violet/30 p-8 rounded-2xl text-center transform hover:-translate-y-2 transition-transform duration-300">
+<p class="text-4xl font-black font-headline text-brand-black mb-2">6 min</p>
+<p class="text-xs font-bold text-zinc-500 uppercase tracking-widest">Temps recommandation</p>
+</div>
+<div class="bg-brand-green/30 p-8 rounded-2xl text-center transform hover:-translate-y-2 transition-transform duration-300">
+<p class="text-4xl font-black font-headline text-brand-black mb-2">43%</p>
+<p class="text-xs font-bold text-zinc-500 uppercase tracking-widest">Taux conversion</p>
+</div>
+<div class="bg-brand-orange/30 p-8 rounded-2xl text-center transform hover:-translate-y-2 transition-transform duration-300">
+<p class="text-4xl font-black font-headline text-brand-black mb-2">+1200</p>
+<p class="text-xs font-bold text-zinc-500 uppercase tracking-widest">Rapporteurs actifs</p>
+</div>
+</div>
+</section>
+<!-- Comment ça marche -->
+<section class="bg-brand-blue py-32 px-6">
+<div class="max-w-7xl mx-auto">
+<div class="text-center mb-24">
+<h2 class="text-4xl lg:text-5xl font-black font-headline mb-6 tracking-tight">Simple. Transparent. Lucratif.</h2>
+<p class="text-zinc-600 text-lg max-w-2xl mx-auto">Trois étapes pour transformer vos relations professionnelles en revenus complémentaires durables.</p>
+</div>
+<div class="grid md:grid-cols-3 gap-12 relative">
+<!-- Step 1 -->
+<div class="bg-white p-10 rounded-3xl shadow-sm space-y-6">
+<div class="w-16 h-16 bg-brand-blue rounded-full flex items-center justify-center text-2xl font-black font-headline">01</div>
+<h3 class="text-2xl font-bold font-headline">Parcourez</h3>
+<p class="text-zinc-600 leading-relaxed">Accédez à notre marketplace d'opportunités qualifiées postées par des entreprises en pleine croissance.</p>
+<div class="h-1 bg-zinc-100 rounded-full w-full">
+<div class="h-full bg-brand-black w-1/3 rounded-full"></div>
+</div>
+</div>
+<!-- Step 2 -->
+<div class="bg-white p-10 rounded-3xl shadow-sm space-y-6">
+<div class="w-16 h-16 bg-brand-blue rounded-full flex items-center justify-center text-2xl font-black font-headline">02</div>
+<h3 class="text-2xl font-bold font-headline">Recommandez</h3>
+<p class="text-zinc-600 leading-relaxed">Mettez en relation un contact de votre réseau avec l'entreprise via notre interface intuitive.</p>
+<div class="h-1 bg-zinc-100 rounded-full w-full">
+<div class="h-full bg-brand-black w-2/3 rounded-full"></div>
+</div>
+</div>
+<!-- Step 3 -->
+<div class="bg-white p-10 rounded-3xl shadow-sm space-y-6">
+<div class="w-16 h-16 bg-brand-blue rounded-full flex items-center justify-center text-2xl font-black font-headline">03</div>
+<h3 class="text-2xl font-bold font-headline">Gagnez</h3>
+<p class="text-zinc-600 leading-relaxed">Dès que la mission est signée, votre commission est automatiquement versée sur votre compte.</p>
+<div class="h-1 bg-zinc-100 rounded-full w-full">
+<div class="h-full bg-brand-black w-full rounded-full"></div>
+</div>
+</div>
+</div>
+</div>
+</section>
+<!-- Combien gagner -->
+<section class="bg-brand-violet/20 py-32 px-6">
+<div class="max-w-7xl mx-auto flex flex-col lg:flex-row gap-16 items-center">
+<div class="w-full lg:w-1/2 space-y-8">
+<h2 class="text-4xl lg:text-5xl font-black font-headline tracking-tight">Estimez vos revenus</h2>
+<p class="text-zinc-600 text-lg leading-relaxed">Nos modèles de rémunération sont conçus pour être les plus compétitifs du marché de la mise en relation, valorisant la qualité de vos recommandations.</p>
+<div class="space-y-4">
+<div class="p-6 bg-white rounded-2xl shadow-sm flex justify-between items-center group hover:bg-brand-violet transition-colors">
+<span class="text-lg font-bold">Projets Web / Design</span>
+<span class="text-2xl font-black font-headline">150 - 200 €</span>
+</div>
+<div class="p-6 bg-white rounded-2xl shadow-sm flex justify-between items-center group hover:bg-brand-violet transition-colors">
+<span class="text-lg font-bold">Développement SaaS / App</span>
+<span class="text-2xl font-black font-headline">1% du CA total</span>
+</div>
+<div class="p-6 bg-white rounded-2xl shadow-sm flex justify-between items-center group hover:bg-brand-violet transition-colors">
+<span class="text-lg font-bold">Conseil Stratégique</span>
+<span class="text-2xl font-black font-headline">Forfait variable</span>
+</div>
+</div>
+</div>
+<div class="w-full lg:w-1/2 bg-brand-black p-12 rounded-3xl text-white relative overflow-hidden shadow-2xl">
+<div class="absolute top-0 right-0 w-64 h-64 bg-brand-violet opacity-20 blur-3xl rounded-full"></div>
+<p class="text-brand-violet font-bold tracking-widest uppercase mb-4 text-[10px]">Exemple Concret</p>
+<h3 class="text-3xl font-black font-headline mb-8">Un budget de 80.000 €</h3>
+<div class="space-y-6">
+<div class="flex justify-between border-b border-white/10 pb-4">
+<span class="text-zinc-400">Type de projet</span>
+<span class="font-bold">Développement App Mobile</span>
+</div>
+<div class="flex justify-between border-b border-white/10 pb-4">
+<span class="text-zinc-400">Votre commission (1%)</span>
+<span class="font-bold text-brand-green">800,00 €</span>
+</div>
+<div class="pt-4 flex items-start gap-4">
+<img class="w-20 h-20 rounded-xl object-cover" data-alt="Close up of a person using a dashboard on a tablet" src="https://lh3.googleusercontent.com/aida-public/AB6AXuC1bMtbm9dm5TyJZhc5A0MmkOklzPRVEogjC3TTZuo2R8RJN-PHMAwiIiw53vSD4rRZKaoL18KQFeUw-c1nbvTenyZZKY-J_s86r6tQmTiq5yCehiVbPkubv85Q6VC0lybdIWzm94DptccfMaB7bHiwAbn3ZMGN9G6mlf6n2dWdEBhH-YwM_osRMcLX7fBP2WQHGAkGinkKw0yqoPPfHHWE6Bof7xSMCHnaf2RxTS1OzHzRMhSN8d110QVzXqiyds6-5R2zX1upyScJ"/>
+<p class="text-sm text-zinc-400 italic">Recommandation réussie en moins de 10 minutes d'effort via notre plateforme sécurisée.</p>
+</div>
+</div>
+</div>
+</div>
+</section>
+<!-- Pour qui -->
+<section class="bg-brand-orange/10 py-32 px-6">
+<div class="max-w-7xl mx-auto">
+<h2 class="text-4xl font-black font-headline mb-16 text-center">Pour qui est Propulse ?</h2>
+<div class="grid md:grid-cols-3 gap-8">
+<!-- Card 1 -->
+<div class="bg-white rounded-3xl overflow-hidden group shadow-sm hover:shadow-xl transition-all duration-500">
+<img class="w-full h-72 object-cover transition-transform duration-700 group-hover:scale-105" data-alt="Dynamic young freelancer working in a creative coffee shop" src="https://lh3.googleusercontent.com/aida-public/AB6AXuCt7w9KRqz6ZIWs8MsqQzvXMoeV0JFCp0eu-Igjy6AEceuaqzodYZHoi5tOyN8FZwXBTLZEGBa1YtOdw5DjWVRfMKPSzzU6mon1xFPNYQGfRb1fKQA5LFCIQnoh09KYUL0PkBFObzRpHy6bjTrjTb33SV6llTKfQlF24hR9XMlczEB9omrLWxXlnUKK55DGRqwTwTZOtfrKN8K5DfAJfnKCnXfa7U-EkjeKvUTRKogz2S5yv2i7cqh5FkrmP47Nb4_j5cgU0gMIFFrX"/>
+<div class="p-8 space-y-4">
+<div class="w-fit px-3 py-1 bg-brand-orange/30 rounded-full text-[10px] font-bold uppercase">Freelances</div>
+<h3 class="text-xl font-black font-headline">Le Freelance Connecté</h3>
+<p class="text-zinc-600 text-sm leading-relaxed">Vous avez trop de demandes entrantes ? Ne refusez plus, recommandez et gagnez des revenus passifs.</p>
+</div>
+</div>
+<!-- Card 2 -->
+<div class="bg-white rounded-3xl overflow-hidden group shadow-sm hover:shadow-xl transition-all duration-500">
+<img class="w-full h-72 object-cover transition-transform duration-700 group-hover:scale-105" data-alt="Mature professional smiling in a formal setting" src="https://lh3.googleusercontent.com/aida-public/AB6AXuD-3EvDD_aVDtfD43k68_FofOjZiLpIa3xk17mGQJZVy1wMw_9dzU-tEZA8HYhFnyvvyiYMpdLDr_2TW0DwP40yBHQu9HqQUyyk10cf5rpe9Hsdh51SZqO4x2Tokl50E5ZjwWdiCYZ403-6p_jfIuAShKhKn-WD3ZMrvDsubspLFydhFla47Kq-RX0MF5JQK_oUCDADuy6xZwwyVWotvzaxqmRM8lB2jtO45mpvoUaI9wukUeBCHa4e1NTWSIfQnVMlQtdQ9ugH79tc"/>
+<div class="p-8 space-y-4">
+<div class="w-fit px-3 py-1 bg-brand-violet/30 rounded-full text-[10px] font-bold uppercase">Consultants</div>
+<h3 class="text-xl font-black font-headline">L'Ex-Consultant</h3>
+<p class="text-zinc-600 text-sm leading-relaxed">Monétisez votre carnet d'adresses accumulé au fil des années en toute discrétion et simplicité.</p>
+</div>
+</div>
+<!-- Card 3 -->
+<div class="bg-white rounded-3xl overflow-hidden group shadow-sm hover:shadow-xl transition-all duration-500">
+<img class="w-full h-72 object-cover transition-transform duration-700 group-hover:scale-105" data-alt="Team of people collaborating in a modern office" src="https://lh3.googleusercontent.com/aida-public/AB6AXuCuVDOrMWtp_ZfTNmgxPmtr4xcOawupqnPtvlkv916GZ0z4mfaOo8xYQ--FjPK7suuKMvSrxKxTLWywl14p8eK43oZ12-BeejVPsJmLGgAhV_7Fe18DNjC-4gKNe67DtVaVMa3vFbAI8ftsciE9SYm7XXLVLMG7l35DB6EBwWtDGPimVrGfMU5G_DrEJda62GRmhPLKLwAgeNiNUwB-HIl_klqhUP7BmFpvxQwm3j26QQvrjAFT4MGs6CqqOutzYBw_VU2Ypi9d57oQ"/>
+<div class="p-8 space-y-4">
+<div class="w-fit px-3 py-1 bg-brand-green/30 rounded-full text-[10px] font-bold uppercase">Networkers</div>
+<h3 class="text-xl font-black font-headline">Le Networker Naturel</h3>
+<p class="text-zinc-600 text-sm leading-relaxed">Vous aimez connecter les gens ? Faites-en une source de revenus régulière et professionnelle.</p>
+</div>
+</div>
+</div>
+</div>
+</section>
+<!-- Avantages Grid -->
+<section class="py-32 px-6">
+<div class="max-w-7xl mx-auto">
+<div class="grid md:grid-cols-2 lg:grid-cols-3 gap-12">
+<div class="space-y-4 p-8 bg-brand-green/10 rounded-3xl border border-brand-green/20">
+<span class="material-symbols-outlined text-4xl text-brand-black">visibility</span>
+<h4 class="text-xl font-bold font-headline">Traçabilité</h4>
+<p class="text-zinc-600 text-sm">Suivez l'état de chaque recommandation en temps réel depuis votre interface dédiée.</p>
+</div>
+<div class="space-y-4 p-8 bg-brand-blue/10 rounded-3xl border border-brand-blue/20">
+<span class="material-symbols-outlined text-4xl text-brand-black">verified_user</span>
+<h4 class="text-xl font-bold font-headline">Commissions garanties</h4>
+<p class="text-zinc-600 text-sm">Un système de séquestre assure que votre paiement est bloqué dès la signature du contrat.</p>
+</div>
+<div class="space-y-4 p-8 bg-brand-violet/10 rounded-3xl border border-brand-violet/20">
+<span class="material-symbols-outlined text-4xl text-brand-black">dashboard</span>
+<h4 class="text-xl font-bold font-headline">Dashboard</h4>
+<p class="text-zinc-600 text-sm">Visualisez vos performances, vos gains cumulés et votre taux de succès en un coup d'oeil.</p>
+</div>
+<div class="space-y-4 p-8 bg-brand-orange/10 rounded-3xl border border-brand-orange/20">
+<span class="material-symbols-outlined text-4xl text-brand-black">stars</span>
+<h4 class="text-xl font-bold font-headline">Opportunités qualifiées</h4>
+<p class="text-zinc-600 text-sm">Nous filtrons les demandes pour ne garder que les projets sérieux avec des budgets validés.</p>
+</div>
+<div class="space-y-4 p-8 bg-brand-green/10 rounded-3xl border border-brand-green/20">
+<span class="material-symbols-outlined text-4xl text-brand-black">handshake</span>
+<h4 class="text-xl font-bold font-headline">Crédibilité</h4>
+<p class="text-zinc-600 text-sm">Recommander via Propulse renforce votre image d'expert apporteur de solutions à forte valeur.</p>
+</div>
+<div class="space-y-4 p-8 bg-brand-blue/10 rounded-3xl border border-brand-blue/20">
+<span class="material-symbols-outlined text-4xl text-brand-black">celebration</span>
+<h4 class="text-xl font-bold font-headline">Gratuité</h4>
+<p class="text-zinc-600 text-sm">L'inscription et l'utilisation standard de la plateforme pour recommander sont 100% gratuites.</p>
+</div>
+</div>
+</div>
+</section>
+<!-- Premium Teaser -->
+<section class="max-w-7xl mx-auto px-6 py-32">
+<div class="bg-brand-black rounded-3xl p-12 lg:p-20 flex flex-col lg:flex-row gap-16 items-center shadow-2xl relative overflow-hidden">
+<div class="absolute top-0 right-0 w-96 h-96 bg-brand-violet opacity-20 blur-[120px] rounded-full"></div>
+<div class="lg:w-1/2 space-y-8 relative z-10">
+<div class="inline-block px-4 py-2 bg-brand-violet text-brand-black rounded-full text-[10px] font-bold uppercase tracking-widest">Membre Premium</div>
+<h2 class="text-4xl lg:text-5xl font-black font-headline text-white">Passez à la vitesse supérieure</h2>
+<p class="text-zinc-400 text-lg">Maximisez vos opportunités et devenez un membre certifié de notre communauté d'élite.</p>
+<ul class="space-y-4">
+<li class="flex items-center gap-3 text-white text-sm">
+<span class="material-symbols-outlined text-brand-green">check_circle</span>
+                        Accès aux opportunités 48h avant tout le monde
+                    </li>
+<li class="flex items-center gap-3 text-white text-sm">
+<span class="material-symbols-outlined text-brand-green">check_circle</span>
+                        Badge "Rapporteur Certifié" visible sur votre profil
+                    </li>
+<li class="flex items-center gap-3 text-white text-sm">
+<span class="material-symbols-outlined text-brand-green">check_circle</span>
+                        Statistiques avancées et insights marché exclusifs
+                    </li>
+</ul>
+</div>
+<div class="lg:w-1/2 w-full bg-white/5 backdrop-blur-md border border-white/10 p-12 rounded-2xl text-center relative z-10">
+<p class="text-6xl font-black font-headline text-white mb-4">29 €<span class="text-xl text-zinc-400">/mois</span></p>
+<p class="text-zinc-400 mb-10 text-sm italic">Sans engagement. Annulable en un clic depuis votre dashboard.</p>
+<button class="w-full py-5 bg-brand-violet text-brand-black font-black rounded-full hover:scale-105 transition-transform shadow-xl">
+                    Devenir Premium
+                </button>
+</div>
+</div>
+</section>
+<!-- Témoignages -->
+<section class="py-32 px-6">
+<div class="max-w-7xl mx-auto">
+<h2 class="text-4xl font-black font-headline mb-20">Ils nous font confiance</h2>
+<div class="grid md:grid-cols-3 gap-8">
+<div class="p-10 bg-white rounded-3xl space-y-6 border border-brand-black/5 shadow-sm">
+<div class="flex gap-1 text-brand-orange">
+<span class="material-symbols-outlined" style="font-variation-settings: 'FILL' 1;">star</span>
+<span class="material-symbols-outlined" style="font-variation-settings: 'FILL' 1;">star</span>
+<span class="material-symbols-outlined" style="font-variation-settings: 'FILL' 1;">star</span>
+<span class="material-symbols-outlined" style="font-variation-settings: 'FILL' 1;">star</span>
+<span class="material-symbols-outlined" style="font-variation-settings: 'FILL' 1;">star</span>
+</div>
+<p class="text-zinc-600 italic">"Propulse a totalement changé ma vision du réseau. En 3 mois, j'ai généré plus de 5000€ de commissions sans changer mes habitudes de travail."</p>
+<div class="flex items-center gap-4">
+<div class="w-12 h-12 rounded-full bg-brand-green"></div>
+<div>
+<p class="font-bold text-sm">Karim B.</p>
+<p class="text-[10px] text-zinc-400 uppercase font-bold">Freelance UX Design</p>
+</div>
+</div>
+</div>
+<div class="p-10 bg-white rounded-3xl space-y-6 border border-brand-black/5 shadow-sm">
+<div class="flex gap-1 text-brand-orange">
+<span class="material-symbols-outlined" style="font-variation-settings: 'FILL' 1;">star</span>
+<span class="material-symbols-outlined" style="font-variation-settings: 'FILL' 1;">star</span>
+<span class="material-symbols-outlined" style="font-variation-settings: 'FILL' 1;">star</span>
+<span class="material-symbols-outlined" style="font-variation-settings: 'FILL' 1;">star</span>
+<span class="material-symbols-outlined" style="font-variation-settings: 'FILL' 1;">star</span>
+</div>
+<p class="text-zinc-600 italic">"L'interface est d'une simplicité déconcertante. C'est l'outil complémentaire indispensable pour n'importe quel consultant souhaitant monétiser son carnet."</p>
+<div class="flex items-center gap-4">
+<div class="w-12 h-12 rounded-full bg-brand-violet"></div>
+<div>
+<p class="font-bold text-sm">Laura D.</p>
+<p class="text-[10px] text-zinc-400 uppercase font-bold">Consultante Marketing</p>
+</div>
+</div>
+</div>
+<div class="p-10 bg-white rounded-3xl space-y-6 border border-brand-black/5 shadow-sm">
+<div class="flex gap-1 text-brand-orange">
+<span class="material-symbols-outlined" style="font-variation-settings: 'FILL' 1;">star</span>
+<span class="material-symbols-outlined" style="font-variation-settings: 'FILL' 1;">star</span>
+<span class="material-symbols-outlined" style="font-variation-settings: 'FILL' 1;">star</span>
+<span class="material-symbols-outlined" style="font-variation-settings: 'FILL' 1;">star</span>
+<span class="material-symbols-outlined" style="font-variation-settings: 'FILL' 1;">star</span>
+</div>
+<p class="text-zinc-600 italic">"Paiements rapides et transparents. C'est rassurant de travailler avec une plateforme aussi sérieuse qui prend soin de ses apporteurs d'affaires."</p>
+<div class="flex items-center gap-4">
+<div class="w-12 h-12 rounded-full bg-brand-blue"></div>
+<div>
+<p class="font-bold text-sm">Marc T.</p>
+<p class="text-[10px] text-zinc-400 uppercase font-bold">Account Manager</p>
+</div>
+</div>
+</div>
+</div>
+</div>
+</section>
+<!-- FAQ -->
+<section class="max-w-4xl mx-auto px-6 py-32">
+<h2 class="text-4xl font-black font-headline mb-16 text-center">Questions fréquentes</h2>
+<div class="space-y-4">
+<details class="group bg-white p-8 rounded-3xl border border-brand-black/5 shadow-sm">
+<summary class="flex justify-between items-center font-bold cursor-pointer list-none">
+<span>Comment sont calculées les commissions ?</span>
+<span class="material-symbols-outlined group-open:rotate-180 transition-transform">expand_more</span>
+</summary>
+<p class="mt-6 text-zinc-600 text-sm leading-relaxed">Les commissions sont fixées par l'entreprise qui dépose l'opportunité. Elles peuvent être sous forme de forfait (ex: 200€) ou de pourcentage sur le chiffre d'affaires généré (généralement entre 1% et 5% selon le type de projet).</p>
+</details>
+<details class="group bg-white p-8 rounded-3xl border border-brand-black/5 shadow-sm">
+<summary class="flex justify-between items-center font-bold cursor-pointer list-none">
+<span>Quand suis-je payé ?</span>
+<span class="material-symbols-outlined group-open:rotate-180 transition-transform">expand_more</span>
+</summary>
+<p class="mt-6 text-zinc-600 text-sm leading-relaxed">Le paiement est déclenché dès que le client final règle la facture à l'entreprise. Propulse traite ensuite le virement vers votre compte sous 48h ouvrées.</p>
+</details>
+<details class="group bg-white p-8 rounded-3xl border border-brand-black/5 shadow-sm">
+<summary class="flex justify-between items-center font-bold cursor-pointer list-none">
+<span>Est-ce légal de toucher une commission ?</span>
+<span class="material-symbols-outlined group-open:rotate-180 transition-transform">expand_more</span>
+</summary>
+<p class="mt-6 text-zinc-600 text-sm leading-relaxed">Absolument. L'apport d'affaires est une pratique commerciale standard et légale. Nous vous fournissons tous les documents nécessaires (facture d'apporteur) pour votre comptabilité simplifiée.</p>
+</details>
+</div>
+</section>
+<!-- CTA Final -->
+<section class="max-w-7xl mx-auto px-6 py-32 text-center">
+<div class="bg-brand-green rounded-[3rem] p-16 lg:p-32 space-y-10 relative overflow-hidden shadow-sm">
+<div class="absolute -top-24 -left-24 w-64 h-64 bg-white/20 blur-3xl rounded-full"></div>
+<div class="absolute -bottom-24 -right-24 w-64 h-64 bg-brand-blue/30 blur-3xl rounded-full"></div>
+<h2 class="text-5xl lg:text-7xl font-black font-headline tracking-tighter relative z-10">Prêt à monétiser <br/> votre réseau ?</h2>
+<p class="text-zinc-600 text-xl max-w-2xl mx-auto relative z-10">Rejoignez la communauté Propulse aujourd'hui et commencez à transformer vos opportunités en succès financier.</p>
+<button class="px-12 py-6 bg-brand-black text-white rounded-full font-bold text-xl hover:scale-105 active:scale-95 transition-all shadow-2xl relative z-10">
+                Rejoindre Propulse gratuitement
+            </button>
+</div>
+</section>
+</main>
+<!-- Footer -->
+<footer class="w-full bg-white border-t border-brand-black/5 mt-20">
+<div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-12 max-w-7xl mx-auto px-8 py-16">
+<div class="space-y-6">
+<span class="text-xl font-bold text-brand-black font-headline">Propulse</span>
+<p class="text-xs text-zinc-500">© 2024 Propulse. L'architecture du succès partagé et du réseau valorisé.</p>
+</div>
+<div class="flex flex-col gap-4">
+<span class="font-bold text-brand-black text-sm">Plateforme</span>
+<a class="text-zinc-500 hover:text-brand-black text-sm" href="#">Comment ça marche</a>
+<a class="text-zinc-500 hover:text-brand-black text-sm" href="#">Opportunités</a>
+<a class="text-zinc-500 hover:text-brand-black text-sm" href="#">Tarifs</a>
+</div>
+<div class="flex flex-col gap-4">
+<span class="font-bold text-brand-black text-sm">Légal</span>
+<a class="text-zinc-500 hover:text-brand-black text-sm" href="#">Conditions Générales</a>
+<a class="text-zinc-500 hover:text-brand-black text-sm" href="#">Politique de Confidentialité</a>
+</div>
+<div class="flex flex-col gap-4">
+<span class="font-bold text-brand-black text-sm">Société</span>
+<a class="text-zinc-500 hover:text-brand-black text-sm" href="#">Contact</a>
+<a class="text-zinc-500 hover:text-brand-black text-sm" href="#">Presse</a>
+<a class="text-zinc-500 hover:text-brand-black text-sm" href="#">Carrières</a>
+</div>
+</div>
+</footer>
+</body></html>

@@ -1,0 +1,247 @@
+<!DOCTYPE html>
+
+<html class="light" lang="fr"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>Propulse - Onboarding Rapporteur</title>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&amp;family=Manrope:wght@400;500;600;700&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script id="tailwind-config">
+        tailwind.config = {
+            darkMode: "class",
+            theme: {
+                extend: {
+                    colors: {
+                        "inverse-primary": "#c8c6c5",
+                        "tertiary-container": "#27180b",
+                        "secondary-fixed": "#c8eae0",
+                        "surface-variant": "#e4e3db",
+                        "surface-dim": "#dcdad2",
+                        "tertiary-fixed-dim": "#dec1ac",
+                        "surface-bright": "#fbf9f1",
+                        "surface-container-low": "#f5f4ec",
+                        "on-secondary-fixed-variant": "#2e4c45",
+                        "primary-fixed-dim": "#c8c6c5",
+                        "on-tertiary-fixed": "#27180b",
+                        "on-tertiary": "#ffffff",
+                        "secondary-container": "#c8eae0",
+                        "on-secondary-container": "#4c6a63",
+                        "on-primary-fixed": "#1c1b1b",
+                        "background": "#fbf9f1",
+                        "outline-variant": "#c4c7c7",
+                        "primary-fixed": "#e5e2e1",
+                        "tertiary": "#000000",
+                        "secondary-fixed-dim": "#accdc4",
+                        "on-surface": "#1b1c17",
+                        "on-secondary-fixed": "#00201b",
+                        "on-primary-fixed-variant": "#474646",
+                        "surface-container-lowest": "#ffffff",
+                        "on-primary": "#ffffff",
+                        "on-tertiary-fixed-variant": "#574333",
+                        "tertiary-fixed": "#fbddc7",
+                        "inverse-surface": "#30312c",
+                        "on-surface-variant": "#444748",
+                        "primary": "#000000",
+                        "error": "#ba1a1a",
+                        "on-secondary": "#ffffff",
+                        "inverse-on-surface": "#f3f1e9",
+                        "secondary": "#46645d",
+                        "surface-container-highest": "#e4e3db",
+                        "surface-container-high": "#eae8e0",
+                        "primary-container": "#1c1b1b",
+                        "on-primary-container": "#858383",
+                        "surface-tint": "#5f5e5e",
+                        "on-error": "#ffffff"
+                    },
+                    fontFamily: {
+                        "headline": ["Plus Jakarta Sans"],
+                        "body": ["Manrope"],
+                        "label": ["Manrope"]
+                    },
+                    borderRadius: {"DEFAULT": "1rem", "lg": "2rem", "xl": "3rem", "full": "9999px"},
+                },
+            },
+        }
+    </script>
+<style>
+        body { font-family: 'Manrope', sans-serif; background-color: #fbf9f1; }
+        .font-headline { font-family: 'Plus Jakarta Sans', sans-serif; }
+        .material-symbols-outlined { font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24; }
+        .glass-card { background: rgba(255, 255, 255, 0.7); backdrop-filter: blur(20px); }
+        .no-scrollbar::-webkit-scrollbar { display: none; }
+    </style>
+</head>
+<body class="text-on-surface selection:bg-secondary-fixed">
+<div class="flex min-h-screen">
+<!-- Side Navigation (Shared Component Integration) -->
+<aside class="hidden md:flex flex-col h-screen w-64 p-6 gap-4 bg-[#fbf9f1] border-r-0 sticky top-0">
+<div class="mb-8">
+<div class="flex items-center gap-3 mb-2">
+<div class="w-10 h-10 bg-primary rounded-xl flex items-center justify-center">
+<span class="material-symbols-outlined text-on-primary">rocket_launch</span>
+</div>
+<span class="text-xl font-bold text-[#141414] font-headline">Propulse</span>
+</div>
+<h2 class="text-[#141414] font-bold text-lg mt-6">Onboarding</h2>
+<p class="text-stone-500 text-xs">Setup your workspace</p>
+</div>
+<nav class="flex flex-col gap-2">
+<div class="flex items-center gap-3 px-4 py-3 text-stone-500 hover:bg-stone-200/50 rounded-full transition-transform hover:scale-105">
+<span class="material-symbols-outlined">person</span>
+<span class="font-medium text-sm">Profile</span>
+</div>
+<div class="flex items-center gap-3 px-4 py-3 text-stone-500 hover:bg-stone-200/50 rounded-full transition-transform hover:scale-105">
+<span class="material-symbols-outlined">tune</span>
+<span class="font-medium text-sm">Preferences</span>
+</div>
+<div class="flex items-center gap-3 px-4 py-3 bg-[#c8eae0] text-[#141414] rounded-full font-bold scale-95 duration-200">
+<span class="material-symbols-outlined" style="font-variation-settings: 'FILL' 1;">verified_user</span>
+<span class="font-medium text-sm">Verification</span>
+</div>
+<div class="flex items-center gap-3 px-4 py-3 text-stone-500 hover:bg-stone-200/50 rounded-full transition-transform hover:scale-105">
+<span class="material-symbols-outlined">rocket_launch</span>
+<span class="font-medium text-sm">Launch</span>
+</div>
+</nav>
+<div class="mt-auto p-4 bg-surface-container rounded-lg">
+<p class="text-xs font-bold text-on-surface-variant uppercase tracking-wider mb-2">Progress</p>
+<div class="h-1.5 w-full bg-surface-variant rounded-full overflow-hidden">
+<div class="h-full bg-secondary w-3/4 rounded-full"></div>
+</div>
+<p class="text-[10px] mt-2 text-on-surface-variant font-medium">Étape 3 sur 4 • 75% complété</p>
+</div>
+</aside>
+<!-- Main Content Area -->
+<main class="flex-1 flex flex-col overflow-x-hidden">
+<!-- Top Nav Mobile -->
+<header class="md:hidden flex justify-between items-center w-full px-6 py-4 bg-[#fbf9f1]">
+<span class="text-2xl font-black tracking-tighter text-[#141414] font-headline">Propulse</span>
+<button class="w-10 h-10 rounded-full bg-surface-container flex items-center justify-center">
+<span class="material-symbols-outlined">menu</span>
+</button>
+</header>
+<!-- Onboarding Content -->
+<div class="max-w-4xl w-full mx-auto px-6 py-12 md:py-20">
+<header class="mb-12">
+<h1 class="text-4xl md:text-5xl font-black font-headline text-primary tracking-tight mb-4 leading-tight">
+                        Parlez-nous de vous
+                    </h1>
+<p class="text-lg text-on-surface-variant font-medium max-w-2xl leading-relaxed">
+                        Votre profil aide les entreprises à comprendre la qualité de votre réseau et la pertinence de vos recommandations.
+                    </p>
+</header>
+<div class="grid grid-cols-1 lg:grid-cols-12 gap-10">
+<!-- Section A: Informations Personnelles -->
+<section class="lg:col-span-7 space-y-10">
+<div class="flex items-start gap-6">
+<div class="relative group">
+<div class="w-24 h-24 md:w-32 md:h-32 rounded-xl bg-surface-container-high flex items-center justify-center overflow-hidden border-2 border-dashed border-outline-variant group-hover:border-secondary transition-colors">
+<span class="material-symbols-outlined text-4xl text-outline">add_a_photo</span>
+</div>
+<button class="absolute -bottom-2 -right-2 bg-primary text-on-primary p-2 rounded-full shadow-lg hover:scale-110 transition-transform">
+<span class="material-symbols-outlined text-sm">edit</span>
+</button>
+</div>
+<div class="flex-1">
+<h3 class="font-headline font-bold text-lg mb-2">Photo de profil</h3>
+<p class="text-sm text-on-surface-variant mb-4">Importez une photo professionnelle ou synchronisez avec LinkedIn.</p>
+<button class="flex items-center gap-2 px-4 py-2 bg-secondary-fixed text-on-secondary-fixed font-bold rounded-full text-xs hover:bg-secondary-fixed-dim transition-colors">
+<span class="material-symbols-outlined text-base">link</span>
+                                    Importer depuis LinkedIn
+                                </button>
+</div>
+</div>
+<div class="space-y-6">
+<div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+<div class="space-y-2">
+<label class="block text-xs font-bold uppercase tracking-widest text-on-surface-variant ml-1">Accroche Professionnelle</label>
+<input class="w-full bg-surface-container-low border-none rounded-md px-5 py-4 focus:ring-2 focus:ring-secondary/40 placeholder:text-outline-variant font-medium" placeholder="ex: Freelance Tech &amp; Recruteur" type="text"/>
+</div>
+<div class="space-y-2">
+<label class="block text-xs font-bold uppercase tracking-widest text-on-surface-variant ml-1">Localisation</label>
+<div class="relative">
+<span class="material-symbols-outlined absolute left-4 top-1/2 -translate-y-1/2 text-outline-variant">location_on</span>
+<input class="w-full bg-surface-container-low border-none rounded-md pl-12 pr-5 py-4 focus:ring-2 focus:ring-secondary/40 placeholder:text-outline-variant font-medium" placeholder="Paris, France" type="text"/>
+</div>
+</div>
+</div>
+<div class="space-y-2">
+<label class="block text-xs font-bold uppercase tracking-widest text-on-surface-variant ml-1">URL LinkedIn</label>
+<input class="w-full bg-surface-container-low border-none rounded-md px-5 py-4 focus:ring-2 focus:ring-secondary/40 placeholder:text-outline-variant font-medium" placeholder="linkedin.com/in/votre-profil" type="url"/>
+</div>
+<div class="space-y-2">
+<div class="flex justify-between items-end">
+<label class="block text-xs font-bold uppercase tracking-widest text-on-surface-variant ml-1">Bio (300 chars max)</label>
+<span class="text-[10px] text-outline-variant font-bold">0 / 300</span>
+</div>
+<textarea class="w-full bg-surface-container-low border-none rounded-md px-5 py-4 focus:ring-2 focus:ring-secondary/40 placeholder:text-outline-variant font-medium resize-none" placeholder="Décrivez brièvement votre expertise et le type de profils que vous accompagnez..." rows="4"></textarea>
+</div>
+</div>
+</section>
+<!-- Section B: Your Network -->
+<section class="lg:col-span-5 space-y-8">
+<div class="bg-surface-container-low p-8 rounded-lg border border-surface-variant/30">
+<h3 class="font-headline font-bold text-xl mb-6">Votre Réseau</h3>
+<div class="space-y-8">
+<div class="space-y-4">
+<p class="text-sm font-bold text-on-surface">Domaines d'expertise (multi-sélection)</p>
+<div class="flex flex-wrap gap-2">
+<button class="px-4 py-2 rounded-full border border-outline-variant text-sm font-medium hover:bg-secondary-fixed hover:border-secondary transition-all">Web Development</button>
+<button class="px-4 py-2 rounded-full bg-secondary text-on-secondary text-sm font-bold border border-secondary shadow-sm">SaaS</button>
+<button class="px-4 py-2 rounded-full border border-outline-variant text-sm font-medium hover:bg-secondary-fixed hover:border-secondary transition-all">Design UX/UI</button>
+<button class="px-4 py-2 rounded-full border border-outline-variant text-sm font-medium hover:bg-secondary-fixed hover:border-secondary transition-all">Product Management</button>
+<button class="px-4 py-2 rounded-full bg-tertiary-fixed text-on-tertiary-fixed-variant text-sm font-bold border border-tertiary-fixed-dim shadow-sm">Sales</button>
+<button class="px-4 py-2 rounded-full border border-outline-variant text-sm font-medium hover:bg-secondary-fixed hover:border-secondary transition-all">Marketing</button>
+<button class="px-4 py-2 rounded-full border border-outline-variant text-sm font-medium hover:bg-secondary-fixed hover:border-secondary transition-all">Data Science</button>
+</div>
+</div>
+<div class="space-y-4">
+<p class="text-sm font-bold text-on-surface">Volume de recommandations mensuelles</p>
+<div class="grid grid-cols-3 gap-3">
+<button class="p-4 rounded-xl border border-outline-variant text-center hover:bg-surface-container-lowest transition-all group">
+<span class="block text-lg font-black group-hover:text-secondary">1-3</span>
+<span class="text-[10px] uppercase tracking-tighter text-on-surface-variant">Occasionnel</span>
+</button>
+<button class="p-4 rounded-xl border-2 border-secondary bg-surface-container-lowest text-center shadow-md">
+<span class="block text-lg font-black text-secondary">4-10</span>
+<span class="text-[10px] uppercase tracking-tighter text-secondary font-bold">Régulier</span>
+</button>
+<button class="p-4 rounded-xl border border-outline-variant text-center hover:bg-surface-container-lowest transition-all group">
+<span class="block text-lg font-black group-hover:text-secondary">10+</span>
+<span class="text-[10px] uppercase tracking-tighter text-on-surface-variant">Expert</span>
+</button>
+</div>
+</div>
+<div class="p-4 bg-secondary-container/30 rounded-lg flex gap-3">
+<span class="material-symbols-outlined text-on-secondary-container">lightbulb</span>
+<p class="text-xs text-on-secondary-container leading-relaxed">
+<strong>Conseil :</strong> Les entreprises préfèrent la qualité à la quantité. Concentrez-vous sur vos domaines de force.
+                                    </p>
+</div>
+</div>
+</div>
+</section>
+</div>
+<!-- Action Buttons -->
+<footer class="mt-16 flex flex-col sm:flex-row items-center justify-between gap-6 pt-10 border-t border-surface-variant/40">
+<button class="order-2 sm:order-1 flex items-center gap-2 px-8 py-4 text-on-surface-variant font-bold hover:text-primary transition-colors">
+<span class="material-symbols-outlined">arrow_back</span>
+                        Précédent
+                    </button>
+<div class="order-1 sm:order-2 flex gap-4 w-full sm:w-auto">
+    <a href="dashboardrapporteur.html" class="flex-1 sm:flex-none">
+        <button class="w-full px-12 py-4 bg-primary text-on-primary rounded-full font-bold text-lg shadow-xl shadow-primary/10 hover:scale-105 active:scale-95 transition-all bg-gradient-to-br from-primary to-primary-container">
+            Continuer
+        </button>
+    </a>
+</div>
+</footer>
+</div>
+</main>
+</div>
+<!-- Background Decorative Elements (Asymmetric Layout) -->
+<div class="fixed top-0 right-0 -z-10 w-1/3 h-screen bg-surface-container-low opacity-50 blur-3xl pointer-events-none"></div>
+<div class="fixed -bottom-24 -left-24 -z-10 w-96 h-96 bg-secondary-container opacity-20 rounded-full blur-3xl pointer-events-none"></div>
+</body></html>

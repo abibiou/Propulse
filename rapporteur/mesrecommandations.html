@@ -1,0 +1,375 @@
+<!DOCTYPE html>
+
+<html class="light" lang="fr"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>Mes recommandations - Propulse</title>
+<!-- Fonts -->
+<link href="https://fonts.googleapis.com" rel="preconnect"/>
+<link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"/>
+<link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&amp;family=Manrope:wght@400;500;600;700&amp;display=swap" rel="stylesheet"/>
+<!-- Icons -->
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<!-- Tailwind -->
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<script id="tailwind-config">
+      tailwind.config = {
+        darkMode: "class",
+        theme: {
+          extend: {
+            colors: {
+              "primary-fixed-dim": "#c8c6c5",
+              "tertiary": "#000000",
+              "on-tertiary-container": "#977f6d",
+              "tertiary-fixed-dim": "#dec1ac",
+              "on-tertiary": "#ffffff",
+              "surface-container-highest": "#e4e3db",
+              "outline-variant": "#c4c7c7",
+              "on-error-container": "#93000a",
+              "tertiary-fixed": "#fbddc7",
+              "tertiary-container": "#27180b",
+              "surface-container-low": "#f5f4ec",
+              "secondary-fixed": "#c8eae0",
+              "on-secondary-container": "#4c6a63",
+              "surface-tint": "#5f5e5e",
+              "surface-container-lowest": "#ffffff",
+              "outline": "#747878",
+              "background": "#fbf9f1",
+              "primary-container": "#1c1b1b",
+              "on-secondary": "#ffffff",
+              "surface-container-high": "#eae8e0",
+              "on-tertiary-fixed": "#27180b",
+              "primary": "#000000",
+              "secondary-fixed-dim": "#accdc4",
+              "surface-container": "#f0eee6",
+              "inverse-on-surface": "#f3f1e9",
+              "surface-dim": "#dcdad2",
+              "on-primary-fixed": "#1c1b1b",
+              "surface-bright": "#fbf9f1",
+              "secondary-container": "#c8eae0",
+              "primary-fixed": "#e5e2e1",
+              "on-tertiary-fixed-variant": "#574333",
+              "on-error": "#ffffff",
+              "on-primary-fixed-variant": "#474646",
+              "on-secondary-fixed-variant": "#2e4c45",
+              "inverse-surface": "#30312c",
+              "surface-variant": "#e4e3db",
+              "surface": "#fbf9f1",
+              "inverse-primary": "#c8c6c5",
+              "on-primary": "#ffffff",
+              "secondary": "#46645d",
+              "error": "#ba1a1a",
+              "on-surface": "#1b1c17",
+              "on-secondary-fixed": "#00201b",
+              "on-primary-container": "#858383",
+              "error-container": "#ffdad6",
+              "on-surface-variant": "#444748",
+              "on-background": "#1b1c17"
+            },
+            fontFamily: {
+              "headline": ["Plus Jakarta Sans"],
+              "body": ["Manrope"],
+              "label": ["Manrope"]
+            },
+            borderRadius: {"DEFAULT": "1rem", "lg": "2rem", "xl": "3rem", "full": "9999px"},
+          },
+        },
+      }
+    </script>
+<style>
+        .material-symbols-outlined {
+            font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24;
+        }
+        body { font-family: 'Manrope', sans-serif; }
+        h1, h2, h3, .font-headline { font-family: 'Plus Jakarta Sans', sans-serif; }
+    </style>
+</head>
+<body class="bg-background text-on-surface min-h-screen">
+<!-- Top Navigation (From JSON) -->
+<nav class="fixed top-0 z-50 w-full bg-[#fbf9f1] dark:bg-[#141414] border-none">
+<div class="flex justify-between items-center w-full px-8 py-4 max-w-7xl mx-auto">
+<div class="flex items-center gap-12">
+<a href="../index.html" class="text-2xl font-extrabold tracking-tighter text-primary font-headline block w-fit">
+    Propulse
+</a>
+<div class="hidden md:flex gap-8 items-center">
+<a class="font-headline tracking-tight text-sm font-semibold text-[#141414]/60 dark:text-[#fbf9f1]/60 hover:text-[#141414] transition-colors duration-200" href="dashboardrapporteur.html">Tableau de bord</a>
+<a class="font-headline tracking-tight text-sm font-semibold text-[#141414]/60 dark:text-[#fbf9f1]/60 hover:text-[#141414] transition-colors duration-200" href="opportunites.html">Opportunities</a>
+<a class="font-headline tracking-tight text-sm font-semibold text-[#141414] dark:text-[#fbf9f1] border-b-2 border-[#141414] pb-1" href="#">Recommendations</a>
+<a class="font-headline tracking-tight text-sm font-semibold text-[#141414]/60 dark:text-[#fbf9f1]/60 hover:text-[#141414] transition-colors duration-200" href="#">Mes gains</a>
+</div>
+</div>
+<div class="flex items-center gap-6">
+<a href="notifications.html" class="p-2 hover:bg-stone-100/50 dark:hover:bg-stone-800/50 rounded-full transition-all scale-95 active:scale-90 duration-200 inline-flex items-center justify-center">
+    <span class="material-symbols-outlined text-[#141414] dark:text-[#fbf9f1]" data-icon="notifications">
+        notifications
+    </span>
+</a>
+<div class="w-10 h-10 rounded-full bg-surface-container overflow-hidden">
+<img alt="User profile avatar" class="w-full h-full object-cover" data-alt="Close-up professional portrait of a smiling middle-eastern man in a sharp blazer with soft studio lighting" src="https://lh3.googleusercontent.com/aida-public/AB6AXuCBiRHyA9mVGpviuSSMYLmUXKwCj4pgZQ4jeRZ8QO1QA0G08BqNZbrmlCAYj0PfMo0rl1rN2LX1POn0qCVk9K-Ut0d3Zh-Cna_7SsfOCbvf6btxX6GzsoRcb4SoG-TPw6msujz5nuVjxeTEzUeI6yYGNAQbeDbgdq1EA8N0ZFmhByXpDYGzI_EuKM09zn6CDO9YEOueQYVJnzgS0nky7dUw3as3FBY5lFduTOybK3aXe68t3O0yUmsQrjD1Mqy5Ib6ThFSrzWxnh0YM"/>
+</div>
+</div>
+</div>
+</nav>
+
+<main class="max-w-screen-xl mx-auto px-6 py-12 md:py-24 pb-32">
+
+    <div id="success-alert" class="flex items-center justify-between p-4 mb-8 text-emerald-900 rounded-xl bg-emerald-50 border border-emerald-200 shadow-[0px_4px_24px_rgba(0,0,0,0.02)] transition-opacity duration-300">
+        <div class="flex items-center gap-3">
+            <span class="material-symbols-outlined text-emerald-600" data-icon="task_alt" style="font-variation-settings: 'FILL' 1;">task_alt</span>
+            <p class="font-bold font-headline text-sm">Recommandation envoyée avec succès ! Vous pouvez suivre son avancement ci-dessous.</p>
+        </div>
+        <button onclick="dismissAlert()" class="p-1 hover:bg-emerald-200/50 rounded-full transition-colors">
+            <span class="material-symbols-outlined text-lg block" data-icon="close">close</span>
+        </button>
+    </div>
+    <header class="mb-12">
+<!-- Stats Row: Bento Style -->
+<div class="grid grid-cols-2 md:grid-cols-4 gap-4 mb-12">
+<div class="bg-surface-container-lowest p-6 rounded-lg shadow-[0px_4px_24px_rgba(0,0,0,0.02)] border border-outline-variant/10">
+<p class="text-sm font-bold uppercase tracking-widest text-on-surface-variant mb-1">Total envoyées</p>
+<p class="text-3xl font-extrabold text-primary">14</p>
+</div>
+<div class="bg-secondary-container p-6 rounded-lg shadow-[0px_4px_24px_rgba(0,0,0,0.02)]">
+<p class="text-sm font-bold uppercase tracking-widest text-on-secondary-container mb-1">En cours</p>
+<p class="text-3xl font-extrabold text-on-secondary-container">03</p>
+</div>
+<div class="bg-emerald-100 p-6 rounded-lg shadow-[0px_4px_24px_rgba(0,0,0,0.02)]">
+<p class="text-sm font-bold uppercase tracking-widest text-emerald-900 mb-1">Signées</p>
+<p class="text-3xl font-extrabold text-emerald-900">06</p>
+</div>
+<div class="bg-tertiary-fixed p-6 rounded-lg shadow-[0px_4px_24px_rgba(0,0,0,0.02)]">
+<p class="text-sm font-bold uppercase tracking-widest text-on-tertiary-fixed-variant mb-1">Rejetées</p>
+<p class="text-3xl font-extrabold text-on-tertiary-fixed-variant">02</p>
+</div>
+</div>
+<!-- Filters & Search -->
+<section class="flex flex-col gap-6 mb-10">
+<div class="flex flex-col md:flex-row md:items-center justify-between gap-6">
+<!-- Pill Filters -->
+<div class="flex flex-wrap gap-2">
+<button class="px-6 py-2.5 rounded-full bg-primary text-on-primary font-semibold text-sm transition-transform active:scale-95">Toutes</button>
+<button class="px-6 py-2.5 rounded-full bg-surface-container-high text-on-surface font-semibold text-sm hover:bg-surface-container-highest transition-all">Nouvelles</button>
+<button class="px-6 py-2.5 rounded-full bg-surface-container-high text-on-surface font-semibold text-sm hover:bg-surface-container-highest transition-all">En cours</button>
+<button class="px-6 py-2.5 rounded-full bg-surface-container-high text-on-surface font-semibold text-sm hover:bg-surface-container-highest transition-all">Signées</button>
+<button class="px-6 py-2.5 rounded-full bg-surface-container-high text-on-surface font-semibold text-sm hover:bg-surface-container-highest transition-all">Rejetées</button>
+</div>
+<!-- Sort Dropdown -->
+<div class="relative min-w-[200px]">
+<select class="w-full bg-surface-container-low border-none rounded-full px-6 py-3 text-sm font-semibold focus:ring-2 focus:ring-secondary/40 appearance-none cursor-pointer">
+<option>Plus récentes</option>
+<option>Commission la plus élevée</option>
+<option>Dernière mise à jour</option>
+</select>
+<span class="material-symbols-outlined absolute right-4 top-1/2 -translate-y-1/2 pointer-events-none text-on-surface-variant">expand_more</span>
+</div>
+</div>
+<!-- Search Bar -->
+<div class="relative group">
+<span class="material-symbols-outlined absolute left-5 top-1/2 -translate-y-1/2 text-on-surface-variant group-focus-within:text-primary transition-colors">search</span>
+<input class="w-full bg-surface-container-low border-none rounded-lg pl-14 pr-6 py-4 focus:ring-2 focus:ring-secondary/40 focus:bg-surface-container-lowest transition-all placeholder:text-on-surface-variant/60" placeholder="Rechercher par nom de projet ou d'entreprise..." type="text"/>
+</div>
+</section>
+<!-- Recommendation List -->
+<div class="space-y-6">
+<!-- Card 1: Signée -->
+<article class="bg-surface-container-lowest rounded-lg p-6 md:p-8 shadow-[0px_24px_48px_rgba(27,28,23,0.04)] hover:shadow-[0px_24px_48px_rgba(27,28,23,0.08)] transition-all border border-transparent hover:border-secondary-fixed">
+<div class="flex flex-col md:flex-row justify-between items-start md:items-center gap-4 mb-8">
+<div class="flex items-center gap-4">
+<div class="w-14 h-14 rounded-full bg-emerald-50 flex items-center justify-center text-emerald-600 font-bold text-xl">TF</div>
+<div>
+<h3 class="text-xl font-extrabold text-primary">TechFlow SAS</h3>
+<p class="text-sm text-on-surface-variant">Envoyé le 20/03/2025</p>
+</div>
+</div>
+<div class="flex items-center gap-3">
+<span class="bg-emerald-100 text-emerald-900 px-4 py-1.5 rounded-full text-xs font-bold uppercase tracking-wider">🎉 Signé</span>
+<span class="text-xs text-on-surface-variant font-medium">il y a 2 jours</span>
+</div>
+</div>
+<div class="grid md:grid-cols-3 gap-8 mb-10">
+<div class="space-y-1">
+<p class="text-xs font-bold uppercase tracking-widest text-on-surface-variant">Projet</p>
+<p class="font-bold text-primary">Refonte site e-commerce Shopify</p>
+</div>
+<div class="space-y-1">
+<p class="text-xs font-bold uppercase tracking-widest text-on-surface-variant">Contact recommandé</p>
+<p class="font-bold text-primary">Jean-Pierre M.</p>
+</div>
+<div class="space-y-1">
+<p class="text-xs font-bold uppercase tracking-widest text-on-surface-variant">Commission</p>
+<p class="text-2xl font-extrabold text-primary tracking-tighter">180 €</p>
+</div>
+</div>
+<!-- Timeline -->
+<div class="mb-10 px-2">
+<div class="relative flex justify-between">
+<!-- Connecting Line -->
+<div class="absolute top-1/2 left-0 w-full h-1 bg-surface-container-high -translate-y-1/2 z-0"></div>
+<div class="absolute top-1/2 left-0 w-full h-1 bg-emerald-500 -translate-y-1/2 z-0 origin-left scale-x-100 transition-transform"></div>
+<!-- Steps -->
+<div class="relative z-10 flex flex-col items-center gap-2">
+<div class="w-8 h-8 rounded-full bg-emerald-500 text-white flex items-center justify-center shadow-lg shadow-emerald-500/20">
+<span class="material-symbols-outlined text-sm" style="font-variation-settings: 'FILL' 1;">check</span>
+</div>
+<span class="text-[10px] font-bold uppercase text-emerald-600">Envoyé</span>
+</div>
+<div class="relative z-10 flex flex-col items-center gap-2">
+<div class="w-8 h-8 rounded-full bg-emerald-500 text-white flex items-center justify-center shadow-lg shadow-emerald-500/20">
+<span class="material-symbols-outlined text-sm" style="font-variation-settings: 'FILL' 1;">check</span>
+</div>
+<span class="text-[10px] font-bold uppercase text-emerald-600">En étude</span>
+</div>
+<div class="relative z-10 flex flex-col items-center gap-2">
+<div class="w-8 h-8 rounded-full bg-emerald-500 text-white flex items-center justify-center shadow-lg shadow-emerald-500/20">
+<span class="material-symbols-outlined text-sm" style="font-variation-settings: 'FILL' 1;">check</span>
+</div>
+<span class="text-[10px] font-bold uppercase text-emerald-600">Contacté</span>
+</div>
+<div class="relative z-10 flex flex-col items-center gap-2">
+<div class="w-8 h-8 rounded-full bg-emerald-500 text-white flex items-center justify-center shadow-lg shadow-emerald-500/20">
+<span class="material-symbols-outlined text-sm" style="font-variation-settings: 'FILL' 1;">check</span>
+</div>
+<span class="text-[10px] font-bold uppercase text-emerald-600">Signé</span>
+</div>
+<div class="relative z-10 flex flex-col items-center gap-2">
+<div class="w-8 h-8 rounded-full bg-emerald-500 text-white flex items-center justify-center shadow-lg shadow-emerald-500/20">
+<span class="material-symbols-outlined text-sm" style="font-variation-settings: 'FILL' 1;">payments</span>
+</div>
+<span class="text-[10px] font-bold uppercase text-emerald-600">Commission</span>
+</div>
+</div>
+</div>
+<div class="flex justify-end gap-3 pt-6 border-t border-surface-container-high">
+<button class="px-8 py-3 rounded-full bg-surface-container-highest text-on-surface font-bold text-sm hover:bg-surface-container-high transition-all">Voir le détail</button>
+</div>
+</article>
+<!-- Card 2: En cours -->
+<article class="bg-surface-container-lowest rounded-lg p-6 md:p-8 shadow-[0px_24px_48px_rgba(27,28,23,0.04)] border border-transparent">
+<div class="flex flex-col md:flex-row justify-between items-start md:items-center gap-4 mb-8">
+<div class="flex items-center gap-4">
+<div class="w-14 h-14 rounded-full bg-secondary-container flex items-center justify-center text-on-secondary-container font-bold text-xl">L</div>
+<div>
+<h3 class="text-xl font-extrabold text-primary">Lumina Labs</h3>
+<p class="text-sm text-on-surface-variant">Envoyé le 15/03/2025</p>
+</div>
+</div>
+<div class="flex items-center gap-3">
+<span class="bg-secondary-container text-on-secondary-container px-4 py-1.5 rounded-full text-xs font-bold uppercase tracking-wider">👀 En étude</span>
+<span class="text-xs text-on-surface-variant font-medium">il y a 5 jours</span>
+</div>
+</div>
+<div class="grid md:grid-cols-3 gap-8 mb-10">
+<div class="space-y-1">
+<p class="text-xs font-bold uppercase tracking-widest text-on-surface-variant">Projet</p>
+<p class="font-bold text-primary">Branding &amp; Logo Design</p>
+</div>
+<div class="space-y-1">
+<p class="text-xs font-bold uppercase tracking-widest text-on-surface-variant">Contact recommandé</p>
+<p class="font-bold text-primary">Sarah K.</p>
+</div>
+<div class="space-y-1">
+<p class="text-xs font-bold uppercase tracking-widest text-on-surface-variant">Commission</p>
+<p class="text-2xl font-extrabold text-primary tracking-tighter">450 €</p>
+</div>
+</div>
+<!-- Timeline -->
+<div class="mb-10 px-2">
+<div class="relative flex justify-between">
+<div class="absolute top-1/2 left-0 w-full h-1 bg-surface-container-high -translate-y-1/2 z-0"></div>
+<div class="absolute top-1/2 left-0 w-1/4 h-1 bg-secondary -translate-y-1/2 z-0 origin-left transition-transform"></div>
+<div class="relative z-10 flex flex-col items-center gap-2">
+<div class="w-8 h-8 rounded-full bg-secondary text-white flex items-center justify-center">
+<span class="material-symbols-outlined text-sm" style="font-variation-settings: 'FILL' 1;">check</span>
+</div>
+<span class="text-[10px] font-bold uppercase text-on-surface">Envoyé</span>
+</div>
+<div class="relative z-10 flex flex-col items-center gap-2">
+<div class="w-8 h-8 rounded-full border-4 border-secondary bg-white flex items-center justify-center">
+<div class="w-2 h-2 rounded-full bg-secondary"></div>
+</div>
+<span class="text-[10px] font-bold uppercase text-on-surface">En étude</span>
+</div>
+<div class="relative z-10 flex flex-col items-center gap-2 opacity-30">
+<div class="w-8 h-8 rounded-full bg-surface-container-high flex items-center justify-center"></div>
+<span class="text-[10px] font-bold uppercase text-on-surface">Contacté</span>
+</div>
+<div class="relative z-10 flex flex-col items-center gap-2 opacity-30">
+<div class="w-8 h-8 rounded-full bg-surface-container-high flex items-center justify-center"></div>
+<span class="text-[10px] font-bold uppercase text-on-surface">Signé</span>
+</div>
+<div class="relative z-10 flex flex-col items-center gap-2 opacity-30">
+<div class="w-8 h-8 rounded-full bg-surface-container-high flex items-center justify-center"></div>
+<span class="text-[10px] font-bold uppercase text-on-surface">Commission</span>
+</div>
+</div>
+</div>
+<div class="flex justify-end gap-3 pt-6 border-t border-surface-container-high">
+<button class="px-8 py-3 rounded-full bg-surface-container-highest text-on-surface font-bold text-sm hover:bg-surface-container-high transition-all">Voir le détail</button>
+<button class="px-8 py-3 rounded-full bg-primary text-on-primary font-bold text-sm hover:bg-primary-container transition-all scale-95 active:scale-90 duration-200">Relancer</button>
+</div>
+</article>
+<!-- Card 3: Pending -->
+<article class="bg-surface-container-lowest rounded-lg p-6 md:p-8 shadow-[0px_24px_48px_rgba(27,28,23,0.04)] border border-transparent">
+<div class="flex flex-col md:flex-row justify-between items-start md:items-center gap-4 mb-8">
+<div class="flex items-center gap-4">
+<div class="w-14 h-14 rounded-full bg-tertiary-fixed flex items-center justify-center text-on-tertiary-fixed font-bold text-xl">NV</div>
+<div>
+<h3 class="text-xl font-extrabold text-primary">Nexus Ventures</h3>
+<p class="text-sm text-on-surface-variant">Envoyé le 10/03/2025</p>
+</div>
+</div>
+<div class="flex items-center gap-3">
+<span class="bg-surface-container text-on-surface-variant px-4 py-1.5 rounded-full text-xs font-bold uppercase tracking-wider">⏳ En attente</span>
+<span class="text-xs text-on-surface-variant font-medium">il y a 10 jours</span>
+</div>
+</div>
+<div class="grid md:grid-cols-3 gap-8 mb-10">
+<div class="space-y-1">
+<p class="text-xs font-bold uppercase tracking-widest text-on-surface-variant">Projet</p>
+<p class="font-bold text-primary">Audit Cybersécurité</p>
+</div>
+<div class="space-y-1">
+<p class="text-xs font-bold uppercase tracking-widest text-on-surface-variant">Contact recommandé</p>
+<p class="font-bold text-primary">Marc-Antoine D.</p>
+</div>
+<div class="space-y-1">
+<p class="text-xs font-bold uppercase tracking-widest text-on-surface-variant">Commission</p>
+<p class="text-2xl font-extrabold text-primary tracking-tighter">1,200 €</p>
+</div>
+</div>
+<div class="flex justify-end gap-3 pt-6 border-t border-surface-container-high">
+<button class="px-8 py-3 rounded-full bg-surface-container-highest text-on-surface font-bold text-sm hover:bg-surface-container-high transition-all">Voir le détail</button>
+<button class="px-8 py-3 rounded-full bg-primary text-on-primary font-bold text-sm hover:bg-primary-container transition-all scale-95 active:scale-90 duration-200">Relancer</button>
+</div>
+</article>
+</div>
+</main>
+<!-- Bottom Navigation (From JSON - Mobile Only) -->
+<nav class="fixed bottom-0 left-0 w-full flex justify-around items-center px-4 pb-8 pt-4 md:hidden bg-white/80 dark:bg-stone-900/80 backdrop-blur-lg shadow-[0_-10px_40px_rgba(0,0,0,0.04)] z-50 rounded-t-[3rem]">
+<a class="flex flex-col items-center justify-center text-stone-400 dark:text-stone-500 px-6 py-2 transition-all active:scale-95 duration-150" href="#">
+<span class="material-symbols-outlined mb-1" data-icon="explore">explore</span>
+<span class="font-['Plus_Jakarta_Sans'] text-[11px] font-bold uppercase tracking-wider">Opportunités</span>
+</a>
+<a class="flex flex-col items-center justify-center bg-emerald-100 dark:bg-emerald-900/30 text-emerald-900 dark:text-emerald-100 rounded-full px-6 py-2 transition-all active:scale-95 duration-150" href="#">
+<span class="material-symbols-outlined mb-1" data-icon="handshake" style="font-variation-settings: 'FILL' 1;">handshake</span>
+<span class="font-['Plus_Jakarta_Sans'] text-[11px] font-bold uppercase tracking-wider">Mes recommandations</span>
+</a>
+<a class="flex flex-col items-center justify-center text-stone-400 dark:text-stone-500 px-6 py-2 transition-all active:scale-95 duration-150" href="#">
+<span class="material-symbols-outlined mb-1" data-icon="payments">payments</span>
+<span class="font-['Plus_Jakarta_Sans'] text-[11px] font-bold uppercase tracking-wider">Mes gains</span>
+</a>
+</nav>
+
+<script>
+        function dismissAlert() {
+            const alert = document.getElementById('success-alert');
+            alert.style.opacity = '0';
+            setTimeout(() => {
+                alert.style.display = 'none';
+            }, 300);
+        }
+    </script>
+</body>
+</html>

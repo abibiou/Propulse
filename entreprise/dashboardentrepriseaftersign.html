@@ -1,0 +1,395 @@
+<!DOCTYPE html>
+
+<html class="light" lang="fr"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>Entreprise Elite - Tableau de Bord Sophie</title>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&amp;family=Manrope:wght@400;500;600;700&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script id="tailwind-config">
+      tailwind.config = {
+        darkMode: "class",
+        theme: {
+          extend: {
+            colors: {
+              "on-error": "#ffffff",
+              "surface-dim": "#dcdad2",
+              "surface-container-lowest": "#ffffff",
+              "on-surface": "#1b1c17",
+              "on-tertiary": "#ffffff",
+              "error-container": "#ffdad6",
+              "secondary": "#46645d",
+              "surface-bright": "#fbf9f1",
+              "on-primary": "#ffffff",
+              "primary-fixed-dim": "#c8c6c5",
+              "background": "#fbf9f1",
+              "on-tertiary-fixed": "#27180b",
+              "inverse-primary": "#c8c6c5",
+              "surface-variant": "#e4e3db",
+              "surface-container": "#f0eee6",
+              "outline": "#747878",
+              "secondary-fixed": "#c8eae0",
+              "on-secondary-fixed-variant": "#2e4c45",
+              "on-surface-variant": "#444748",
+              "on-background": "#1b1c17",
+              "error": "#ba1a1a",
+              "on-error-container": "#93000a",
+              "tertiary-fixed": "#fbddc7",
+              "secondary-container": "#c8eae0",
+              "on-primary-container": "#858383",
+              "surface": "#fbf9f1",
+              "on-secondary-container": "#4c6a63",
+              "surface-container-high": "#eae8e0",
+              "on-tertiary-container": "#977f6d",
+              "inverse-on-surface": "#f3f1e9",
+              "secondary-fixed-dim": "#accdc4",
+              "tertiary-fixed-dim": "#dec1ac",
+              "tertiary-container": "#27180b",
+              "primary-container": "#1c1b1b",
+              "surface-container-low": "#f5f4ec",
+              "on-tertiary-fixed-variant": "#574333",
+              "on-primary-fixed": "#1c1b1b",
+              "surface-container-highest": "#e4e3db",
+              "on-secondary-fixed": "#00201b",
+              "tertiary": "#000000",
+              "primary-fixed": "#e5e2e1",
+              "on-secondary": "#ffffff",
+              "on-primary-fixed-variant": "#474646",
+              "inverse-surface": "#30312c",
+              "surface-tint": "#5f5e5e",
+              "primary": "#000000",
+              "outline-variant": "#c4c7c7"
+            },
+            fontFamily: {
+              "headline": ["Plus Jakarta Sans"],
+              "body": ["Manrope"],
+              "label": ["Manrope"]
+            },
+            borderRadius: {"DEFAULT": "1rem", "lg": "2rem", "xl": "3rem", "full": "9999px"},
+          },
+        },
+      }
+    </script>
+<style>
+      .material-symbols-outlined {
+        font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24;
+      }
+      body {
+        font-family: 'Manrope', sans-serif;
+        background-color: #fbf9f1;
+      }
+      h1, h2, h3, .brand-font {
+        font-family: 'Plus Jakarta Sans', sans-serif;
+      }
+      .glass-card {
+        background: rgba(255, 255, 255, 0.7);
+        backdrop-filter: blur(20px);
+      }
+    </style>
+</head>
+<body class="text-on-surface selection:bg-secondary-fixed selection:text-on-secondary-fixed-variant">
+<!-- TopNavBar -->
+<header class="bg-white dark:bg-[#141414] sticky top-0 z-50">
+<nav class="flex justify-between items-center w-full px-8 py-4 max-w-[1440px] mx-auto">
+<div class="text-2xl font-bold tracking-tighter text-neutral-900 dark:text-white">
+                Entreprise Elite
+            </div>
+<div class="hidden md:flex items-center gap-8">
+<a class="font-['Plus_Jakarta_Sans'] tracking-tight text-sm font-semibold text-neutral-900 dark:text-white border-b-2 border-neutral-900 dark:border-white pb-1" href="#">Annonces</a>
+<a class="font-['Plus_Jakarta_Sans'] tracking-tight text-sm font-semibold text-neutral-500 dark:text-neutral-400 hover:text-neutral-800 dark:hover:text-neutral-200 transition-colors duration-200" href="#">Leads</a>
+<a class="font-['Plus_Jakarta_Sans'] tracking-tight text-sm font-semibold text-neutral-500 dark:text-neutral-400 hover:text-neutral-800 dark:hover:text-neutral-200 transition-colors duration-200" href="#">Facturation</a>
+<a class="font-['Plus_Jakarta_Sans'] tracking-tight text-sm font-semibold text-neutral-500 dark:text-neutral-400 hover:text-neutral-800 dark:hover:text-neutral-200 transition-colors duration-200" href="#">Commissions</a>
+<a class="font-['Plus_Jakarta_Sans'] tracking-tight text-sm font-semibold text-neutral-500 dark:text-neutral-400 hover:text-neutral-800 dark:hover:text-neutral-200 transition-colors duration-200" href="#">Urgence</a>
+<a class="font-['Plus_Jakarta_Sans'] tracking-tight text-sm font-semibold text-neutral-500 dark:text-neutral-400 hover:text-neutral-800 dark:hover:text-neutral-200 transition-colors duration-200" href="#">Premium</a>
+</div>
+<div class="flex items-center gap-4">
+<div class="hidden lg:flex items-center bg-surface-container-low px-4 py-2 rounded-full">
+<span class="material-symbols-outlined text-outline text-sm mr-2">search</span>
+<input class="bg-transparent border-none focus:ring-0 text-sm w-32 font-medium" placeholder="Rechercher..." type="text"/>
+</div>
+<button class="p-2 rounded-full hover:bg-neutral-100 dark:hover:bg-neutral-800 transition-colors duration-200 scale-95 active:opacity-80">
+<span class="material-symbols-outlined">notifications</span>
+</button>
+<button class="p-2 rounded-full hover:bg-neutral-100 dark:hover:bg-neutral-800 transition-colors duration-200 scale-95 active:opacity-80">
+<span class="material-symbols-outlined">settings</span>
+</button>
+<img alt="Photo de profil utilisateur" class="w-10 h-10 rounded-full object-cover ring-2 ring-surface-container" data-alt="Close up portrait of a professional woman with a friendly smile, soft natural lighting in a modern office environment" src="https://lh3.googleusercontent.com/aida-public/AB6AXuC37cr394gZOBaEuQMBqWvUcqBKwzdNwrX_lrViHkz5Bfs91LuEHi6WrD6piyXwpDOCd2GiINxOXVH7d6rcQm1_51rsJHdrCGUzQcxp3bYGS266aXV8C2htDnasvOcufNv_9BVDgsTD6yDMzTYSQhEvLzRW0F30ZDmnHcnt8oBoUaRF58s6EpY3Qq5bHML07wjXiXV0wa3ARW7FFJANn2eWjKauQXeFMEHJOL1SK2E7U5aTodLiRc1NkaJ8ClPB1ZR7fqChxld-A_zg"/>
+</div>
+</nav>
+</header>
+<main class="max-w-[1440px] mx-auto px-8 py-12 space-y-12">
+<!-- Welcome Banner -->
+<section class="flex flex-col gap-6">
+    <div id="commission-alert" class="w-full md:w-fit flex items-center justify-between gap-6 p-4 bg-secondary-fixed text-on-secondary-fixed-variant rounded-full border border-secondary/20 shadow-sm transition-all duration-300 z-10 animate-pulse">
+        <div class="flex items-center gap-3">
+            <div class="w-8 h-8 rounded-full bg-secondary text-on-secondary flex items-center justify-center shrink-0">
+                <span class="material-symbols-outlined text-[18px]" style="font-variation-settings: 'FILL' 1;">payments</span>
+            </div>
+            <div>
+                <p class="font-bold font-headline text-sm leading-none">La commission est déclenchée ! 🚀</p>
+                <p class="text-[11px] opacity-80 mt-1">Merci pour votre confiance, les 180 € ont été ajoutés à votre historique.</p>
+            </div>
+        </div>
+        <button onclick="document.getElementById('commission-alert').remove()" class="p-1 hover:bg-secondary/10 rounded-full transition-colors mr-2">
+            <span class="material-symbols-outlined text-lg block">close</span>
+        </button>
+    </div>
+
+    <div class="flex flex-col md:flex-row justify-between items-end md:items-center gap-6">
+        <div>
+            <h1 class="text-5xl font-extrabold tracking-tight mb-2">Bonjour Sophie 👋</h1>
+            <p class="text-on-surface-variant font-medium text-lg">TechFlow SAS • <span class="text-secondary font-bold">2 annonces actives</span> actuellement.</p>
+        </div>
+        <button class="bg-primary hover:bg-primary-container text-on-primary px-8 py-4 rounded-full font-bold transition-all transform active:scale-95 shadow-xl shadow-primary/10">
+            Publier une annonce
+        </button>
+    </div>
+</section>
+<!-- Stats Cards Bento Grid -->
+<section class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6">
+<div class="bg-white p-8 rounded-lg space-y-4">
+<span class="material-symbols-outlined text-primary text-3xl">campaign</span>
+<div>
+<p class="text-sm font-bold text-on-surface-variant uppercase tracking-widest">Annonces</p>
+<p class="text-4xl font-extrabold">4</p>
+</div>
+</div>
+<div class="bg-secondary-fixed p-8 rounded-lg space-y-4">
+<span class="material-symbols-outlined text-on-secondary-fixed-variant text-3xl">hub</span>
+<div>
+<p class="text-sm font-bold text-on-secondary-fixed-variant uppercase tracking-widest">Leads reçus</p>
+<p class="text-4xl font-extrabold">18</p>
+</div>
+</div>
+<div class="bg-tertiary-fixed p-8 rounded-lg space-y-4">
+<span class="material-symbols-outlined text-on-tertiary-fixed-variant text-3xl">pending_actions</span>
+<div>
+<p class="text-sm font-bold text-on-tertiary-fixed-variant uppercase tracking-widest">En cours</p>
+<p class="text-4xl font-extrabold">6</p>
+</div>
+</div>
+<div class="bg-primary-container p-8 rounded-lg space-y-4 text-white">
+<span class="material-symbols-outlined text-white text-3xl">task_alt</span>
+<div>
+<p class="text-sm font-bold text-white/70 uppercase tracking-widest">Signés</p>
+<p class="text-4xl font-extrabold">3</p>
+</div>
+</div>
+</section>
+<!-- Two Column Layout: Urgent & My Ads -->
+<div class="grid grid-cols-1 lg:grid-cols-3 gap-8">
+<!-- Urgent Leads -->
+<section class="lg:col-span-1 space-y-6">
+<div class="flex items-center justify-between">
+<h2 class="text-2xl font-bold tracking-tight">À traiter rapidement</h2>
+<span class="bg-error-container text-on-error-container text-xs font-black px-3 py-1 rounded-full">URGENT</span>
+</div>
+<div class="space-y-4">
+<!-- Urgent Item -->
+<div class="bg-surface-container-low p-6 rounded-lg flex items-center gap-4 group hover:bg-white transition-all cursor-pointer">
+<div class="w-12 h-12 rounded-full bg-error-container flex items-center justify-center text-on-error-container font-bold">JM</div>
+<div class="flex-1">
+<p class="font-bold">Jean-Pierre M.</p>
+<p class="text-sm text-on-surface-variant">Attente depuis 3 jours</p>
+</div>
+<span class="material-symbols-outlined text-error">priority_high</span>
+</div>
+<!-- Urgent Item -->
+<div class="bg-surface-container-low p-6 rounded-lg flex items-center gap-4 group hover:bg-white transition-all cursor-pointer border-l-4 border-error">
+<div class="w-12 h-12 rounded-full bg-error-container flex items-center justify-center text-on-error-container font-bold">ML</div>
+<div class="flex-1">
+<p class="font-bold">Marie L.</p>
+<p class="text-sm text-on-surface-variant">Attente depuis 5 jours</p>
+</div>
+<span class="material-symbols-outlined text-error">history</span>
+</div>
+</div>
+</section>
+<!-- My Ads -->
+<section class="lg:col-span-2 space-y-6">
+<div class="flex items-center justify-between">
+<h2 class="text-2xl font-bold tracking-tight">Mes annonces</h2>
+<button class="text-primary text-sm font-bold hover:underline">Voir tout</button>
+</div>
+<div class="grid grid-cols-1 sm:grid-cols-3 gap-6">
+<!-- Ad Card -->
+<a href="detailannonce.html" class="bg-white rounded-lg overflow-hidden group block hover:shadow-xl hover:-translate-y-1 transition-all duration-300 editorial-shadow">
+    <div class="h-32 bg-surface-container-highest relative overflow-hidden">
+        <img alt="Shopify E-commerce" class="w-full h-full object-cover opacity-80 group-hover:scale-110 transition-transform duration-500" src="https://lh3.googleusercontent.com/aida-public/AB6AXuCr7FsIZTsZIEGmHi2EB3eLV6te8fNPPLYejCv_JpDA2JiWI-g3FWlcInmJy8uwwIjgpyAT0AwOqcC40DMuROlkw6g-OHQTRhvmfWN2t3SlesN97RAyaRayIe82AmmvOvALF3Wd1QYV6klyzN9onF6Zg6H8PKdDK7lIVFIJA73_5o3z324UXksGQq2r9HUcZwF_tMfJqGtcScE3Nc1dq3NFzJJjUCOFpklEooBYtckdMf21ATqae6qg1ADlJKoe8bLPr5gd-k-M1B6-"/>
+        <div class="absolute top-3 left-3">
+            <span class="bg-secondary-fixed text-on-secondary-fixed-variant text-[10px] font-black px-2 py-1 rounded-full uppercase tracking-tighter">Active</span>
+        </div>
+    </div>
+    <div class="p-5">
+        <h3 class="font-bold text-sm mb-1 group-hover:text-primary transition-colors">Refonte Shopify</h3>
+        <p class="text-xs text-on-surface-variant">1 Leads reçus</p>
+    </div>
+</a>
+<!-- Ad Card -->
+<div class="bg-white rounded-lg overflow-hidden group">
+<div class="h-32 bg-surface-container-highest relative">
+<img alt="HR Tool" class="w-full h-full object-cover opacity-80 group-hover:scale-110 transition-transform duration-500" data-alt="Group of diverse professionals collaborating in a bright modern office with clean aesthetic and natural light" src="https://lh3.googleusercontent.com/aida-public/AB6AXuAkJqWVwFjFdBA-gqzWI6UOSLeCs2vdaWkqxjR_hbgcJKq4twNUxljppptdZPpHKVYJtWqS8JenGChPWs06_UEGsNQfC-l9S6Fg4NrtQAHMhLm7wN9mHdOvWXk4mSNEfX-xBsopPNsBCv2ySzcTHicD65oLSx_XyBp_-zYXdYm0poxZoHWI6cXHWvyOBMYTfsCioCG_CJHoyAOeO7ZMiIc5xgbRz0qoroU64GK68fvAHP9ELj235arOUK8DTmL-CiAPOjS6tKnpFuR3"/>
+<div class="absolute top-3 left-3">
+<span class="bg-secondary-fixed text-on-secondary-fixed-variant text-[10px] font-black px-2 py-1 rounded-full uppercase tracking-tighter">Active</span>
+</div>
+</div>
+<div class="p-5">
+<h3 class="font-bold text-sm mb-1">Outil RH Interne</h3>
+<p class="text-xs text-on-surface-variant">5 Leads reçus</p>
+</div>
+</div>
+<!-- Ad Card -->
+<div class="bg-white rounded-lg overflow-hidden group grayscale opacity-60">
+<div class="h-32 bg-surface-container-highest relative">
+<img alt="iOS App" class="w-full h-full object-cover opacity-80" data-alt="Minimalist photography of a smartphone held in a hand against a clean studio background with soft lighting" src="https://lh3.googleusercontent.com/aida-public/AB6AXuDVVnexvBAnnbADUpXfDxJB_iRDjR7LRw3ek-plld-47LCsSHZCDm4jmHpnSEk9TMZrSzW_0nHc9Yz80GzWOXoLBohaKfU896RYSheg2gugYYKaGog5ZQrRtERONFmCKx0Mn3hF8CJW7D7FAOCFxIK9vSLEYe7lKEb3E6-sivPya590copBaTXaVbjO4C-xlRrMoziuybSWiXCt7vEP6AUGyPHbJz93MJe7Jq2JvykiHGa3ALDxP9CHJp-qdfsVpvJS8jwXPi00STIn"/>
+<div class="absolute top-3 left-3">
+<span class="bg-surface-container-highest text-on-surface-variant text-[10px] font-black px-2 py-1 rounded-full uppercase tracking-tighter">Clôturée</span>
+</div>
+</div>
+<div class="p-5">
+<h3 class="font-bold text-sm mb-1 text-on-surface-variant">App iOS Fitness</h3>
+<p class="text-xs text-on-surface-variant">Terminée le 12/05</p>
+</div>
+</div>
+</div>
+</section>
+</div>
+<!-- Pipeline Kanban -->
+<section class="space-y-6">
+<h2 class="text-2xl font-bold tracking-tight">Pipeline Leads</h2>
+<div class="grid grid-cols-1 md:grid-cols-3 gap-6">
+<!-- Column: Nouveau -->
+<div class="bg-surface-container-low p-6 rounded-lg space-y-4">
+<div class="flex items-center justify-between mb-2">
+<p class="text-xs font-black uppercase tracking-widest text-on-surface-variant">Nouveau (2)</p>
+<span class="material-symbols-outlined text-sm text-outline">more_horiz</span>
+</div>
+<div class="bg-white p-4 rounded shadow-sm border-l-4 border-secondary">
+<p class="font-bold text-sm">Lucas Berton</p>
+<p class="text-[10px] text-on-surface-variant">Refonte Shopify • Il y a 2h</p>
+</div>
+<div class="bg-white p-4 rounded shadow-sm">
+<p class="font-bold text-sm">Sarah Weber</p>
+<p class="text-[10px] text-on-surface-variant">App iOS Fitness • Hier</p>
+</div>
+</div>
+<!-- Column: Contacté -->
+<div class="bg-surface-container-low p-6 rounded-lg space-y-4">
+<div class="flex items-center justify-between mb-2">
+<p class="text-xs font-black uppercase tracking-widest text-on-surface-variant">Contacté (3)</p>
+<span class="material-symbols-outlined text-sm text-outline">more_horiz</span>
+</div>
+<div class="bg-white p-4 rounded shadow-sm border-l-4 border-tertiary-fixed-dim">
+<p class="font-bold text-sm">Marc D. Studio</p>
+<p class="text-[10px] text-on-surface-variant">Outil RH • 15/05</p>
+</div>
+</div>
+<!-- Column: En négociation -->
+<div class="bg-surface-container-low p-6 rounded-lg space-y-4">
+<div class="flex items-center justify-between mb-2">
+<p class="text-xs font-black uppercase tracking-widest text-on-surface-variant">Négociation (1)</p>
+<span class="material-symbols-outlined text-sm text-outline">more_horiz</span>
+</div>
+<div class="bg-white p-4 rounded shadow-sm border-l-4 border-primary">
+<p class="font-bold text-sm">Aurore &amp; Co</p>
+<p class="text-[10px] text-on-surface-variant">Refonte Shopify • Finalisation</p>
+</div>
+</div>
+</div>
+</section>
+<!-- Commissions & Premium Banner -->
+<div class="grid grid-cols-1 xl:grid-cols-4 gap-8">
+<!-- Commissions Table -->
+<section class="xl:col-span-3 space-y-6">
+<h2 class="text-2xl font-bold tracking-tight">Commissions versées</h2>
+<div class="bg-white rounded-lg overflow-hidden">
+<table class="w-full text-left border-collapse">
+<thead>
+    
+<tr class="bg-surface-container-low">
+<th class="px-6 py-4 text-xs font-black uppercase tracking-widest text-on-surface-variant">Date</th>
+<th class="px-6 py-4 text-xs font-black uppercase tracking-widest text-on-surface-variant">Projet</th>
+<th class="px-6 py-4 text-xs font-black uppercase tracking-widest text-on-surface-variant">Rapporteur</th>
+<th class="px-6 py-4 text-xs font-black uppercase tracking-widest text-on-surface-variant">Montant</th>
+<th class="px-6 py-4 text-xs font-black uppercase tracking-widest text-on-surface-variant">Statut</th>
+</tr>
+</thead>
+<tbody class="divide-y divide-surface-container">
+    <tr class="hover:bg-surface-container-lowest transition-colors bg-secondary-fixed/10">
+    <td class="px-6 py-4 text-sm font-medium">28/05/2024</td>
+    <td class="px-6 py-4 text-sm font-bold">Refonte Shopify</td>
+    <td class="px-6 py-4 text-sm">Sophie (Auto)</td>
+    <td class="px-6 py-4 text-sm font-extrabold text-secondary">180 €</td>
+    <td class="px-6 py-4">
+        <span class="bg-secondary-fixed text-on-secondary-fixed-variant text-[10px] font-black px-3 py-1 rounded-full uppercase">Payé</span>
+    </td>
+</tr>
+<tr class="hover:bg-surface-container-lowest transition-colors">
+<td class="px-6 py-4 text-sm font-medium">10/05/2024</td>
+<td class="px-6 py-4 text-sm font-bold">Refonte Shopify</td>
+<td class="px-6 py-4 text-sm">Julien V.</td>
+<td class="px-6 py-4 text-sm font-extrabold text-secondary">850 €</td>
+<td class="px-6 py-4">
+<span class="bg-secondary-fixed text-on-secondary-fixed-variant text-[10px] font-black px-3 py-1 rounded-full uppercase">Payé</span>
+</td>
+</tr>
+<tr class="hover:bg-surface-container-lowest transition-colors">
+<td class="px-6 py-4 text-sm font-medium">02/05/2024</td>
+<td class="px-6 py-4 text-sm font-bold">Audit SEO</td>
+<td class="px-6 py-4 text-sm">Carla M.</td>
+<td class="px-6 py-4 text-sm font-extrabold text-secondary">1200 €</td>
+<td class="px-6 py-4">
+<span class="bg-secondary-fixed text-on-secondary-fixed-variant text-[10px] font-black px-3 py-1 rounded-full uppercase">Payé</span>
+</td>
+</tr>
+</tbody>
+</table>
+</div>
+</section>
+<!-- Premium Promo -->
+<section class="xl:col-span-1">
+<div class="bg-primary text-white p-8 rounded-lg h-full flex flex-col justify-between relative overflow-hidden group">
+<!-- Decor -->
+<div class="absolute -top-10 -right-10 w-40 h-40 bg-white/10 rounded-full blur-3xl group-hover:scale-150 transition-transform duration-700"></div>
+<div class="relative space-y-6">
+<div class="w-12 h-12 bg-tertiary-fixed rounded-full flex items-center justify-center text-primary">
+<span class="material-symbols-outlined font-black">bolt</span>
+</div>
+<h2 class="text-2xl font-extrabold tracking-tight">Passez à Propulse Premium</h2>
+<ul class="space-y-4">
+<li class="flex items-start gap-3 text-sm text-white/80">
+<span class="material-symbols-outlined text-secondary-fixed text-lg">check_circle</span>
+                                Leads prioritaires &amp; exclusifs
+                            </li>
+<li class="flex items-start gap-3 text-sm text-white/80">
+<span class="material-symbols-outlined text-secondary-fixed text-lg">check_circle</span>
+                                Commissions réduites de 15%
+                            </li>
+<li class="flex items-start gap-3 text-sm text-white/80">
+<span class="material-symbols-outlined text-secondary-fixed text-lg">check_circle</span>
+                                Support dédié 24/7
+                            </li>
+</ul>
+</div>
+<button class="w-full bg-white text-primary py-4 rounded-full font-bold mt-8 hover:bg-secondary-fixed transition-colors active:scale-95">
+                        Découvrir les avantages
+                    </button>
+</div>
+</section>
+</div>
+</main>
+<!-- Footer -->
+<footer class="bg-neutral-50 dark:bg-[#0a0a0a] w-full py-8 px-8 flex justify-between items-center border-t border-neutral-100 dark:border-neutral-800 mt-20">
+<div class="font-['Manrope'] text-xs text-neutral-500">
+            © 2024 Entreprise Elite. Tous droits réservés.
+        </div>
+<div class="flex gap-6">
+<a class="font-['Manrope'] text-xs text-neutral-500 hover:underline" href="#">Confidentialité</a>
+<a class="font-['Manrope'] text-xs text-neutral-500 hover:underline" href="#">Conditions</a>
+<a class="font-['Manrope'] text-xs text-neutral-500 hover:underline" href="#">Aide</a>
+</div>
+</footer>
+</body>
+</html>

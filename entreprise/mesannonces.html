@@ -1,0 +1,395 @@
+<!DOCTYPE html>
+
+<html class="light" lang="fr"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>Propulse - Publiez votre besoin</title>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&amp;family=Manrope:wght@400;500;600;700&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<style>
+        .material-symbols-outlined {
+            font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24;
+        }
+        .glass-card {
+            background: rgba(255, 255, 255, 0.7);
+            backdrop-filter: blur(20px);
+        }
+        input:focus, textarea:focus, select:focus {
+            outline: none !important;
+            box-shadow: none !important;
+        }
+        body {
+            background-color: #FFFDF5;
+        }
+    </style>
+<script id="tailwind-config">
+        tailwind.config = {
+          darkMode: "class",
+          theme: {
+            extend: {
+              colors: {
+                "brand-blue": "#DEF2FE",
+                "brand-green": "#D4F6EC",
+                "brand-orange": "#FFE1CB",
+                "brand-purple": "#E2DBF9",
+                "brand-dark": "#141414",
+                "on-tertiary-fixed-variant": "#574333",
+                "on-surface-variant": "#444748",
+                "on-secondary-fixed": "#00201b",
+                "on-primary-fixed": "#1c1b1b",
+                "surface-tint": "#5f5e5e",
+                "on-secondary-fixed-variant": "#2e4c45",
+                "surface-container": "#f0eee6",
+                "on-error-container": "#93000a",
+                "on-secondary-container": "#4c6a63",
+                "secondary": "#46645d",
+                "tertiary-container": "#27180b",
+                "surface-variant": "#e4e3db",
+                "outline-variant": "#c4c7c7",
+                "surface-container-low": "#f5f4ec",
+                "tertiary-fixed": "#fbddc7",
+                "surface": "#fbf9f1",
+                "inverse-primary": "#c8c6c5",
+                "on-primary-container": "#858383",
+                "surface-dim": "#dcdad2",
+                "surface-container-highest": "#e4e3db",
+                "secondary-fixed": "#c8eae0",
+                "on-background": "#1b1c17",
+                "error": "#ba1a1a",
+                "background": "#FFFDF5",
+                "on-secondary": "#ffffff",
+                "inverse-surface": "#30312c",
+                "secondary-fixed-dim": "#accdc4",
+                "primary-fixed-dim": "#c8c6c5",
+                "primary": "#000000",
+                "primary-fixed": "#e5e2e1",
+                "tertiary-fixed-dim": "#dec1ac",
+                "tertiary": "#000000",
+                "on-error": "#ffffff",
+                "on-tertiary-container": "#977f6d",
+                "on-tertiary": "#ffffff",
+                "on-primary": "#ffffff",
+                "secondary-container": "#c8eae0",
+                "on-surface": "#1b1c17",
+                "surface-container-lowest": "#ffffff",
+                "error-container": "#ffdad6",
+                "surface-bright": "#fbf9f1",
+                "on-tertiary-fixed": "#27180b",
+                "surface-container-high": "#eae8e0",
+                "on-primary-fixed-variant": "#474646",
+                "primary-container": "#1c1b1b",
+                "outline": "#747878",
+                "inverse-on-surface": "#f3f1e9"
+              },
+              fontFamily: {
+                "headline": ["Plus Jakarta Sans"],
+                "body": ["Manrope"],
+                "label": ["Manrope"]
+              },
+              borderRadius: {"DEFAULT": "1rem", "lg": "2rem", "xl": "3rem", "full": "9999px"},
+            },
+          },
+        }
+      </script>
+</head>
+<body class="bg-background font-body text-on-surface">
+<!-- Header Navigation Shell -->
+<header class="bg-[#FFFDF5] dark:bg-zinc-950 flex justify-between items-center w-full px-8 py-4 max-w-full fixed top-0 z-50">
+<div class="text-2xl font-bold tracking-tighter text-[#141414] dark:text-white font-headline">Propulse</div>
+<nav class="hidden md:flex items-center space-x-8 font-['Plus_Jakarta_Sans'] tracking-tight text-sm font-semibold">
+<a class="text-[#141414] dark:text-white border-b-2 border-[#141414] dark:border-white pb-1" href="#">Mes annonces</a>
+<a class="text-zinc-500 dark:text-zinc-400 hover:text-[#141414] dark:hover:text-zinc-200 transition-colors" href="#">Mes leads</a>
+<a class="text-zinc-500 dark:text-zinc-400 hover:text-[#141414] dark:hover:text-zinc-200 transition-colors" href="#">Facturation</a>
+</nav>
+<div class="flex items-center space-x-4">
+<button class="material-symbols-outlined text-[#141414] dark:text-zinc-100 hover:opacity-80 transition-opacity">notifications</button>
+<div class="w-8 h-8 rounded-full bg-surface-container overflow-hidden">
+<img alt="User profile" data-alt="close-up portrait of a professional man in a neutral studio setting with soft lighting" src="https://lh3.googleusercontent.com/aida-public/AB6AXuAWdFV8syDzD8DJ6TOXo_rQWBOZBLdj61FMlMpq97rpUre0tS97nfTbfu5X74xolkvmQtoRi17BlQbok5zbS-KQ39cItFOGwEVgzFLinJI9kiwHTk3lGKfW3o7UkwkUDj4pak972ynxeM3v19yb1NAzjVikDIlwkKftJq79sgjsI50bxTMkzY-ww7RVAzZJEesYlOd2Z8EVni5-mu5DWyA-5k4NQKUi49spF96HBiE07Tzjpy3Bgonbga47yLmkmzATDu6pDkaVd_4K"/>
+</div>
+</div>
+</header>
+<main class="pt-28 pb-20 px-4 md:px-8 max-w-7xl mx-auto">
+<!-- Hero Header -->
+<section class="mb-12">
+<h1 class="font-headline text-4xl md:text-5xl font-extrabold tracking-tighter text-brand-dark mb-2">Publiez votre besoin</h1>
+<p class="text-on-surface-variant text-lg max-w-2xl">Décrivez votre projet en quelques minutes et trouvez le partenaire idéal pour concrétiser vos ambitions.</p>
+</section>
+<!-- Progress Tracker -->
+<div class="flex flex-col md:flex-row justify-between items-start md:items-center gap-4 mb-16 px-6 py-8 bg-surface-container rounded-lg">
+<div class="flex items-center gap-3">
+<div class="w-10 h-10 rounded-full bg-brand-dark text-on-primary flex items-center justify-center font-bold">1</div>
+<div>
+<span class="block text-xs font-bold uppercase tracking-wider text-on-surface-variant">Étape 1</span>
+<span class="font-semibold text-brand-dark">Votre projet</span>
+</div>
+</div>
+<div class="hidden md:block h-px flex-1 bg-brand-orange mx-4"></div>
+<div class="flex items-center gap-3">
+<div class="w-10 h-10 rounded-full bg-brand-orange text-on-tertiary-fixed flex items-center justify-center font-bold">2</div>
+<div>
+<span class="block text-xs font-bold uppercase tracking-wider text-on-surface-variant">Étape 2</span>
+<span class="font-semibold text-on-surface">Budget &amp; Commission</span>
+</div>
+</div>
+<div class="hidden md:block h-px flex-1 bg-brand-purple mx-4 opacity-30"></div>
+<div class="flex items-center gap-3 opacity-50">
+<div class="w-10 h-10 rounded-full bg-brand-purple text-on-surface flex items-center justify-center font-bold">3</div>
+<div>
+<span class="block text-xs font-bold uppercase tracking-wider text-on-surface-variant">Étape 3</span>
+<span class="font-semibold text-on-surface">Confirmation</span>
+</div>
+</div>
+</div>
+<div class="grid grid-cols-1 lg:grid-cols-12 gap-12">
+<!-- Form Section -->
+<div class="lg:col-span-8 space-y-16">
+<!-- STEP 1: PROJECT DETAILS -->
+<section class="space-y-10">
+<div class="flex items-center gap-4">
+<span class="material-symbols-outlined text-3xl text-brand-dark">rocket_launch</span>
+<h2 class="font-headline text-2xl font-bold">Détails de la mission</h2>
+</div>
+<div class="space-y-6">
+<label class="font-headline font-bold text-lg block">Quel type de projet souhaitez-vous lancer ?</label>
+<div class="grid grid-cols-2 md:grid-cols-4 gap-4">
+<button class="flex flex-col items-center justify-center p-6 rounded-lg bg-brand-blue border-2 border-transparent hover:border-brand-dark transition-all group">
+<span class="material-symbols-outlined text-3xl mb-3 text-on-surface-variant group-hover:text-brand-dark">language</span>
+<span class="text-sm font-semibold">Site web</span>
+</button>
+<button class="flex flex-col items-center justify-center p-6 rounded-lg bg-brand-green border-2 border-brand-dark transition-all">
+<span class="material-symbols-outlined text-3xl mb-3 text-brand-dark">phone_iphone</span>
+<span class="text-sm font-semibold">App mobile</span>
+</button>
+<button class="flex flex-col items-center justify-center p-6 rounded-lg bg-brand-orange border-2 border-transparent hover:border-brand-dark transition-all group">
+<span class="material-symbols-outlined text-3xl mb-3 text-on-surface-variant group-hover:text-brand-dark">settings_suggest</span>
+<span class="text-sm font-semibold">Outil métier</span>
+</button>
+<button class="flex flex-col items-center justify-center p-6 rounded-lg bg-brand-purple border-2 border-transparent hover:border-brand-dark transition-all group">
+<span class="material-symbols-outlined text-3xl mb-3 text-on-surface-variant group-hover:text-brand-dark">cloud_queue</span>
+<span class="text-sm font-semibold">SaaS</span>
+</button>
+<button class="flex flex-col items-center justify-center p-6 rounded-lg bg-brand-blue border-2 border-transparent hover:border-brand-dark transition-all group">
+<span class="material-symbols-outlined text-3xl mb-3 text-on-surface-variant group-hover:text-brand-dark">palette</span>
+<span class="text-sm font-semibold">Design &amp; UX</span>
+</button>
+<button class="flex flex-col items-center justify-center p-6 rounded-lg bg-brand-green border-2 border-transparent hover:border-brand-dark transition-all group">
+<span class="material-symbols-outlined text-3xl mb-3 text-on-surface-variant group-hover:text-brand-dark">analytics</span>
+<span class="text-sm font-semibold">Audit &amp; Conseil</span>
+</button>
+<button class="flex flex-col items-center justify-center p-6 rounded-lg bg-surface-container-lowest border-2 border-transparent hover:border-brand-dark transition-all group">
+<span class="material-symbols-outlined text-3xl mb-3 text-on-surface-variant group-hover:text-brand-dark">add_circle</span>
+<span class="text-sm font-semibold">Autre</span>
+</button>
+</div>
+</div>
+<div class="space-y-8">
+<div class="space-y-2">
+<label class="font-headline font-bold text-lg block">Titre de votre annonce</label>
+<input class="w-full bg-surface-container-low border-none rounded-md px-6 py-4 text-on-surface placeholder:text-outline-variant focus:ring-2 focus:ring-brand-dark/20 transition-all" placeholder="Ex : Refonte complète de notre site e-commerce Shopify" type="text"/>
+</div>
+<div class="space-y-2">
+<div class="flex justify-between items-center">
+<label class="font-headline font-bold text-lg block">Description du projet</label>
+<span class="text-xs font-semibold text-on-surface-variant uppercase tracking-widest">150 / 1000</span>
+</div>
+<textarea class="w-full bg-surface-container-low border-none rounded-md px-6 py-4 text-on-surface placeholder:text-outline-variant focus:ring-2 focus:ring-brand-dark/20 transition-all" placeholder="Détaillez vos besoins, les technologies souhaitées et les objectifs de la mission..." rows="6"></textarea>
+</div>
+<div class="grid grid-cols-1 md:grid-cols-2 gap-8">
+<div class="space-y-2">
+<label class="font-headline font-bold text-lg block">Secteur d'activité</label>
+<select class="w-full bg-surface-container-low border-none rounded-md px-6 py-4 text-on-surface appearance-none focus:ring-2 focus:ring-brand-dark/20 transition-all">
+<option>Tech &amp; Software</option>
+<option>Retail &amp; E-commerce</option>
+<option>Finance &amp; Fintech</option>
+<option>Santé &amp; Bien-être</option>
+<option>Éducation</option>
+</select>
+</div>
+<div class="space-y-2">
+<label class="font-headline font-bold text-lg block">Localisation (Ville / CP)</label>
+<div class="relative">
+<input class="w-full bg-surface-container-low border-none rounded-md px-6 py-4 text-on-surface placeholder:text-outline-variant focus:ring-2 focus:ring-brand-dark/20 transition-all" placeholder="Paris, 75000" type="text"/>
+<div class="mt-4 flex items-center gap-3">
+<button class="w-10 h-6 bg-brand-green rounded-full relative transition-colors">
+<div class="absolute left-1 top-1 w-4 h-4 bg-brand-dark rounded-full transform translate-x-4 transition-transform"></div>
+</button>
+<span class="text-sm font-semibold">Télétravail accepté</span>
+</div>
+</div>
+</div>
+</div>
+<div class="space-y-4">
+<label class="font-headline font-bold text-lg block">Délai souhaité</label>
+<div class="flex flex-wrap gap-3">
+<button class="px-6 py-3 rounded-full bg-brand-orange/40 font-semibold border-2 border-brand-orange text-brand-dark">Urgent</button>
+<button class="px-6 py-3 rounded-full bg-surface-container-lowest font-semibold border-2 border-transparent hover:border-outline-variant transition-all">Dans le mois</button>
+<button class="px-6 py-3 rounded-full bg-surface-container-lowest font-semibold border-2 border-transparent hover:border-outline-variant transition-all">1-3 mois</button>
+<button class="px-6 py-3 rounded-full bg-surface-container-lowest font-semibold border-2 border-transparent hover:border-outline-variant transition-all">Flexible</button>
+</div>
+</div>
+</div>
+</section>
+<!-- STEP 2: BUDGET & COMMISSION -->
+<section class="space-y-10 pt-16 border-t border-surface-container-high">
+<div class="flex items-center gap-4">
+<span class="material-symbols-outlined text-3xl text-brand-dark">payments</span>
+<h2 class="font-headline text-2xl font-bold">Budget &amp; Commission</h2>
+</div>
+<div class="space-y-8">
+<div class="space-y-6">
+<div class="flex justify-between items-center">
+<label class="font-headline font-bold text-lg block">Budget estimé</label>
+<div class="flex items-center gap-3">
+<button class="w-10 h-6 bg-surface-container-high rounded-full relative transition-colors">
+<div class="absolute left-1 top-1 w-4 h-4 bg-outline rounded-full transition-transform"></div>
+</button>
+<span class="text-sm font-semibold">Garder le budget privé</span>
+</div>
+</div>
+<div class="relative pt-4 px-2">
+<input class="w-full h-2 bg-surface-container-high rounded-lg appearance-none cursor-pointer accent-brand-dark" max="50000" min="1000" step="1000" type="range" value="15000"/>
+<div class="flex justify-between text-xs font-bold text-outline-variant mt-4 uppercase tracking-tighter">
+<span>1 000 €</span>
+<span>50 000 €+</span>
+</div>
+</div>
+<div class="grid grid-cols-2 gap-4">
+<div class="bg-surface-container-low p-4 rounded-md">
+<span class="text-xs font-bold uppercase tracking-widest text-on-surface-variant block mb-1">Minimum</span>
+<input class="bg-transparent border-none p-0 font-bold text-lg w-full focus:ring-0" type="text" value="12 000 €"/>
+</div>
+<div class="bg-surface-container-low p-4 rounded-md">
+<span class="text-xs font-bold uppercase tracking-widest text-on-surface-variant block mb-1">Maximum</span>
+<input class="bg-transparent border-none p-0 font-bold text-lg w-full focus:ring-0" type="text" value="18 000 €"/>
+</div>
+</div>
+</div>
+<div class="space-y-6">
+<label class="font-headline font-bold text-lg block">Commission de mise en relation</label>
+<div class="grid grid-cols-1 md:grid-cols-2 gap-4">
+<label class="relative flex flex-col p-6 rounded-lg bg-brand-green border-2 border-brand-dark cursor-pointer">
+<input checked="" class="hidden" name="commission" type="radio"/>
+<span class="font-bold text-lg mb-1">Recommandée : 180€</span>
+<span class="text-sm text-on-secondary-container">Forfait fixe, idéal pour les projets standards.</span>
+</label>
+<label class="relative flex flex-col p-6 rounded-lg bg-surface-container-lowest border-2 border-transparent hover:border-outline-variant cursor-pointer transition-all">
+<input class="hidden" name="commission" type="radio"/>
+<span class="font-bold text-lg mb-1">Pourcentage : 1%</span>
+<span class="text-sm text-on-surface-variant">Adapté aux missions à gros volumes.</span>
+</label>
+</div>
+<div class="bg-brand-green p-6 rounded-lg flex gap-4">
+<span class="material-symbols-outlined text-brand-dark">info</span>
+<p class="text-sm font-medium text-brand-dark leading-relaxed">
+                    La commission Propulse est un gage de qualité. Elle n'est facturée que si vous trouvez votre prestataire via notre plateforme.
+                </p>
+</div>
+</div>
+</div>
+</section>
+<!-- STEP 3: CONFIRMATION -->
+<section class="space-y-10 pt-16 border-t border-surface-container-high">
+<div class="flex items-center gap-4">
+<span class="material-symbols-outlined text-3xl text-brand-dark">verified</span>
+<h2 class="font-headline text-2xl font-bold">Validation &amp; Visibilité</h2>
+</div>
+<div class="bg-surface-container-lowest p-8 rounded-lg space-y-8 border border-surface-container-high">
+<h3 class="font-headline font-bold text-xl">Options de visibilité</h3>
+<div class="space-y-4">
+<div class="flex items-start gap-4 p-4 rounded-lg bg-surface-container-low">
+<input checked="" class="mt-1 text-brand-dark focus:ring-brand-dark" name="visibility" type="radio"/>
+<div>
+<span class="font-bold block">Standard (Gratuit)</span>
+<span class="text-sm text-on-surface-variant">Publication classique dans le flux public sous 24h.</span>
+</div>
+</div>
+<div class="flex items-start gap-4 p-4 rounded-lg border-2 border-brand-purple bg-brand-purple/10">
+<input class="mt-1 text-brand-dark focus:ring-brand-dark" name="visibility" type="radio"/>
+<div>
+<span class="font-bold flex items-center gap-2">
+                        Premium Immediate 
+                        <span class="bg-brand-orange text-on-tertiary-fixed text-[10px] font-extrabold uppercase px-2 py-0.5 rounded-full">Boost</span>
+</span>
+<span class="text-sm text-on-surface-variant">Votre annonce en tête de liste et notification prioritaire aux top experts. (49€ HT)</span>
+</div>
+</div>
+</div>
+<div class="pt-6 border-t border-surface-container-high space-y-6">
+<div class="flex items-start gap-3">
+<input class="mt-1 rounded border-outline-variant text-brand-dark focus:ring-brand-dark" type="checkbox"/>
+<span class="text-sm text-on-surface-variant leading-snug">J'accepte les Conditions Générales d'Utilisation et je confirme que les informations fournies sont exactes.</span>
+</div>
+<a href="annoncepublier.html" class="block w-full">
+    <button class="w-full bg-brand-dark hover:opacity-90 text-white font-headline font-extrabold py-5 rounded-full text-xl transition-all scale-95 hover:scale-100 duration-200">
+        Publier mon annonce
+    </button>
+</a>
+<div class="flex items-center justify-center gap-2 text-on-surface-variant text-sm font-semibold">
+<span class="material-symbols-outlined text-sm">schedule</span>
+                Votre annonce sera vérifiée manuellement sous 24h.
+            </div>
+</div>
+</div>
+</section>
+</div>
+<!-- Summary Sidebar -->
+<aside class="lg:col-span-4">
+<div class="sticky top-32 space-y-6">
+<!-- Cost Summary Card -->
+<div class="bg-brand-blue p-8 rounded-lg shadow-sm">
+<h3 class="font-headline font-extrabold text-xl mb-6">Récapitulatif</h3>
+<div class="space-y-4 text-sm mb-8">
+<div class="flex justify-between items-center pb-4 border-b border-brand-dark/10">
+<span class="font-medium text-on-surface-variant">Projet</span>
+<span class="font-bold">App mobile</span>
+</div>
+<div class="flex justify-between items-center pb-4 border-b border-brand-dark/10">
+<span class="font-medium text-on-surface-variant">Budget estimé</span>
+<span class="font-bold">12k - 18k €</span>
+</div>
+<div class="flex justify-between items-center pb-4 border-b border-brand-dark/10">
+<span class="font-medium text-on-surface-variant">Commission</span>
+<span class="font-bold">180 €</span>
+</div>
+<div class="flex justify-between items-center">
+<span class="font-medium text-on-surface-variant">Frais Propulse</span>
+<span class="font-bold">0 €</span>
+</div>
+</div>
+<div class="bg-surface-container-lowest p-6 rounded-lg">
+<div class="flex justify-between items-end">
+<div>
+<span class="text-[10px] font-extrabold uppercase tracking-widest text-on-surface-variant block mb-1">Total estimé</span>
+<span class="font-headline font-extrabold text-2xl">18 180 €</span>
+</div>
+<span class="text-[10px] font-bold text-on-surface-variant mb-1">HT</span>
+</div>
+</div>
+</div>
+<!-- Editorial Advice Card -->
+<div class="relative rounded-lg overflow-hidden h-64 flex flex-col justify-end p-6">
+<img alt="Team meeting" class="absolute inset-0 w-full h-full object-cover" data-alt="high-end modern office interior with professional team discussing a project around a wooden table, warm sunlight filtering through large windows" src="https://lh3.googleusercontent.com/aida-public/AB6AXuA3dR5Ad23lOXjD0CBZfJs4J9lejWQBpl_3-t1C1Qcd4Hez9wwalo6sxafCotBNgu_DC9Br9QusfAlsFaQPbBCHh0UQarvQ5lTw8yIhDBmHVRWBOI1NS5kaoJna9smCRZApkMC8m1RBoyHAP4crGRhmDlbFXOeorgwgwHuypYRHjwwjyE9t-Z1HZFajB5qaVMoYOTK4wQGAgjCrx--FYc0xioUA4Bmpzt7VmKs_e5s10zz34r30z1H5V8FMnK2wQ-v7J0yqHCOjlC_3"/>
+<div class="absolute inset-0 bg-gradient-to-t from-brand-dark/90 via-brand-dark/40 to-transparent"></div>
+<div class="relative z-10">
+<span class="text-brand-orange text-[10px] font-extrabold uppercase tracking-widest mb-2 block">Conseil d'expert</span>
+<h4 class="text-on-primary font-bold leading-tight">Une description précise attire 3x plus d'experts qualifiés.</h4>
+</div>
+</div>
+</div>
+</aside>
+</div>
+</main>
+<!-- Footer -->
+<footer class="bg-[#FFFDF5] dark:bg-zinc-950 border-t border-zinc-200/20 dark:border-zinc-800/20 py-8 px-8 w-full flex flex-col md:flex-row justify-between items-center">
+<div class="font-['Manrope'] text-xs text-zinc-500 dark:text-zinc-400 mb-4 md:mb-0">
+        © 2024 Propulse Enterprise. Tous droits réservés.
+    </div>
+<div class="flex gap-8">
+<a class="font-['Manrope'] text-xs text-zinc-500 dark:text-zinc-400 hover:text-brand-dark dark:hover:text-white hover:underline" href="#">Support</a>
+<a class="font-['Manrope'] text-xs text-zinc-500 dark:text-zinc-400 hover:text-brand-dark dark:hover:text-white hover:underline" href="#">Conditions</a>
+<a class="font-['Manrope'] text-xs text-zinc-500 dark:text-zinc-400 hover:text-brand-dark dark:hover:text-white hover:underline" href="#">Confidentialité</a>
+</div>
+</footer>
+</body>
+</html>

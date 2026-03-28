@@ -1,0 +1,555 @@
+<!DOCTYPE html><html class="light" lang="fr"><head>
+<meta charset="utf-8">
+<meta content="width=device-width, initial-scale=1.0" name="viewport">
+<title>Propulse — La recommandation, enfin cadrée.</title>
+<!-- Fonts -->
+<link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&amp;family=Manrope:wght@400;500;600;700&amp;family=Poppins:wght@400;500;600;700&amp;display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet">
+<!-- Tailwind -->
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<script id="tailwind-config">
+      tailwind.config = {
+        darkMode: "class",
+        theme: {
+          extend: {
+            colors: {
+              "primary-fixed-dim": "#c8c6c5",
+              "on-error": "#ffffff",
+              "inverse-surface": "#30312c",
+              "on-secondary-fixed-variant": "#2e4c45",
+              "primary": "#000000",
+              "surface-container-lowest": "#ffffff",
+              "primary-fixed": "#e5e2e1",
+              "error": "#ba1a1a",
+              "on-primary": "#ffffff",
+              "secondary-container": "#c8eae0",
+              "on-background": "#1b1c17",
+              "secondary-fixed": "#c8eae0",
+              "surface-container-low": "#f5f4ec",
+              "surface-variant": "#e4e3db",
+              "on-tertiary": "#ffffff",
+              "secondary-fixed-dim": "#accdc4",
+              "on-primary-fixed": "#1c1b1b",
+              "tertiary": "#000000",
+              "on-surface": "#1b1c17",
+              "secondary": "#46645d",
+              "surface-container-high": "#eae8e0",
+              "inverse-on-surface": "#f3f1e9",
+              "surface": "#fbf9f1",
+              "surface-dim": "#dcdad2",
+              "on-tertiary-fixed": "#27180b",
+              "tertiary-container": "#27180b",
+              "on-tertiary-container": "#977f6d",
+              "on-tertiary-fixed-variant": "#574333",
+              "primary-container": "#1c1b1b",
+              "inverse-primary": "#c8c6c5",
+              "tertiary-fixed": "#fbddc7",
+              "surface-bright": "#fbf9f1",
+              "outline-variant": "#c4c7c7",
+              "on-primary-fixed-variant": "#474646",
+              "tertiary-fixed-dim": "#dec1ac",
+              "surface-container-highest": "#e4e3db",
+              "on-secondary": "#ffffff",
+              "surface-container": "#f0eee6",
+              "on-secondary-fixed": "#00201b",
+              "background": "#fbf9f1",
+              "outline": "#747878",
+              "on-surface-variant": "#444748",
+              "on-primary-container": "#858383",
+              "error-container": "#ffdad6",
+              "on-secondary-container": "#4c6a63",
+              "surface-tint": "#5f5e5e",
+              "on-error-container": "#93000a"
+            },
+            fontFamily: {
+              "headline": ["Plus Jakarta Sans"],
+              "body": ["Manrope"],
+              "label": ["Manrope"],
+              "poppins": ["Poppins", "sans-serif"]
+            },
+            borderRadius: {"DEFAULT": "1rem", "lg": "2rem", "xl": "3rem", "full": "9999px"},
+          },
+        },
+      }
+    </script>
+<style>
+        .material-symbols-outlined {
+            font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24;
+            vertical-align: middle;
+        }
+        .glass-header {
+            background: rgba(251, 249, 241, 0.7);
+            backdrop-filter: blur(20px);
+        }
+        .editorial-shadow {
+            box-shadow: 0px 24px 48px rgba(27, 28, 23, 0.06);
+        }
+        .profile-card-shadow {
+            box-shadow: 0px 10px 30px rgba(0, 0, 0, 0.04);
+        }
+    </style>
+</head>
+<body class="bg-surface font-body text-on-surface antialiased">
+<!-- TopNavBar -->
+<nav class="fixed top-0 w-full z-50 glass-header no-border transition-colors duration-300">
+<div class="flex justify-between items-center w-full px-8 py-6 max-w-[1440px] mx-auto">
+<a href="index.html" class="text-2xl font-extrabold tracking-tighter text-primary font-headline block w-fit">
+    Propulse
+</a>
+<div class="hidden md:flex items-center gap-10">
+<a class="text-primary font-headline font-bold tracking-tight text-primary/60 hover:text-primary transition-opacity" href="#" style="">Comment ça marche</a>
+<a class="text-primary font-headline font-bold tracking-tight text-primary/60 hover:text-primary transition-opacity" href="rapporteur.html" style="">Rapporteurs</a>
+<a class="text-primary font-headline font-bold tracking-tight text-primary/60 hover:text-primary transition-opacity" href="#" style="">Entreprises</a>
+<a class="text-primary font-headline font-bold tracking-tight text-primary/60 hover:text-primary transition-opacity" href="tarifs.html" style="">Tarifs</a>
+<a class="text-primary font-headline font-bold tracking-tight text-primary/60 hover:text-primary transition-opacity" href="#" style="">À propos</a>
+</div>
+<div class="flex items-center gap-4">
+<button class="px-6 py-2.5 rounded-full font-headline font-bold text-sm text-primary hover:opacity-80 transition-all active:scale-95" style="">Se connecter</button>
+<a href="inscription.html" class="inline-block">
+    <button class="px-6 py-2.5 rounded-full font-headline font-bold text-sm bg-primary text-on-primary hover:opacity-90 transition-all active:scale-95">
+        S'inscrire gratuitement
+    </button>
+</a>
+</div>
+</div>
+</nav>
+<main class="pt-24">
+<!-- HERO SECTION - UPDATED LAYOUT -->
+<section class="px-8 py-20 md:py-24 max-w-[1440px] mx-auto bg-[#FFFDF5]">
+<div class="flex flex-col gap-12">
+<!-- Top row: Headline + Image side by side -->
+<div class="flex flex-col lg:flex-row items-center gap-16">
+<div class="flex-1 max-w-2xl">
+<h1 class="font-headline text-5xl md:text-7xl font-extrabold tracking-tight leading-[1.1] mb-8 text-primary" style="">
+                    Recommandez, suivez, gagnez
+                </h1>
+<p class="font-body text-lg md:text-xl text-on-surface-variant leading-relaxed" style="">
+                    La première plateforme qui transforme votre réseau en source de revenus — avec un suivi transparent, des commissions claires, et zéro ambiguïté.
+                </p>
+</div>
+<div class="flex-1 w-full lg:w-1/2">
+<div class="relative p-6 bg-surface-container-lowest editorial-shadow rounded-lg">
+<img alt="Professional meeting environment" class="w-full h-auto aspect-[4/3] object-cover rounded-lg" src="https://lh3.googleusercontent.com/aida-public/AB6AXuA6TIRe3VYy7cgwEKDAs3lvAKknHWeT-tPgf-e91lPJijzScQYx2hKIY6fGleRzhq0dwgIx2YSEUfl8Nz8lYBPLaHLUiyjzRuCcv0J2HiABletT6F9LtTQA4jeh-tOcC1v0sUlg8626WFc6nj3q5niQrH_HPulmGflYwte4gw4E6jlX-2kBSZVJXPR_nnKw8omrTVKw-F0KN-6XLdFW6ilFDizY5F0uJ974IJLCXykrHi5AV5v2PYwM2MQSanGHQFUXo7bJqoejBWQt" style="">
+<div class="absolute -bottom-4 -left-4 bg-surface p-4 rounded-xl editorial-shadow border border-surface-variant/20 hidden md:block">
+<div class="flex items-center gap-3">
+<div class="w-10 h-10 rounded-full bg-secondary-container flex items-center justify-center">
+<span class="material-symbols-outlined text-on-secondary-container" data-icon="handshake" style="">handshake</span>
+</div>
+<div>
+<div class="text-[10px] font-bold text-outline-variant uppercase" style="">Dernier succès</div>
+<div class="text-sm font-bold text-primary" style="">Referral: Fintech Growth</div>
+</div>
+<div class="ml-4 px-3 py-1 rounded-full bg-primary text-on-primary text-xs font-bold" style="">2 500 €</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+<!-- Bottom row: Search Bar and Suggestions positioned below -->
+<div class="w-full flex flex-col items-center">
+<div class="bg-surface-container-lowest editorial-shadow rounded-full p-2 md:p-3 flex flex-col md:flex-row items-center gap-2 max-w-5xl">
+<div class="flex-1 flex items-center px-6 w-full">
+<span class="material-symbols-outlined text-outline mr-3" data-icon="search" style="">search</span>
+<input class="w-full bg-transparent border-none focus:ring-0 text-on-surface placeholder:text-outline font-medium py-3" placeholder="Type de projet" type="text">
+</div>
+<div class="hidden md:block w-px h-8 bg-surface-variant"></div>
+<div class="flex-1 flex items-center px-6 w-full">
+<span class="material-symbols-outlined text-outline mr-3" data-icon="category" style="">category</span>
+<input class="w-full bg-transparent border-none focus:ring-0 text-on-surface placeholder:text-outline font-medium py-3" placeholder="Secteur / Domaine" type="text">
+</div>
+<button class="w-full md:w-auto bg-primary text-on-primary font-headline font-bold px-8 py-4 rounded-full transition-transform active:scale-95 whitespace-nowrap" style="">
+                        Trouver une opportunité
+                    </button>
+</div>
+<div class="mt-8 flex flex-wrap gap-4 items-center justify-center">
+<span class="text-sm font-semibold text-outline-variant" style="">Suggestions :</span>
+<button class="px-4 py-1.5 rounded-full bg-surface-container-high text-sm font-medium hover:bg-surface-variant transition-colors" style="">Site web</button>
+<button class="px-4 py-1.5 rounded-full bg-surface-container-high text-sm font-medium hover:bg-surface-variant transition-colors" style="">Application mobile</button>
+<button class="px-4 py-1.5 rounded-full bg-surface-container-high text-sm font-medium hover:bg-surface-variant transition-colors" style="">Outil métier</button>
+<button class="px-4 py-1.5 rounded-full bg-surface-container-high text-sm font-medium hover:bg-surface-variant transition-colors" style="">SaaS</button>
+</div>
+</div>
+</div>
+</section>
+<!-- KEY FIGURES -->
+<section class="bg-surface-container-low py-12 border-y border-surface-variant/20">
+<div class="max-w-[1440px] mx-auto px-8 grid grid-cols-2 md:grid-cols-4 gap-8">
+<div class="text-center md:text-left">
+<div class="text-3xl font-headline font-extrabold text-primary" style="">+1 200</div>
+<div class="text-sm text-on-surface-variant font-medium" style="">Rapporteurs actifs</div>
+</div>
+<div class="text-center md:text-left">
+<div class="text-3xl font-headline font-extrabold text-primary" style="">+340</div>
+<div class="text-sm text-on-surface-variant font-medium" style="">Entreprises inscrites</div>
+</div>
+<div class="text-center md:text-left">
+<div class="text-3xl font-headline font-extrabold text-primary" style="">92%</div>
+<div class="text-sm text-on-surface-variant font-medium" style="">Taux de satisfaction</div>
+</div>
+<div class="text-center md:text-left">
+<div class="text-3xl font-headline font-extrabold text-primary" style="">2 400 €</div>
+<div class="text-sm text-on-surface-variant font-medium" style="">Commission moyenne gagnée</div>
+</div>
+</div>
+</section>
+<!-- HOW IT WORKS -->
+<section class="py-24 px-8 max-w-[1440px] mx-auto">
+<div class="mb-20">
+<h2 class="font-headline text-4xl font-extrabold text-primary mb-4" style="">Simple. Transparent. Rémunérateur.</h2>
+<div class="w-24 h-1.5 bg-secondary rounded-full"></div>
+</div>
+<div class="grid grid-cols-1 md:grid-cols-3 gap-12">
+<div class="space-y-6">
+<div class="w-16 h-16 rounded-2xl bg-secondary-container flex items-center justify-center text-on-secondary-container">
+<span class="material-symbols-outlined text-3xl" data-icon="search_insights" style="">search_insights</span>
+</div>
+<h3 class="text-2xl font-headline font-bold" style="">1. Parcourez les opportunités</h3>
+<p class="text-on-surface-variant leading-relaxed" style="">Accédez à un listing qualifié de projets en attente. Filtrez par budget, secteur ou montant de commission.</p>
+</div>
+<div class="space-y-6">
+<div class="w-16 h-16 rounded-2xl bg-tertiary-fixed flex items-center justify-center text-on-tertiary-fixed">
+<span class="material-symbols-outlined text-3xl" data-icon="send" style="">send</span>
+</div>
+<h3 class="text-2xl font-headline font-bold" style="">2. Recommandez un contact</h3>
+<p class="text-on-surface-variant leading-relaxed" style="">Soumettez une mise en relation via notre formulaire rapide. Nous gérons la première prise de contact pour vous.</p>
+</div>
+<div class="space-y-6">
+<div class="w-16 h-16 rounded-2xl bg-primary flex items-center justify-center text-on-primary">
+<span class="material-symbols-outlined text-3xl" data-icon="payments" style="">payments</span>
+</div>
+<h3 class="text-2xl font-headline font-bold" style="">3. Touchez votre commission</h3>
+<p class="text-on-surface-variant leading-relaxed" style="">Suivez l'avancement en temps réel. Dès que le contrat est signé, votre commission est déclenchée automatiquement.</p>
+</div>
+</div>
+</section>
+<!-- DOUBLE CTA -->
+<section class="py-12 px-8 max-w-[1440px] mx-auto grid grid-cols-1 md:grid-cols-2 gap-8">
+<div class="relative group overflow-hidden rounded-xl p-12 bg-surface-container-high transition-all hover:translate-y-[-4px]">
+<div class="relative z-10">
+<span class="inline-block px-4 py-1.5 rounded-full bg-secondary-fixed text-on-secondary-fixed-variant text-xs font-bold tracking-wider mb-6" style="">RAPPORTEUR</span>
+<h3 class="text-3xl font-headline font-extrabold mb-4" style="">Vous avez un réseau ?<br>Monétisez-le.</h3>
+<p class="text-on-surface-variant mb-8 max-w-sm" style="">Rejoignez notre communauté de business developers freelances et experts.</p>
+<button class="flex items-center gap-2 font-headline font-bold text-primary group-hover:translate-x-2 transition-transform" style="">
+                        Commencer maintenant <span class="material-symbols-outlined" data-icon="arrow_forward" style="">arrow_forward</span>
+</button>
+</div>
+<span class="absolute bottom-[-20%] right-[-10%] material-symbols-outlined text-[12rem] text-primary/5 select-none" data-icon="monetization_on" style="">monetization_on</span>
+</div>
+<div class="relative group overflow-hidden rounded-xl p-12 bg-primary-container text-on-primary transition-all hover:translate-y-[-4px]">
+<div class="relative z-10">
+<span class="inline-block px-4 py-1.5 rounded-full bg-on-primary-container text-primary-container text-xs font-bold tracking-wider mb-6" style="">ENTREPRISE</span>
+<h3 class="text-3xl font-headline font-extrabold mb-4" style="">Vous cherchez un prestataire fiable ?<br>Publiez votre besoin.</h3>
+<p class="text-on-primary-container mb-8 max-w-sm" style="">Accédez à des leads qualifiés via la recommandation directe.</p>
+<button class="flex items-center gap-2 font-headline font-bold text-on-primary group-hover:translate-x-2 transition-transform" style="">
+                        Déposer un projet <span class="material-symbols-outlined" data-icon="arrow_forward" style="">arrow_forward</span>
+</button>
+</div>
+<span class="absolute bottom-[-20%] right-[-10%] material-symbols-outlined text-[12rem] text-on-primary/5 select-none" data-icon="business_center" style="">business_center</span>
+</div>
+</section>
+<!-- FEATURED OPPORTUNITIES -->
+<section class="py-24 px-8 max-w-[1440px] mx-auto">
+<div class="flex flex-col md:flex-row md:items-end justify-between mb-16 gap-6">
+<div>
+<h2 class="font-headline text-4xl font-extrabold text-primary mb-4" style="">Opportunités à la une</h2>
+<p class="text-on-surface-variant" style="">Les missions les plus récentes prêtes à être recommandées.</p>
+</div>
+<button class="text-primary font-headline font-bold underline decoration-primary/30 hover:opacity-80 transition-opacity" style="">Voir tout le catalogue</button>
+</div>
+<div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+<!-- Card 1 -->
+<div class="bg-surface-container-lowest rounded-lg p-8 editorial-shadow border border-surface-variant/10 hover:bg-secondary-container transition-all cursor-pointer group">
+<div class="flex justify-between items-start mb-6">
+<span class="px-3 py-1 rounded-full bg-tertiary-fixed text-on-tertiary-fixed text-xs font-bold" style="">RETAIL</span>
+<div class="text-right">
+<div class="text-sm font-bold text-primary" style="">Commission</div>
+<div class="text-2xl font-headline font-extrabold text-primary" style="">180 €</div>
+</div>
+</div>
+<h4 class="text-xl font-headline font-bold mb-4" style="">Refonte e-commerce Shopify</h4>
+<p class="text-sm text-on-surface-variant mb-6 line-clamp-2" style="">Migration d'une boutique physique vers un canal digital complet pour une marque de cosmétique.</p>
+<div class="flex items-center gap-2 text-xs font-bold text-outline" style="">
+<span class="material-symbols-outlined text-base" data-icon="schedule" style="">schedule</span> Il y a 2 heures
+                    </div>
+</div>
+<!-- Card 2 -->
+<div class="bg-surface-container-lowest rounded-lg p-8 editorial-shadow border border-surface-variant/10 hover:bg-secondary-container transition-all cursor-pointer group">
+<div class="flex justify-between items-start mb-6">
+<span class="px-3 py-1 rounded-full bg-secondary-fixed text-on-secondary-fixed text-xs font-bold" style="">SAAS</span>
+<div class="text-right">
+<div class="text-sm font-bold text-primary" style="">Commission</div>
+<div class="text-2xl font-headline font-extrabold text-primary" style="">450 €</div>
+</div>
+</div>
+<h4 class="text-xl font-headline font-bold mb-4" style="">Développement App Mobile B2B</h4>
+<p class="text-sm text-on-surface-variant mb-6 line-clamp-2" style="">Application de gestion de stocks synchronisée en temps réel pour une PME logistique.</p>
+<div class="flex items-center gap-2 text-xs font-bold text-outline" style="">
+<span class="material-symbols-outlined text-base" data-icon="schedule" style="">schedule</span> Il y a 5 heures
+                    </div>
+</div>
+<!-- Card 3 -->
+<div class="bg-surface-container-lowest rounded-lg p-8 editorial-shadow border border-surface-variant/10 hover:bg-secondary-container transition-all cursor-pointer group">
+<div class="flex justify-between items-start mb-6">
+<span class="px-3 py-1 rounded-full bg-tertiary-fixed text-on-tertiary-fixed text-xs font-bold" style="">TECH</span>
+<div class="text-right">
+<div class="text-sm font-bold text-primary" style="">Commission</div>
+<div class="text-2xl font-headline font-extrabold text-primary" style="">320 €</div>
+</div>
+</div>
+<h4 class="text-xl font-headline font-bold mb-4" style="">Audit de Cybersécurité</h4>
+<p class="text-sm text-on-surface-variant mb-6 line-clamp-2" style="">Analyse complète des failles réseau pour une startup fintech en pleine levée de fonds.</p>
+<div class="flex items-center gap-2 text-xs font-bold text-outline" style="">
+<span class="material-symbols-outlined text-base" data-icon="schedule" style="">schedule</span> Hier
+                    </div>
+</div>
+</div>
+</section>
+<!-- TOP REPORTERS SECTION -->
+<section class="py-24 px-8 max-w-[1440px] mx-auto">
+<div class="mb-16">
+<h2 class="font-headline text-4xl font-extrabold text-primary mb-4" style="">Nos meilleurs rapporteurs d'affaires</h2>
+<div class="w-24 h-1.5 bg-secondary rounded-full"></div>
+</div>
+<div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+<!-- Profile Card 1 -->
+<div class="bg-[#FFFDF5] rounded-[1.5rem] overflow-hidden profile-card-shadow border border-[#f0eee6] font-poppins flex flex-col">
+<div class="relative h-48 overflow-hidden">
+<img alt="Sarah El Amrani" class="w-full h-full object-cover" src="https://images.unsplash.com/photo-1600486913747-55e5470d6f40?q=80&amp;w=2070&amp;auto=format&amp;fit=crop&amp;ixlib=rb-4.1.0&amp;ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D`" style="">
+<div class="absolute top-4 right-4 bg-white/90 backdrop-blur px-2 py-1 rounded-full flex items-center gap-1 shadow-sm">
+<span class="material-symbols-outlined text-yellow-500 text-sm" style="font-variation-settings: &quot;FILL&quot; 1;">star</span>
+<span class="text-xs font-bold text-primary" style="">4.9</span>
+</div>
+</div>
+<div class="p-8 flex flex-col flex-1">
+<div class="flex justify-between items-start mb-2">
+<h4 class="text-xl font-bold text-primary" style="">Sarah El Amrani</h4>
+<span class="text-[10px] font-bold tracking-wider text-[#4c6a63] bg-[#c8eae0]/40 px-2 py-1 rounded uppercase" style="">Tech &amp; SaaS</span>
+</div>
+<p class="text-sm text-on-surface-variant mb-6" style="">Product Designer UI/UX</p>
+<div class="flex flex-wrap gap-2 mb-8">
+<span class="px-3 py-1 bg-[#f5f4ec] text-[11px] font-medium rounded-full" style="">Figma</span>
+<span class="px-3 py-1 bg-[#f5f4ec] text-[11px] font-medium rounded-full" style="">Design Systems</span>
+<span class="px-3 py-1 bg-[#f5f4ec] text-[11px] font-medium rounded-full" style="">SaaS Flow</span>
+</div>
+<div class="mt-auto flex items-center justify-between pt-6 border-t border-[#f0eee6]">
+<div>
+<div class="text-[10px] uppercase tracking-widest text-outline-variant font-bold mb-1" style="">Projets</div>
+<div class="text-sm font-bold text-primary" style="">42 complétés</div>
+</div>
+<button class="bg-black text-white px-6 py-2.5 rounded-full text-xs font-bold hover:opacity-90 transition-all active:scale-95" style="">Voir le profil</button>
+</div>
+</div>
+</div>
+<!-- Profile Card 2 -->
+<div class="bg-[#FFFDF5] rounded-[1.5rem] overflow-hidden profile-card-shadow border border-[#f0eee6] font-poppins flex flex-col">
+<div class="relative h-48 overflow-hidden">
+<img alt="Marc-Antoine V." class="w-full h-full object-cover" src="https://images.unsplash.com/photo-1674161610452-88bb7b13a931?q=80&amp;w=2070&amp;auto=format&amp;fit=crop&amp;ixlib=rb-4.1.0&amp;ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D" style="">
+<div class="absolute top-4 right-4 bg-white/90 backdrop-blur px-2 py-1 rounded-full flex items-center gap-1 shadow-sm">
+<span class="material-symbols-outlined text-yellow-500 text-sm" style="font-variation-settings: &quot;FILL&quot; 1;">star</span>
+<span class="text-xs font-bold text-primary" style="">5.0</span>
+</div>
+</div>
+<div class="p-8 flex flex-col flex-1">
+<div class="flex justify-between items-start mb-2">
+<h4 class="text-xl font-bold text-primary" style="">Marc-Antoine V.</h4>
+<span class="text-[10px] font-bold tracking-wider text-[#574333] bg-[#fbddc7]/40 px-2 py-1 rounded uppercase" style="">Creative &amp; Design</span>
+</div>
+<p class="text-sm text-on-surface-variant mb-6" style="">Développeur Fullstack</p>
+<div class="flex flex-wrap gap-2 mb-8">
+<span class="px-3 py-1 bg-[#f5f4ec] text-[11px] font-medium rounded-full" style="">React.js</span>
+<span class="px-3 py-1 bg-[#f5f4ec] text-[11px] font-medium rounded-full" style="">Node.js</span>
+<span class="px-3 py-1 bg-[#f5f4ec] text-[11px] font-medium rounded-full" style="">TypeScript</span>
+</div>
+<div class="mt-auto flex items-center justify-between pt-6 border-t border-[#f0eee6]">
+<div>
+<div class="text-[10px] uppercase tracking-widest text-outline-variant font-bold mb-1" style="">Projets</div>
+<div class="text-sm font-bold text-primary" style="">127 complétés</div>
+</div>
+<button class="bg-black text-white px-6 py-2.5 rounded-full text-xs font-bold hover:opacity-90 transition-all active:scale-95" style="">Voir le profil</button>
+</div>
+</div>
+</div>
+<!-- Profile Card 3 -->
+<div class="bg-[#FFFDF5] rounded-[1.5rem] overflow-hidden profile-card-shadow border border-[#f0eee6] font-poppins flex flex-col">
+<div class="relative h-48 overflow-hidden">
+<img alt="Léa Rousseau" class="w-full h-full object-cover" src="https://images.unsplash.com/photo-1480455624313-e29b44bbfde1?q=80&amp;w=2070&amp;auto=format&amp;fit=crop&amp;ixlib=rb-4.1.0&amp;ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3Dv" style="">
+<div class="absolute top-4 right-4 bg-white/90 backdrop-blur px-2 py-1 rounded-full flex items-center gap-1 shadow-sm">
+<span class="material-symbols-outlined text-yellow-500 text-sm" style="font-variation-settings: &quot;FILL&quot; 1;">star</span>
+<span class="text-xs font-bold text-primary" style="">4.8</span>
+</div>
+</div>
+<div class="p-8 flex flex-col flex-1">
+<div class="flex justify-between items-start mb-2">
+<h4 class="text-xl font-bold text-primary" style="">Léa Rousseau</h4>
+<span class="text-[10px] font-bold tracking-wider text-[#444748] bg-[#e5e2e1] px-2 py-1 rounded uppercase" style="">Marketing &amp; Sales</span>
+</div>
+<p class="text-sm text-on-surface-variant mb-6" style="">Growth Strategist</p>
+<div class="flex flex-wrap gap-2 mb-8">
+<span class="px-3 py-1 bg-[#f5f4ec] text-[11px] font-medium rounded-full" style="">Ads</span>
+<span class="px-3 py-1 bg-[#f5f4ec] text-[11px] font-medium rounded-full" style="">Automation</span>
+<span class="px-3 py-1 bg-[#f5f4ec] text-[11px] font-medium rounded-full" style="">SEO</span>
+</div>
+<div class="mt-auto flex items-center justify-between pt-6 border-t border-[#f0eee6]">
+<div>
+<div class="text-[10px] uppercase tracking-widest text-outline-variant font-bold mb-1" style="">Projets</div>
+<div class="text-sm font-bold text-primary" style="">89 complétés</div>
+</div>
+<button class="bg-black text-white px-6 py-2.5 rounded-full text-xs font-bold hover:opacity-90 transition-all active:scale-95" style="">Voir le profil</button>
+</div>
+</div>
+</div>
+</div>
+</section>
+<!-- WHY TRUST US -->
+<section class="bg-surface-dim/30 py-24 px-8">
+<div class="max-w-[1440px] mx-auto grid grid-cols-1 md:grid-cols-4 gap-12">
+<div class="text-center md:text-left">
+<span class="material-symbols-outlined text-4xl mb-6 text-secondary" data-icon="history" style="">history</span>
+<h5 class="font-headline font-bold text-lg mb-3" style="">Traçabilité</h5>
+<p class="text-sm text-on-surface-variant" style="">Chaque échange est consigné pour garantir l'origine de votre recommandation.</p>
+</div>
+<div class="text-center md:text-left">
+<span class="material-symbols-outlined text-4xl mb-6 text-secondary" data-icon="verified_user" style="">verified_user</span>
+<h5 class="font-headline font-bold text-lg mb-3" style="">Commissions garanties</h5>
+<p class="text-sm text-on-surface-variant" style="">Système de séquestre assurant que les fonds sont disponibles pour votre paiement.</p>
+</div>
+<div class="text-center md:text-left">
+<span class="material-symbols-outlined text-4xl mb-6 text-secondary" data-icon="monitoring" style="">monitoring</span>
+<h5 class="font-headline font-bold text-lg mb-3" style="">Dashboard temps réel</h5>
+<p class="text-sm text-on-surface-variant" style="">Visualisez l'étape de chaque recommandation, de la prise de contact à la signature.</p>
+</div>
+<div class="text-center md:text-left">
+<span class="material-symbols-outlined text-4xl mb-6 text-secondary" data-icon="shield" style="">shield</span>
+<h5 class="font-headline font-bold text-lg mb-3" style="">Zéro risque</h5>
+<p class="text-sm text-on-surface-variant" style="">Pas d'engagement, pas de frais de gestion. Vous ne gagnez que sur le succès.</p>
+</div>
+</div>
+</section>
+<!-- TESTIMONIALS -->
+<section class="py-24 px-8 max-w-[1440px] mx-auto">
+<h2 class="font-headline text-4xl font-extrabold text-primary mb-16 text-center" style="">Ils propulsent leur carrière avec nous</h2>
+<div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+<!-- Testimonial 1 -->
+<div class="p-10 bg-surface-container-low rounded-lg italic">
+<p class="text-on-surface mb-8" style="">"Enfin une plateforme qui respecte le travail des apporteurs d'affaires. Le suivi est ultra clair et j'ai touché ma première commission de 1 200€ en moins de 3 semaines."</p>
+<div class="flex items-center gap-4 not-italic">
+<div class="w-12 h-12 rounded-full overflow-hidden">
+<img alt="Marc T." class="w-full h-full object-cover" src="https://lh3.googleusercontent.com/aida-public/AB6AXuCKRGdN0140GQgWSecus7nxHYTQpWSeAm4YpfZxsGMO5ExGffKyItKU7ebKLVxOF8L7cUQNner4EnGkA3H9dHSdZCE6p6m5uTo0QgLX1B6FHGayvyt2km_dSWolHpKrOkExz90xd8d3Pvqtefw_jf9Z50EUTpFPzjxX7HwHRBVRomrmpP4klbvpxrBVzl9m8TsThLlYOL0fC710eBcnu9SWdnWBOQpLM17kB_5sIsH8ytSJ7T6Gy06cMsbC8gW9gOliEzWGbKKwWFjW" style="">
+</div>
+<div>
+<div class="font-headline font-bold" style="">Marc T.</div>
+<div class="text-xs text-on-surface-variant" style="">Consultant Indépendant</div>
+</div>
+</div>
+</div>
+<!-- Testimonial 2 -->
+<div class="p-10 bg-surface-container-low rounded-lg italic">
+<p class="text-on-surface mb-8" style="">"Propulse est devenu mon canal d'acquisition favori pour mon agence. Les contacts recommandés sont bien plus qualifiés que n'importe quelle publicité."</p>
+<div class="flex items-center gap-4 not-italic">
+<div class="w-12 h-12 rounded-full overflow-hidden">
+<img alt="Sophie L." class="w-full h-full object-cover" src="https://lh3.googleusercontent.com/aida-public/AB6AXuDWT8Zi8C3sBkMCrJZFF4qGkq0sLd2Vsc24TKV6aijhi9Vv2Nm3BElju5zNO6GroyJcsgM3TWvaAYP015tu7KiMfMgV7sdadK_H3uZE76VFpzcHSOzsMK62J7cHczNJspsJJ-OvgkEqu3pzClyldqugsGF8i6wj292NA7uC11vR8PiUX3ynpjWr_R2sVy3yqNRrFd9Z66aCPvLXYXBzcRDr7XkBHDQlnUPM2d3fqV3eUJT4qQX--8GddY7A7p9ee5UycX_Eb2nv4T2u" style="">
+</div>
+<div>
+<div class="font-headline font-bold" style="">Sophie L.</div>
+<div class="text-xs text-on-surface-variant" style="">CEO Agence Web</div>
+</div>
+</div>
+</div>
+<!-- Testimonial 3 -->
+<div class="p-10 bg-surface-container-low rounded-lg italic">
+<p class="text-on-surface mb-8" style="">"Un système transparent et honnête. Le tableau de bord permet de dormir tranquille en attendant ses commissions."</p>
+<div class="flex items-center gap-4 not-italic">
+<div class="w-12 h-12 rounded-full overflow-hidden">
+<img alt="Karim B." class="w-full h-full object-cover" src="https://lh3.googleusercontent.com/aida-public/AB6AXuAi36uq5i6NxZ0kH5ZZ9tb_1ojYiCY_wUrOicGiSJkO0C0NRKdbWvGgEqaxgLowCwWDbcFDOLvEx3RkAiEshB0TuhcrQMnalLugOU0ZGsIe3PBuR77UzcUCZvMtKNMIe7F6ytXDSj3Xl784N3CsUi4xTj5PJpGVeAssRxNBrCQOnJ_GzTxmhyEk51d-MYs0f-SkfJr6vCyKyHaPzg8fFVxhURsOHSCmWU9x06IDoaiyUJXoda7VEvAY9b_lSH9rvLixHNC6wgaYOa7h" style="">
+</div>
+<div>
+<div class="font-headline font-bold" style="">Karim B.</div>
+<div class="text-xs text-on-surface-variant" style="">Freelance SEO</div>
+</div>
+</div>
+</div>
+</div>
+</section>
+<!-- PREMIUM TEASER -->
+<section class="px-8 pb-24 max-w-[1440px] mx-auto">
+<div class="bg-primary rounded-xl p-12 md:p-20 text-on-primary flex flex-col md:flex-row items-center gap-12 overflow-hidden relative">
+<div class="relative z-10 flex-1">
+<h2 class="font-headline text-4xl md:text-5xl font-extrabold mb-8" style="">Allez plus loin avec le Premium</h2>
+<div class="grid grid-cols-1 sm:grid-cols-3 gap-8 mb-10">
+<div class="flex flex-col gap-2">
+<span class="material-symbols-outlined text-secondary-fixed" data-icon="rocket_launch" style="">rocket_launch</span>
+<div class="font-bold" style="">Accès anticipé</div>
+<p class="text-sm text-on-primary-container" style="">Soyez le premier sur les meilleures opportunités.</p>
+</div>
+<div class="flex flex-col gap-2">
+<span class="material-symbols-outlined text-secondary-fixed" data-icon="verified" style="">verified</span>
+<div class="font-bold" style="">Badge crédibilité</div>
+<p class="text-sm text-on-primary-container" style="">Rassurez les entreprises sur votre expertise.</p>
+</div>
+<div class="flex flex-col gap-2">
+<span class="material-symbols-outlined text-secondary-fixed" data-icon="insights" style="">insights</span>
+<div class="font-bold" style="">Statistiques</div>
+<p class="text-sm text-on-primary-container" style="">Suivez vos performances en détail.</p>
+</div>
+</div>
+<button class="px-8 py-4 rounded-full bg-surface text-primary font-headline font-bold transition-transform active:scale-95" style="">Découvrir l'offre Premium</button>
+</div>
+<div class="relative z-10 w-full md:w-1/3">
+<div class="bg-surface-container-lowest/10 backdrop-blur-md rounded-lg p-6 border border-white/10 rotate-3">
+<div class="flex items-center gap-4 mb-4">
+<div class="w-10 h-10 rounded-full bg-secondary-container"></div>
+<div class="h-4 w-32 bg-white/20 rounded"></div>
+</div>
+<div class="space-y-3">
+<div class="h-3 w-full bg-white/10 rounded"></div>
+<div class="h-3 w-2/3 bg-white/10 rounded"></div>
+<div class="h-12 w-full bg-secondary-container/50 rounded-lg mt-4"></div>
+</div>
+</div>
+</div>
+<!-- Decoration -->
+<div class="absolute top-0 right-0 w-96 h-96 bg-secondary-container/10 rounded-full blur-[100px]"></div>
+</div>
+</section>
+</main>
+<!-- Footer -->
+<footer class="w-full pt-20 pb-10 bg-surface dark:bg-[#141414] tonal-shift bg-surface-container-low">
+<div class="grid grid-cols-1 md:grid-cols-4 gap-12 px-8 max-w-[1440px] mx-auto">
+<div class="space-y-6">
+<div class="text-xl font-bold font-['Plus_Jakarta_Sans'] text-primary" style="">Propulse</div>
+<p class="font-['Manrope'] text-sm text-on-surface-variant opacity-70" style="">La recommandation, enfin cadrée. Le trait d'union entre experts et entreprises.</p>
+</div>
+<div>
+<h6 class="font-headline font-bold text-sm mb-6 uppercase tracking-wider" style="">Produit</h6>
+<ul class="space-y-4 font-['Manrope'] text-sm">
+<li class="" style=""><a class="opacity-70 hover:opacity-100 underline decoration-primary/30 transition-all duration-200" href="#" style="">Fonctionnalités</a></li>
+<li class="" style=""><a class="opacity-70 hover:opacity-100 underline decoration-primary/30 transition-all duration-200" href="#" style="">Tarifs</a></li>
+<li class="" style=""><a class="opacity-70 hover:opacity-100 underline decoration-primary/30 transition-all duration-200" href="#" style="">Marketplace</a></li>
+</ul>
+</div>
+<div>
+<h6 class="font-headline font-bold text-sm mb-6 uppercase tracking-wider" style="">Entreprises</h6>
+<ul class="space-y-4 font-['Manrope'] text-sm">
+<li class="" style=""><a class="opacity-70 hover:opacity-100 underline decoration-primary/30 transition-all duration-200" href="#" style="">Publier un projet</a></li>
+<li class="" style=""><a class="opacity-70 hover:opacity-100 underline decoration-primary/30 transition-all duration-200" href="#" style="">Espace Pro</a></li>
+<li class="" style=""><a class="opacity-70 hover:opacity-100 underline decoration-primary/30 transition-all duration-200" href="#" style="">API</a></li>
+</ul>
+</div>
+<div>
+<h6 class="font-headline font-bold text-sm mb-6 uppercase tracking-wider" style="">Nous</h6>
+<ul class="space-y-4 font-['Manrope'] text-sm">
+<li class="" style=""><a class="opacity-70 hover:opacity-100 underline decoration-primary/30 transition-all duration-200" href="#" style="">À propos</a></li>
+<li class="" style=""><a class="opacity-70 hover:opacity-100 underline decoration-primary/30 transition-all duration-200" href="#" style="">Blog</a></li>
+<li class="" style=""><a class="opacity-70 hover:opacity-100 underline decoration-primary/30 transition-all duration-200" href="#" style="">Contact</a></li>
+</ul>
+</div>
+</div>
+<div class="mt-20 border-t border-surface-variant/20 pt-10 px-8 max-w-[1440px] mx-auto flex flex-col md:flex-row justify-between items-center gap-6">
+<div class="font-['Manrope'] text-sm opacity-70" style="">© 2025 Propulse — La recommandation, enfin cadrée.</div>
+<div class="flex gap-8 font-['Manrope'] text-sm opacity-70">
+<a class="hover:opacity-100 transition-opacity" href="#" style="">Confidentialité</a>
+<a class="hover:opacity-100 transition-opacity" href="#" style="">Mentions légales</a>
+</div>
+</div>
+</footer>
+</body></html>

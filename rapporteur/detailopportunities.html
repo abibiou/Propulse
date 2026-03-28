@@ -1,0 +1,274 @@
+<!DOCTYPE html>
+
+<html class="light" lang="fr"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>Détail Opportunité - ReferralArch</title>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&amp;family=Manrope:wght@400;500;600;700&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script id="tailwind-config">
+      tailwind.config = {
+        darkMode: "class",
+        theme: {
+          extend: {
+            colors: {
+              "tertiary-container": "#27180b",
+              "error-container": "#ffdad6",
+              "on-error": "#ffffff",
+              "primary-fixed": "#e5e2e1",
+              "on-secondary-container": "#4c6a63",
+              "surface-container-high": "#eae8e0",
+              "outline": "#747878",
+              "on-secondary": "#ffffff",
+              "inverse-on-surface": "#f3f1e9",
+              "secondary-fixed": "#c8eae0",
+              "primary-fixed-dim": "#c8c6c5",
+              "surface": "#fbf9f1",
+              "primary": "#000000",
+              "on-secondary-fixed": "#00201b",
+              "tertiary-fixed-dim": "#dec1ac",
+              "secondary-container": "#c8eae0",
+              "on-primary-container": "#858383",
+              "on-background": "#1b1c17",
+              "surface-container-highest": "#e4e3db",
+              "surface-variant": "#e4e3db",
+              "on-tertiary-fixed": "#27180b",
+              "tertiary": "#000000",
+              "on-tertiary": "#ffffff",
+              "tertiary-fixed": "#fbddc7",
+              "surface-bright": "#fbf9f1",
+              "on-primary-fixed": "#1c1b1b",
+              "background": "#fbf9f1",
+              "on-primary-fixed-variant": "#474646",
+              "on-tertiary-container": "#977f6d",
+              "inverse-surface": "#30312c",
+              "outline-variant": "#c4c7c7",
+              "secondary": "#46645d",
+              "on-surface-variant": "#444748",
+              "on-tertiary-fixed-variant": "#574333",
+              "surface-container-low": "#f5f4ec",
+              "on-surface": "#1b1c17",
+              "on-error-container": "#93000a",
+              "error": "#ba1a1a",
+              "on-primary": "#ffffff",
+              "surface-container-lowest": "#ffffff",
+              "inverse-primary": "#c8c6c5",
+              "secondary-fixed-dim": "#accdc4",
+              "on-secondary-fixed-variant": "#2e4c45",
+              "surface-container": "#f0eee6",
+              "primary-container": "#1c1b1b",
+              "surface-tint": "#5f5e5e",
+              "surface-dim": "#dcdad2"
+            },
+            fontFamily: {
+              "headline": ["Plus Jakarta Sans"],
+              "body": ["Manrope"],
+              "label": ["Manrope"]
+            },
+            borderRadius: {"DEFAULT": "1rem", "lg": "2rem", "xl": "3rem", "full": "9999px"},
+          },
+        },
+      }
+    </script>
+<style>
+        .material-symbols-outlined {
+            font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24;
+            vertical-align: middle;
+        }
+        body {
+            background-color: #fbf9f1;
+            font-family: 'Manrope', sans-serif;
+        }
+        .editorial-shadow {
+            box-shadow: 0px 24px 48px rgba(27, 28, 23, 0.06);
+        }
+    </style>
+</head>
+<body class="text-on-surface selection:bg-secondary-container">
+<!-- Top Navigation Bar -->
+<nav class="fixed top-0 z-50 w-full bg-[#fbf9f1] dark:bg-[#141414] border-none">
+<div class="flex justify-between items-center w-full px-8 py-4 max-w-7xl mx-auto">
+<div class="flex items-center gap-12">
+<a href="../index.html" class="text-2xl font-extrabold tracking-tighter text-primary font-headline block w-fit">
+    Propulse
+</a>
+<div class="hidden md:flex gap-8 items-center">
+<a class="font-headline tracking-tight text-sm font-semibold text-[#141414]/60 dark:text-[#fbf9f1]/60 hover:text-[#141414] transition-colors duration-200" href="dashboardrapporteur.html">Tableau de bord</a>
+<a class="font-headline tracking-tight text-sm font-semibold text-[#141414] dark:text-[#fbf9f1] border-b-2 border-[#141414] pb-1" href="opportunites.html">Opportunities</a>
+<a class="font-headline tracking-tight text-sm font-semibold text-[#141414]/60 dark:text-[#fbf9f1]/60 hover:text-[#141414] transition-colors duration-200" href="#">Recommendations</a>
+<a class="font-headline tracking-tight text-sm font-semibold text-[#141414]/60 dark:text-[#fbf9f1]/60 hover:text-[#141414] transition-colors duration-200" href="#">Mes gains</a>
+</div>
+</div>
+<div class="flex items-center gap-6">
+<button class="material-symbols-outlined text-[#141414] dark:text-[#fbf9f1] scale-95 active:scale-90 transition-transform" data-icon="notifications">notifications</button>
+<div class="w-10 h-10 rounded-full bg-surface-container overflow-hidden">
+<img alt="User profile avatar" class="w-full h-full object-cover" data-alt="Close-up professional portrait of a smiling middle-eastern man in a sharp blazer with soft studio lighting" src="https://lh3.googleusercontent.com/aida-public/AB6AXuCBiRHyA9mVGpviuSSMYLmUXKwCj4pgZQ4jeRZ8QO1QA0G08BqNZbrmlCAYj0PfMo0rl1rN2LX1POn0qCVk9K-Ut0d3Zh-Cna_7SsfOCbvf6btxX6GzsoRcb4SoG-TPw6msujz5nuVjxeTEzUeI6yYGNAQbeDbgdq1EA8N0ZFmhByXpDYGzI_EuKM09zn6CDO9YEOueQYVJnzgS0nky7dUw3as3FBY5lFduTOybK3aXe68t3O0yUmsQrjD1Mqy5Ib6ThFSrzWxnh0YM"/>
+</div>
+</div>
+</div>
+</nav>
+<main class="max-w-screen-2xl mx-auto px-8 py-12 md:py-20">
+<!-- Breadcrumb & Action Back -->
+<div class="mb-8 flex items-center space-x-2 text-on-surface-variant font-label text-sm uppercase tracking-widest">
+<a class="hover:text-primary transition-colors" href="#">Opportunités</a>
+<span class="material-symbols-outlined text-xs">chevron_right</span>
+<span class="text-primary font-bold">Détails du projet</span>
+</div>
+<div class="grid grid-cols-1 lg:grid-cols-12 gap-12 items-start">
+<!-- Left Column: Content -->
+<div class="lg:col-span-8 space-y-12">
+<!-- Hero Section Header -->
+<section class="space-y-6">
+<div class="flex flex-wrap items-center gap-3">
+<span class="px-4 py-1.5 rounded-full bg-tertiary-fixed text-on-tertiary-fixed-variant text-xs font-bold uppercase tracking-wider flex items-center gap-2">
+<span class="material-symbols-outlined text-sm" data-icon="bolt">bolt</span>
+                            Urgent — Dès que possible
+                        </span>
+<span class="px-4 py-1.5 rounded-full bg-secondary-container text-on-secondary-container text-xs font-bold uppercase tracking-wider flex items-center gap-2">
+<span class="material-symbols-outlined text-sm" data-icon="verified">verified</span>
+                            Badge Premium
+                        </span>
+</div>
+<h1 class="text-5xl md:text-7xl font-headline font-extrabold tracking-tighter text-primary leading-[1.1]">
+                        Refonte complète site <span class="text-transparent bg-clip-text bg-gradient-to-r from-primary to-secondary">e-commerce Shopify</span>
+</h1>
+<div class="flex flex-wrap items-center gap-8 py-8 border-y border-outline-variant/20">
+<div class="flex flex-col">
+<span class="text-on-surface-variant text-sm font-label uppercase tracking-widest mb-1">Entreprise</span>
+<span class="text-lg font-headline font-bold">TechFlow SAS</span>
+</div>
+<div class="w-px h-10 bg-outline-variant/20 hidden md:block"></div>
+<div class="flex flex-col">
+<span class="text-on-surface-variant text-sm font-label uppercase tracking-widest mb-1">Budget estimé</span>
+<span class="text-lg font-headline font-bold text-secondary">10 000 € — 14 000 €</span>
+</div>
+<div class="w-px h-10 bg-outline-variant/20 hidden md:block"></div>
+<div class="flex flex-col">
+<span class="text-on-surface-variant text-sm font-label uppercase tracking-widest mb-1">Localisation</span>
+<span class="text-lg font-headline font-bold">Paris / Remote accepté</span>
+</div>
+</div>
+<div class="grid grid-cols-2 sm:grid-cols-4 gap-4">
+<div class="p-6 rounded-lg bg-surface-container-low flex flex-col items-center text-center">
+<span class="material-symbols-outlined text-secondary mb-2" data-icon="visibility">visibility</span>
+<span class="text-2xl font-headline font-extrabold">1.2k</span>
+<span class="text-xs font-label text-on-surface-variant">Vues</span>
+</div>
+<div class="p-6 rounded-lg bg-surface-container-low flex flex-col items-center text-center">
+<span class="material-symbols-outlined text-secondary mb-2" data-icon="groups">groups</span>
+<span class="text-2xl font-headline font-extrabold">12</span>
+<span class="text-xs font-label text-on-surface-variant">Leads reçus</span>
+</div>
+<div class="p-6 rounded-lg bg-surface-container-low flex flex-col items-center text-center">
+<span class="material-symbols-outlined text-secondary mb-2" data-icon="sell">sell</span>
+<span class="text-2xl font-headline font-extrabold">180 €</span>
+<span class="text-xs font-label text-on-surface-variant">Commission</span>
+</div>
+<div class="p-6 rounded-lg bg-surface-container-low flex flex-col items-center text-center">
+<span class="material-symbols-outlined text-secondary mb-2" data-icon="category">category</span>
+<span class="text-xl font-headline font-bold leading-tight">Retail</span>
+<span class="text-xs font-label text-on-surface-variant">Secteur</span>
+</div>
+</div>
+</section>
+<!-- Description Section -->
+<section class="space-y-6">
+<h2 class="text-3xl font-headline font-bold">Description du projet</h2>
+<p class="text-xl text-on-surface-variant leading-relaxed font-body">
+                        Nous cherchons un prestataire expert Shopify pour refondre notre boutique en ligne. Le projet inclut l'optimisation du tunnel de commande, l'intégration de nouveaux modes de paiement et une refonte graphique complète pour une image plus premium.
+                    </p>
+</section>
+<!-- Skills Section -->
+<section class="space-y-6">
+<h2 class="text-2xl font-headline font-bold">Compétences recherchées</h2>
+<div class="flex flex-wrap gap-3">
+<span class="px-6 py-2 rounded-full border border-outline-variant/40 bg-white font-medium text-on-surface">Shopify</span>
+<span class="px-6 py-2 rounded-full border border-outline-variant/40 bg-white font-medium text-on-surface">Liquid</span>
+<span class="px-6 py-2 rounded-full border border-outline-variant/40 bg-white font-medium text-on-surface">UX/UI Design</span>
+<span class="px-6 py-2 rounded-full border border-outline-variant/40 bg-white font-medium text-on-surface">SEO</span>
+<span class="px-6 py-2 rounded-full border border-outline-variant/40 bg-white font-medium text-on-surface">E-commerce</span>
+</div>
+</section>
+<!-- About Company -->
+<section class="p-8 rounded-lg bg-surface-container-low flex flex-col md:flex-row items-center gap-8">
+<div class="h-24 w-24 flex-shrink-0 rounded-xl bg-primary flex items-center justify-center text-white font-headline text-3xl font-extrabold">
+                        TF
+                    </div>
+<div>
+<h2 class="text-2xl font-headline font-bold mb-2">À propos de TechFlow SAS</h2>
+<p class="text-on-surface-variant leading-relaxed">
+                            TechFlow SAS est une startup en forte croissance spécialisée dans les solutions de logistique e-commerce. Nous accompagnons les marques dans leur développement digital à travers des solutions technologiques innovantes.
+                        </p>
+</div>
+</section>
+</div>
+<!-- Right Column: Sidebar Action -->
+<aside class="lg:col-span-4 space-y-6 lg:sticky lg:top-24">
+<!-- Recommendation Card -->
+<div class="p-8 rounded-lg bg-white border border-outline-variant/10 editorial-shadow space-y-8">
+<div class="space-y-2">
+<div class="text-on-surface-variant font-label text-xs uppercase tracking-widest">Commission garantie</div>
+<div class="text-4xl font-headline font-extrabold">180 € <span class="text-sm font-label text-on-surface-variant align-middle">(Fixe)</span></div>
+</div>
+<a href="recommanderuncontact.html" class="block w-full">
+    <button class="w-full py-5 px-8 rounded-full bg-primary text-white font-headline font-bold text-lg hover:scale-[1.02] active:scale-95 transition-all flex items-center justify-center gap-3">
+        <span class="material-symbols-outlined" data-icon="person_add">person_add</span>
+        Faire une recommandation
+    </button>
+</a>
+<div class="p-6 rounded-lg bg-secondary-container/30 border border-secondary/10 space-y-3">
+<div class="flex items-center gap-2 text-on-secondary-container font-bold">
+<span class="material-symbols-outlined" data-icon="lightbulb">lightbulb</span>
+<span>Recommandation éclair</span>
+</div>
+<p class="text-sm text-on-secondary-container leading-relaxed">
+                            Vous connaissez le candidat idéal ? Recommandez-le en 2 minutes et gagnez 180 € à la signature du contrat.
+                        </p>
+</div>
+<ul class="space-y-4 pt-4 border-t border-outline-variant/20">
+<li class="flex items-start gap-3 text-sm">
+<span class="material-symbols-outlined text-secondary text-xl" data-icon="check_circle">check_circle</span>
+<span>Processus 100% digitalisé</span>
+</li>
+<li class="flex items-start gap-3 text-sm">
+<span class="material-symbols-outlined text-secondary text-xl" data-icon="check_circle">check_circle</span>
+<span>Suivi en temps réel de votre commission</span>
+</li>
+<li class="flex items-start gap-3 text-sm">
+<span class="material-symbols-outlined text-secondary text-xl" data-icon="check_circle">check_circle</span>
+<span>Paiement sous 48h après signature</span>
+</li>
+</ul>
+</div>
+<!-- Assistance Card -->
+<div class="p-8 rounded-lg bg-surface-container-highest space-y-4">
+<h3 class="font-headline font-bold">Besoin d'aide ?</h3>
+<p class="text-sm text-on-surface-variant">Une question sur cette opportunité ? Nos experts sont là pour vous accompagner.</p>
+<a class="inline-flex items-center gap-2 text-primary font-bold hover:gap-3 transition-all" href="#">
+                        Contacter un conseiller
+                        <span class="material-symbols-outlined text-sm" data-icon="arrow_forward">arrow_forward</span>
+</a>
+</div>
+</aside>
+</div>
+</main>
+<!-- Footer -->
+<footer class="bg-neutral-50 dark:bg-neutral-950 full-width py-12 border-t border-neutral-200/20 dark:border-neutral-800/20 tonal-shift-from-surface-to-dim">
+<div class="flex flex-col md:flex-row justify-between items-center px-10 max-w-7xl mx-auto gap-6">
+<div class="font-['Plus_Jakarta_Sans'] font-bold text-neutral-900 dark:text-white">
+                ReferralArch
+            </div>
+<div class="flex gap-8 font-['Manrope'] text-sm tracking-wide text-neutral-500 dark:text-neutral-400">
+<a class="hover:text-neutral-900 dark:hover:text-white transition-colors" href="#">Conditions</a>
+<a class="hover:text-neutral-900 dark:hover:text-white transition-colors" href="#">Confidentialité</a>
+<a class="hover:text-neutral-900 dark:hover:text-white transition-colors" href="#">Aide</a>
+<a class="hover:text-neutral-900 dark:hover:text-white transition-colors" href="#">Contact</a>
+</div>
+<div class="text-neutral-600 dark:text-neutral-400 font-['Manrope'] text-sm tracking-wide">
+                © 2024 ReferralArch. L'excellence en réseau.
+            </div>
+</div>
+</footer>
+</body></html>

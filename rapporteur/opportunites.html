@@ -1,0 +1,464 @@
+<!DOCTYPE html>
+
+<html class="light" lang="fr"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>Propulse | Opportunités de Referral</title>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&amp;family=Manrope:wght@400;500;600;700&amp;family=Poppins:wght@400;500;600;700&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script id="tailwind-config">
+        tailwind.config = {
+            darkMode: "class",
+            theme: {
+                extend: {
+                    colors: {
+                        "error-container": "#ffdad6",
+                        "on-surface": "#1b1c17",
+                        "tertiary-fixed-dim": "#dec1ac",
+                        "surface-bright": "#fbf9f1",
+                        "on-secondary-container": "#4c6a63",
+                        "secondary-fixed": "#c8eae0",
+                        "outline": "#747878",
+                        "on-primary-container": "#858383",
+                        "outline-variant": "#c4c7c7",
+                        "on-secondary": "#ffffff",
+                        "surface-container-lowest": "#ffffff",
+                        "primary": "#000000",
+                        "secondary": "#46645d",
+                        "surface": "#fbf9f1",
+                        "background": "#fbf9f1",
+                        "surface-container": "#f0eee6",
+                        "secondary-fixed-dim": "#accdc4",
+                        "on-tertiary-fixed-variant": "#574333",
+                        "primary-fixed": "#e5e2e1",
+                        "surface-container-high": "#eae8e0",
+                        "surface-tint": "#5f5e5e",
+                        "on-tertiary": "#ffffff",
+                        "on-secondary-fixed-variant": "#2e4c45",
+                        "on-error-container": "#93000a",
+                        "tertiary-fixed": "#fbddc7",
+                        "on-tertiary-fixed": "#27180b",
+                        "error": "#ba1a1a",
+                        "tertiary-container": "#27180b",
+                        "inverse-primary": "#c8c6c5",
+                        "primary-container": "#1c1b1b",
+                        "tertiary": "#000000",
+                        "primary-fixed-dim": "#c8c6c5",
+                        "on-tertiary-container": "#977f6d",
+                        "on-primary": "#ffffff",
+                        "inverse-surface": "#30312c",
+                        "surface-container-low": "#f5f4ec",
+                        "surface-variant": "#e4e3db",
+                        "inverse-on-surface": "#f3f1e9",
+                        "surface-container-highest": "#e4e3db",
+                        "on-secondary-fixed": "#00201b",
+                        "on-background": "#1b1c17",
+                        "secondary-container": "#c8eae0",
+                        "on-error": "#ffffff",
+                        "on-surface-variant": "#444748",
+                        "on-primary-fixed": "#1c1b1b",
+                        "surface-dim": "#dcdad2",
+                        "on-primary-fixed-variant": "#474646",
+                        "propulse-green": "#c8eae0",
+                        "propulse-orange": "#fbddc7",
+                        "propulse-blue": "#d0e4ff",
+                        "propulse-violet": "#e8d9ff"
+                    },
+                    fontFamily: {
+                        "headline": ["Plus Jakarta Sans"],
+                        "body": ["Manrope"],
+                        "label": ["Manrope"],
+                        "poppins": ["Poppins"]
+                    },
+                    borderRadius: {"DEFAULT": "1rem", "lg": "2rem", "xl": "3rem", "full": "9999px"},
+                },
+            },
+        }
+    </script>
+<style>
+        .material-symbols-outlined {
+            font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24;
+        }
+        body {
+            background-color: #fbf9f1;
+            font-family: 'Poppins', sans-serif;
+        }
+        .glass-card {
+            background: rgba(255, 255, 255, 0.7);
+            backdrop-filter: blur(20px);
+            -webkit-backdrop-filter: blur(20px);
+        }
+    </style>
+</head>
+<body class="text-on-surface">
+<!-- TopNavBar -->
+<nav class="fixed top-0 z-50 w-full bg-[#fbf9f1] dark:bg-[#141414] border-none">
+<div class="flex justify-between items-center w-full px-8 py-4 max-w-7xl mx-auto">
+<div class="flex items-center gap-12">
+<a href="../index.html" class="text-2xl font-extrabold tracking-tighter text-primary font-headline block w-fit">
+    Propulse
+</a>
+<div class="hidden md:flex gap-8 items-center">
+<a class="font-headline tracking-tight text-sm font-semibold text-[#141414]/60 dark:text-[#fbf9f1]/60 hover:text-[#141414] transition-colors duration-200" href="dashboardrapporteur.html">Tableau de bord</a>
+<a class="font-headline tracking-tight text-sm font-semibold text-[#141414] dark:text-[#fbf9f1] border-b-2 border-[#141414] pb-1" href="opportunites.html">Opportunities</a>
+<a class="font-headline tracking-tight text-sm font-semibold text-[#141414]/60 dark:text-[#fbf9f1]/60 hover:text-[#141414] transition-colors duration-200" href="#">Recommendations</a>
+<a class="font-headline tracking-tight text-sm font-semibold text-[#141414]/60 dark:text-[#fbf9f1]/60 hover:text-[#141414] transition-colors duration-200" href="#">Mes gains</a>
+</div>
+</div>
+<div class="flex items-center gap-6">
+<button class="material-symbols-outlined text-[#141414] dark:text-[#fbf9f1] scale-95 active:scale-90 transition-transform" data-icon="notifications">notifications</button>
+<div class="w-10 h-10 rounded-full bg-surface-container overflow-hidden">
+<img alt="User profile avatar" class="w-full h-full object-cover" data-alt="Close-up professional portrait of a smiling middle-eastern man in a sharp blazer with soft studio lighting" src="https://lh3.googleusercontent.com/aida-public/AB6AXuCBiRHyA9mVGpviuSSMYLmUXKwCj4pgZQ4jeRZ8QO1QA0G08BqNZbrmlCAYj0PfMo0rl1rN2LX1POn0qCVk9K-Ut0d3Zh-Cna_7SsfOCbvf6btxX6GzsoRcb4SoG-TPw6msujz5nuVjxeTEzUeI6yYGNAQbeDbgdq1EA8N0ZFmhByXpDYGzI_EuKM09zn6CDO9YEOueQYVJnzgS0nky7dUw3as3FBY5lFduTOybK3aXe68t3O0yUmsQrjD1Mqy5Ib6ThFSrzWxnh0YM"/>
+</div>
+</div>
+</div>
+</nav>
+
+<main class="max-w-[1440px] mx-auto px-8 pt-12">
+<!-- Hero Search Recap -->
+<header class="text-center mb-16 space-y-8">
+<div class="space-y-2">
+<h1 class="text-5xl font-extrabold tracking-tight font-headline mt-24">127 opportunités disponibles</h1>
+<p class="text-on-surface-variant font-body">Trouvées pour votre recherche "Site web" et "Retail"</p>
+</div>
+<div class="max-w-2xl mx-auto glass-card p-2 rounded-full flex items-center shadow-sm border border-outline-variant/10">
+<div class="flex-1 flex items-center px-6">
+<span class="material-symbols-outlined text-on-surface-variant mr-3">search</span>
+<input class="w-full bg-transparent border-none focus:ring-0 text-lg font-medium" type="text" value="Site web, Retail"/>
+</div>
+<button class="bg-primary text-white px-8 py-3 rounded-full font-bold hover:scale-95 transition-transform">Rechercher</button>
+</div>
+</header>
+<!-- Horizontal Filter Bar -->
+<section class="flex flex-wrap items-center justify-between gap-4 mb-10 py-4 border-y border-outline-variant/10">
+<div class="flex flex-wrap items-center gap-3">
+<div class="flex items-center bg-surface-container-high rounded-full px-4 py-2 gap-2 cursor-pointer hover:bg-surface-container-highest transition-colors">
+<span class="text-xs font-semibold uppercase tracking-wider">Budget</span>
+<span class="material-symbols-outlined text-sm">expand_more</span>
+</div>
+<div class="flex items-center bg-surface-container-high rounded-full px-4 py-2 gap-2 cursor-pointer hover:bg-surface-container-highest transition-colors">
+<span class="text-xs font-semibold uppercase tracking-wider">Commission</span>
+<span class="material-symbols-outlined text-sm">expand_more</span>
+</div>
+<div class="flex items-center bg-surface-container-high rounded-full px-4 py-2 gap-2 cursor-pointer hover:bg-surface-container-highest transition-colors">
+<span class="text-xs font-semibold uppercase tracking-wider">Type de projet</span>
+<span class="material-symbols-outlined text-sm">expand_more</span>
+</div>
+<div class="flex items-center bg-surface-container-high rounded-full px-4 py-2 gap-2 cursor-pointer hover:bg-surface-container-highest transition-colors">
+<span class="text-xs font-semibold uppercase tracking-wider">Urgence</span>
+<span class="material-symbols-outlined text-sm">expand_more</span>
+</div>
+<div class="flex items-center gap-2 ml-4">
+<input class="rounded border-outline-variant text-primary focus:ring-primary" id="premium" type="checkbox"/>
+<label class="text-xs font-bold uppercase tracking-widest flex items-center gap-1" for="premium">
+                        Premium Only <span class="material-symbols-outlined text-amber-500 text-sm" style="font-variation-settings: 'FILL' 1;">star</span>
+</label>
+</div>
+</div>
+<div class="flex items-center gap-3">
+<span class="text-xs text-on-surface-variant font-medium">Trier par :</span>
+<select class="bg-transparent border-none focus:ring-0 text-sm font-bold p-0 pr-8">
+<option>Pertinence</option>
+<option>Plus récent</option>
+<option>Budget élevé</option>
+</select>
+</div>
+</section>
+<!-- Main Layout -->
+<div class="flex gap-12 items-start">
+<!-- Left Sidebar Filters -->
+<aside class="w-72 sticky top-24 hidden xl:block">
+<div class="space-y-8">
+<div class="flex justify-between items-center">
+<h3 class="text-lg font-bold font-headline">Filtres détaillés</h3>
+<button class="text-xs text-primary underline font-bold uppercase">Reset</button>
+</div>
+<!-- Sector -->
+<div class="space-y-4">
+<h4 class="text-sm font-bold uppercase tracking-widest text-on-surface-variant">Secteur</h4>
+<div class="space-y-2">
+<label class="flex items-center gap-3 cursor-pointer">
+<input checked="" class="rounded-sm text-primary focus:ring-primary" type="checkbox"/>
+<span class="text-sm font-medium">Tech &amp; SaaS</span>
+</label>
+<label class="flex items-center gap-3 cursor-pointer">
+<input checked="" class="rounded-sm text-primary focus:ring-primary" type="checkbox"/>
+<span class="text-sm font-medium">Marketing</span>
+</label>
+<label class="flex items-center gap-3 cursor-pointer">
+<input class="rounded-sm text-primary focus:ring-primary" type="checkbox"/>
+<span class="text-sm font-medium">Luxe</span>
+</label>
+</div>
+</div>
+<!-- Service Type -->
+<div class="space-y-4">
+<h4 class="text-sm font-bold uppercase tracking-widest text-on-surface-variant">Type de Service</h4>
+<div class="space-y-2">
+<label class="flex items-center gap-3 cursor-pointer">
+<input class="rounded-sm text-primary focus:ring-primary" type="checkbox"/>
+<span class="text-sm font-medium">Design &amp; Créa</span>
+</label>
+<label class="flex items-center gap-3 cursor-pointer">
+<input class="rounded-sm text-primary focus:ring-primary" type="checkbox"/>
+<span class="text-sm font-medium">Développement</span>
+</label>
+</div>
+</div>
+<!-- Commission Slider -->
+<div class="space-y-4">
+<div class="flex justify-between">
+<h4 class="text-sm font-bold uppercase tracking-widest text-on-surface-variant">Commission</h4>
+<span class="text-sm font-bold">5% - 25%</span>
+</div>
+<input class="w-full h-1.5 bg-surface-container-highest rounded-lg appearance-none cursor-pointer accent-black" type="range"/>
+</div>
+<!-- Location -->
+<div class="space-y-4">
+<h4 class="text-sm font-bold uppercase tracking-widest text-on-surface-variant">Localisation</h4>
+<div class="relative">
+<span class="material-symbols-outlined absolute left-3 top-1/2 -translate-y-1/2 text-on-surface-variant text-sm">location_on</span>
+<input class="w-full bg-surface-container-low border-none rounded-xl pl-10 pr-4 py-2.5 text-sm focus:ring-2 focus:ring-secondary/20" placeholder="Remote, Paris..." type="text"/>
+</div>
+</div>
+<!-- Date -->
+<div class="space-y-4">
+<h4 class="text-sm font-bold uppercase tracking-widest text-on-surface-variant">Publié depuis</h4>
+<select class="w-full bg-surface-container-low border-none rounded-xl px-4 py-2.5 text-sm focus:ring-2 focus:ring-secondary/20 appearance-none">
+<option>Dernières 24 heures</option>
+<option>7 derniers jours</option>
+<option>30 derniers jours</option>
+</select>
+</div>
+</div>
+</aside>
+<!-- Cards Container -->
+<div class="flex-1 space-y-6">
+<!-- Card 1 -->
+<article class="bg-surface-container-lowest rounded-lg p-8 hover:shadow-xl transition-all border border-transparent hover:border-outline-variant/10 group">
+<div class="flex justify-between items-start mb-6">
+<div class="flex items-center gap-4">
+<div class="w-16 h-16 rounded-xl bg-surface-container overflow-hidden flex items-center justify-center p-2">
+<img class="w-full h-full object-contain" data-alt="minimalist tech company logo with geometric shapes in blue and white" src="https://lh3.googleusercontent.com/aida-public/AB6AXuCT8-GCAgNIXxYMzMxvonIv12cNmdQHuF_pTS7kGfrz1WsYrZyBio1GkVomAcCB1sX883lS5sguqblXbbcXE9fRZB-NlEusSL-0wvEaveL9XbFIk-kOUE6MGQR0io_VSH3fRVLrbZTRaW0JheDW_cXGPDgHxe5SWuGa_Eac54VRuOaSgxNerkuYPxbh88WuJ5PuHNdGd_EEk547h25iyX9kXe6Mz-T_L4oXITtVD5m6BpdPdJSpZblQUMcRdkUDT1AIG1YD1rVHeOPG"/>
+</div>
+<div>
+<div class="flex items-center gap-2 mb-1">
+<span class="text-sm font-bold text-on-surface-variant">Shopify Plus Partner</span>
+<span class="bg-propulse-orange text-[10px] font-bold uppercase tracking-wider px-2 py-0.5 rounded-full text-on-tertiary-fixed">URGENT</span>
+</div>
+<h2 class="text-2xl font-extrabold font-headline leading-tight">Refonte complète site e-commerce Shopify</h2>
+</div>
+</div>
+<div class="flex items-center gap-2">
+<span class="bg-surface-container-high px-3 py-1.5 rounded-full text-xs font-bold uppercase tracking-wider">RETAIL</span>
+<span class="bg-surface-container-high px-3 py-1.5 rounded-full text-xs font-bold uppercase tracking-wider">TECH</span>
+</div>
+</div>
+<p class="text-on-surface-variant mb-8 line-clamp-2 max-w-3xl">Nous recherchons un partenaire expert Shopify pour la migration et le redesign complet de notre boutique retail vers un environnement headless haute performance...</p>
+<div class="grid grid-cols-2 md:grid-cols-4 gap-6 mb-8 py-6 border-y border-outline-variant/5">
+<div class="space-y-1">
+<p class="text-[10px] font-bold uppercase tracking-widest text-on-surface-variant">Budget</p>
+<p class="text-lg font-bold">15k€ - 25k€</p>
+</div>
+<div class="space-y-1">
+<p class="text-[10px] font-bold uppercase tracking-widest text-on-surface-variant">Commission</p>
+<p class="text-lg font-bold text-secondary">10% (Fixed)</p>
+</div>
+<div class="space-y-1">
+<p class="text-[10px] font-bold uppercase tracking-widest text-on-surface-variant">Localisation</p>
+<p class="text-lg font-bold">Remote / Paris</p>
+</div>
+<div class="space-y-1">
+<p class="text-[10px] font-bold uppercase tracking-widest text-on-surface-variant">Date Limite</p>
+<p class="text-lg font-bold">12 Juin 2024</p>
+</div>
+</div>
+<div class="flex flex-col sm:flex-row justify-between items-center gap-6">
+<div class="flex items-center gap-3">
+<div class="flex -space-x-2">
+<div class="w-8 h-8 rounded-full border-2 border-white bg-gray-200"></div>
+<div class="w-8 h-8 rounded-full border-2 border-white bg-gray-300"></div>
+<div class="w-8 h-8 rounded-full border-2 border-white bg-gray-400"></div>
+</div>
+<span class="text-xs font-medium text-on-surface-variant"><span class="font-bold text-black">4 rapporteurs</span> ont déjà recommandé</span>
+</div>
+<div class="flex items-center gap-3 w-full sm:w-auto">
+<button class="flex-1 sm:flex-none px-4 py-3 rounded-xl hover:bg-surface-container-high transition-colors">
+<span class="material-symbols-outlined text-on-surface-variant">bookmark</span>
+</button>
+<a href="detailopportunities.html" class="flex-[3] sm:flex-none">
+    <button class="w-full bg-primary text-on-primary px-8 py-3 rounded-full font-bold hover:scale-95 transition-transform whitespace-nowrap">
+        Voir l'opportunité
+    </button>
+</a>
+</div>
+</div>
+</article>
+<!-- Card 2 -->
+<article class="bg-surface-container-lowest rounded-lg p-8 hover:shadow-xl transition-all border border-transparent hover:border-outline-variant/10 group">
+<div class="flex justify-between items-start mb-6">
+<div class="flex items-center gap-4">
+<div class="w-16 h-16 rounded-xl bg-surface-container overflow-hidden flex items-center justify-center p-2">
+<img class="w-full h-full object-contain" data-alt="modern minimalist lifestyle brand logo with organic leaf shape in soft green" src="https://lh3.googleusercontent.com/aida-public/AB6AXuAFQjij3iRxlh8OvT5m_rfw2iP4yJn71eWxY4vuViaORR7Y_A5sa0XvBQde63QnkyA6tR1YfTLnG5B12J_kK6CG83JP5yHQ8r7uM4lfxz5hXShqw2Wa_98ycFM6NjdJEQwcn_Us0_hVP14u2kN0dnniGq90zF1qw8PBznJb5U8EaZ-j0WREN9gkU9r6nRq0WbC7aDai_vBdf73o_eKV4mYmOLYa4QyvMQz78U2E5PID61adJesECPejF7HbOLkriJakDZib2vQhbnuQ"/>
+</div>
+<div>
+<div class="flex items-center gap-2 mb-1">
+<span class="text-sm font-bold text-on-surface-variant">Venture-backed Startup</span>
+<span class="bg-propulse-blue text-[10px] font-bold uppercase tracking-wider px-2 py-0.5 rounded-full">PREMIUM</span>
+</div>
+<h2 class="text-2xl font-extrabold font-headline leading-tight">Campagne d'influence Lifestyle Q4</h2>
+</div>
+</div>
+<div class="flex items-center gap-2">
+<span class="bg-surface-container-high px-3 py-1.5 rounded-full text-xs font-bold uppercase tracking-wider">MARKETING</span>
+</div>
+</div>
+<p class="text-on-surface-variant mb-8 line-clamp-2 max-w-3xl">Stratégie d'influence et déploiement opérationnel pour le lancement d'une nouvelle gamme de produits bien-être. Budget alloué important...</p>
+<div class="grid grid-cols-2 md:grid-cols-4 gap-6 mb-8 py-6 border-y border-outline-variant/5">
+<div class="space-y-1">
+<p class="text-[10px] font-bold uppercase tracking-widest text-on-surface-variant">Budget</p>
+<p class="text-lg font-bold">45k€+</p>
+</div>
+<div class="space-y-1">
+<p class="text-[10px] font-bold uppercase tracking-widest text-on-surface-variant">Commission</p>
+<p class="text-lg font-bold text-secondary">15% (Var.)</p>
+</div>
+<div class="space-y-1">
+<p class="text-[10px] font-bold uppercase tracking-widest text-on-surface-variant">Localisation</p>
+<p class="text-lg font-bold">Paris / Lyon</p>
+</div>
+<div class="space-y-1">
+<p class="text-[10px] font-bold uppercase tracking-widest text-on-surface-variant">Date Limite</p>
+<p class="text-lg font-bold">Demain</p>
+</div>
+</div>
+<div class="flex flex-col sm:flex-row justify-between items-center gap-6">
+<div class="flex items-center gap-3">
+<span class="text-xs font-medium text-on-surface-variant italic">Soyez le premier à recommander !</span>
+</div>
+<div class="flex items-center gap-3 w-full sm:w-auto">
+<button class="flex-1 sm:flex-none px-4 py-3 rounded-xl hover:bg-surface-container-high transition-colors">
+<span class="material-symbols-outlined text-on-surface-variant">bookmark</span>
+</button>
+<button class="flex-[3] sm:flex-none bg-primary text-on-primary px-8 py-3 rounded-full font-bold hover:scale-95 transition-transform whitespace-nowrap">Voir l'opportunité</button>
+</div>
+</div>
+</article>
+<!-- In-list Promo: Passer Premium -->
+<section class="bg-gradient-to-r from-primary to-primary-container text-white p-10 rounded-xl relative overflow-hidden">
+<div class="relative z-10 max-w-lg">
+<h3 class="text-3xl font-extrabold font-headline mb-4">Passez au niveau supérieur</h3>
+<p class="text-on-primary/70 mb-8">Accédez aux opportunités exclusives, aux budgets &gt; 50k€ et recevez des alertes en temps réel avant tout le monde.</p>
+<button class="bg-white text-black px-8 py-3 rounded-full font-bold hover:bg-opacity-90 transition-all">Découvrir l'offre Premium</button>
+</div>
+<div class="absolute right-0 top-0 bottom-0 w-1/3 opacity-20 pointer-events-none">
+<span class="material-symbols-outlined text-[200px] absolute -right-10 top-1/2 -translate-y-1/2" style="font-variation-settings: 'FILL' 1;">star</span>
+</div>
+</section>
+<!-- Card 3 -->
+<article class="bg-surface-container-lowest rounded-lg p-8 hover:shadow-xl transition-all border border-transparent hover:border-outline-variant/10 group">
+<div class="flex justify-between items-start mb-6">
+<div class="flex items-center gap-4">
+<div class="w-16 h-16 rounded-xl bg-surface-container overflow-hidden flex items-center justify-center p-2">
+<img class="w-full h-full object-contain" data-alt="clean professional fintech logo with abstract arrows and deep navy tones" src="https://lh3.googleusercontent.com/aida-public/AB6AXuBI73xLL5g5UcY5uoCWDZpZn1fQkZrnisyqwcOjr0zj_lbAc5VKRacCjzpCYWCGmwkGKVOh5DTsPO8nFkwKaZdnOuIbwG8zra2dY60NosFrfwh4hQ-yGvPg2FTMf30DS3WmSSx2JPgJIv29p1Sh_cjTq33-W361ZKTkU6UwhetY8VC9PPP0BhbDh8H9okqkaBp5lsk1DMbv7VvSc6uHPeSV_vDCPTdkLFQOrPrJCE2WGqYS5JVaAigc-z0Ob7Twgk0AYNuZWiekCzGE"/>
+</div>
+<div>
+<div class="flex items-center gap-2 mb-1">
+<span class="text-sm font-bold text-on-surface-variant">Série B Fintech</span>
+</div>
+<h2 class="text-2xl font-extrabold font-headline leading-tight">Optimisation SEO &amp; Content Strategy</h2>
+</div>
+</div>
+<div class="flex items-center gap-2">
+<span class="bg-surface-container-high px-3 py-1.5 rounded-full text-xs font-bold uppercase tracking-wider">SEO</span>
+<span class="bg-surface-container-high px-3 py-1.5 rounded-full text-xs font-bold uppercase tracking-wider">FINANCE</span>
+</div>
+</div>
+<p class="text-on-surface-variant mb-8 line-clamp-2 max-w-3xl">Accompagnement annuel pour la production de contenu stratégique et l'optimisation technique SEO pour un acteur majeur de la néo-banque...</p>
+<div class="grid grid-cols-2 md:grid-cols-4 gap-6 mb-8 py-6 border-y border-outline-variant/5">
+<div class="space-y-1">
+<p class="text-[10px] font-bold uppercase tracking-widest text-on-surface-variant">Budget</p>
+<p class="text-lg font-bold">5k€ - 8k€ / mois</p>
+</div>
+<div class="space-y-1">
+<p class="text-[10px] font-bold uppercase tracking-widest text-on-surface-variant">Commission</p>
+<p class="text-lg font-bold text-secondary">8% (M-Reccur)</p>
+</div>
+<div class="space-y-1">
+<p class="text-[10px] font-bold uppercase tracking-widest text-on-surface-variant">Localisation</p>
+<p class="text-lg font-bold">Full Remote</p>
+</div>
+<div class="space-y-1">
+<p class="text-[10px] font-bold uppercase tracking-widest text-on-surface-variant">Date Limite</p>
+<p class="text-lg font-bold">30 Juin</p>
+</div>
+</div>
+<div class="flex flex-col sm:flex-row justify-between items-center gap-6">
+<div class="flex items-center gap-3">
+<div class="flex -space-x-2">
+<div class="w-8 h-8 rounded-full border-2 border-white bg-gray-200"></div>
+<div class="w-8 h-8 rounded-full border-2 border-white bg-gray-300"></div>
+</div>
+<span class="text-xs font-medium text-on-surface-variant"><span class="font-bold text-black">2 rapporteurs</span> ont déjà recommandé</span>
+</div>
+<div class="flex items-center gap-3 w-full sm:w-auto">
+<button class="flex-1 sm:flex-none px-4 py-3 rounded-xl hover:bg-surface-container-high transition-colors">
+<span class="material-symbols-outlined text-on-surface-variant">bookmark</span>
+</button>
+<button class="flex-[3] sm:flex-none bg-primary text-on-primary px-8 py-3 rounded-full font-bold hover:scale-95 transition-transform whitespace-nowrap">Voir l'opportunité</button>
+</div>
+</div>
+</article>
+<!-- In-list Promo: Inscription -->
+<section class="bg-propulse-green p-10 rounded-xl flex flex-col md:flex-row items-center justify-between gap-8">
+<div class="space-y-2 text-center md:text-left">
+<h3 class="text-2xl font-extrabold font-headline">Gagnez plus en recommandant</h3>
+<p class="text-on-surface-variant">Inscrivez-vous pour commencer à monétiser votre réseau pro dès aujourd'hui.</p>
+</div>
+<div class="flex gap-4 w-full md:w-auto">
+<button class="flex-1 md:flex-none bg-white border border-black px-8 py-3 rounded-full font-bold hover:bg-black hover:text-white transition-all">En savoir plus</button>
+<button class="flex-1 md:flex-none bg-black text-white px-8 py-3 rounded-full font-bold hover:scale-95 transition-transform">Créer un compte</button>
+</div>
+</section>
+<!-- Pagination -->
+<nav class="flex items-center justify-center gap-2 pt-12">
+<button class="w-10 h-10 rounded-full flex items-center justify-center bg-primary text-white font-bold">1</button>
+<button class="w-10 h-10 rounded-full flex items-center justify-center hover:bg-surface-container-high transition-colors font-bold">2</button>
+<button class="w-10 h-10 rounded-full flex items-center justify-center hover:bg-surface-container-high transition-colors font-bold">3</button>
+<span class="px-2">...</span>
+<button class="px-6 py-2 rounded-full flex items-center gap-2 hover:bg-surface-container-high transition-colors font-bold">
+                        Suivant <span class="material-symbols-outlined">arrow_forward</span>
+</button>
+</nav>
+<!-- Alerte Section -->
+<section class="bg-surface-container-low rounded-xl p-12 mt-20 text-center max-w-3xl mx-auto border border-outline-variant/10">
+<div class="mb-8">
+<span class="material-symbols-outlined text-5xl text-on-surface-variant mb-4">notifications_active</span>
+<h3 class="text-2xl font-extrabold font-headline">Aucun résultat ne vous correspond ?</h3>
+<p class="text-on-surface-variant max-w-md mx-auto">Créez une alerte pour être informé dès qu'une opportunité similaire est publiée.</p>
+</div>
+<form class="flex flex-col sm:flex-row gap-4 max-w-md mx-auto">
+<input class="flex-1 rounded-full border-outline-variant/20 px-6 py-3 text-sm focus:ring-primary" placeholder="votre@email.com" type="email"/>
+<button class="bg-primary text-white px-8 py-3 rounded-full font-bold whitespace-nowrap hover:scale-95 transition-transform">Créer mon alerte</button>
+</form>
+</section>
+</div>
+</div>
+</main>
+<!-- Footer -->
+<footer class="w-full mt-20 bg-[#dcdad2] flex flex-col md:flex-row justify-between items-center px-12 py-10 w-full border-t border-black/10">
+<div class="flex flex-col gap-2 items-center md:items-start mb-8 md:mb-0">
+<span class="font-['Plus_Jakarta_Sans'] font-bold text-lg">Propulse.</span>
+<p class="font-['Manrope'] text-xs uppercase tracking-widest text-gray-500">© 2024 ReferralArch Editorial. All rights reserved.</p>
+</div>
+<div class="flex flex-wrap justify-center gap-8">
+<a class="font-['Manrope'] text-xs uppercase tracking-widest text-gray-500 hover:text-black transition-colors" href="#">Terms of Service</a>
+<a class="font-['Manrope'] text-xs uppercase tracking-widest text-gray-500 hover:text-black transition-colors" href="#">Privacy Policy</a>
+<a class="font-['Manrope'] text-xs uppercase tracking-widest text-gray-500 hover:text-black transition-colors" href="#">Cookie Settings</a>
+<a class="font-['Manrope'] text-xs uppercase tracking-widest text-gray-500 hover:text-black transition-colors" href="#">Contact Support</a>
+<a class="font-['Manrope'] text-xs uppercase tracking-widest text-gray-500 hover:text-black transition-colors" href="#">Careers</a>
+</div>
+</footer>
+</body></html>

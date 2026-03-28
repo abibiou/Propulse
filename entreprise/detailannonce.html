@@ -1,0 +1,289 @@
+<!DOCTYPE html><html class="light" lang="fr"><head>
+<meta charset="utf-8">
+<meta content="width=device-width, initial-scale=1.0" name="viewport">
+<title>Propulse - Mes annonces</title>
+<link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&amp;family=Manrope:wght@400;500;600;700&amp;display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet">
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<script id="tailwind-config">
+      tailwind.config = {
+        darkMode: "class",
+        theme: {
+          extend: {
+            colors: {
+              "tertiary": "#000000",
+              "on-primary-container": "#858383",
+              "surface-container-high": "#eae8e0",
+              "on-secondary-container": "#4c6a63",
+              "on-background": "#1b1c17",
+              "background": "#fbf9f1",
+              "on-surface": "#1b1c17",
+              "inverse-surface": "#30312c",
+              "on-tertiary-container": "#977f6d",
+              "primary-container": "#1c1b1b",
+              "on-secondary-fixed-variant": "#2e4c45",
+              "secondary-fixed-dim": "#accdc4",
+              "on-tertiary-fixed-variant": "#574333",
+              "surface-container-low": "#f5f4ec",
+              "surface-container-highest": "#e4e3db",
+              "primary-fixed-dim": "#c8c6c5",
+              "on-secondary-fixed": "#00201b",
+              "primary": "#000000",
+              "on-tertiary-fixed": "#27180b",
+              "on-tertiary": "#ffffff",
+              "on-primary": "#ffffff",
+              "tertiary-container": "#27180b",
+              "surface": "#fbf9f1",
+              "secondary": "#46645d",
+              "outline-variant": "#c4c7c7",
+              "tertiary-fixed-dim": "#dec1ac",
+              "on-error-container": "#93000a",
+              "outline": "#747878",
+              "surface-container-lowest": "#ffffff",
+              "inverse-primary": "#c8c6c5",
+              "on-surface-variant": "#444748",
+              "tertiary-fixed": "#fbddc7",
+              "surface-tint": "#5f5e5e",
+              "on-error": "#ffffff",
+              "inverse-on-surface": "#f3f1e9",
+              "error": "#ba1a1a",
+              "surface-bright": "#fbf9f1",
+              "error-container": "#ffdad6",
+              "surface-variant": "#e4e3db",
+              "surface-dim": "#dcdad2",
+              "on-primary-fixed": "#1c1b1b",
+              "primary-fixed": "#e5e2e1",
+              "on-secondary": "#ffffff",
+              "secondary-fixed": "#c8eae0",
+              "surface-container": "#f0eee6",
+              "on-primary-fixed-variant": "#474646",
+              "secondary-container": "#c8eae0"
+            },
+            fontFamily: {
+              "headline": ["Plus Jakarta Sans"],
+              "body": ["Manrope"],
+              "label": ["Manrope"]
+            },
+            borderRadius: {"DEFAULT": "1rem", "lg": "2rem", "xl": "3rem", "full": "9999px"},
+          },
+        },
+      }
+ </script>
+<style>
+      .material-symbols-outlined {
+        font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24;
+        display: inline-block;
+        line-height: 1;
+        text-transform: none;
+        letter-spacing: normal;
+        word-wrap: normal;
+        white-space: nowrap;
+        direction: ltr;
+      }
+      body { background-color: #fbf9f1; }
+    </style>
+</head>
+<body class="font-body text-on-surface">
+<!-- TopNavBar -->
+<nav class="flex justify-between items-center w-full px-8 py-4 max-w-full bg-[#fbf9f1] dark:bg-zinc-950 sticky top-0 z-50">
+<div class="text-2xl font-bold tracking-tighter text-[#141414] dark:text-white font-headline" style="">
+            Propulse
+        </div>
+<div class="hidden md:flex items-center space-x-8">
+<a class="font-['Plus_Jakarta_Sans'] tracking-tight text-sm font-semibold text-[#141414] dark:text-white border-b-2 border-[#141414] dark:border-white pb-1" href="#" style="">Mes annonces</a>
+<a class="font-['Plus_Jakarta_Sans'] tracking-tight text-sm font-semibold text-zinc-500 dark:text-zinc-400 hover:text-[#141414] dark:hover:text-zinc-200 transition-colors" href="#" style="">Mes leads</a>
+<a class="font-['Plus_Jakarta_Sans'] tracking-tight text-sm font-semibold text-zinc-500 dark:text-zinc-400 hover:text-[#141414] dark:hover:text-zinc-200 transition-colors" href="#" style="">Facturation</a>
+</div>
+<div class="flex items-center gap-4">
+<button class="hover:opacity-80 transition-opacity p-2 rounded-full surface-container-low" style="">
+<span class="material-symbols-outlined text-[#141414] dark:text-white" data-icon="notifications" style="">notifications</span>
+</button>
+<div class="w-10 h-10 rounded-full overflow-hidden border-2 border-surface-container-high">
+<img alt="User profile" data-alt="professional headshot of a creative director in a minimalist studio setting with soft natural lighting" src="https://lh3.googleusercontent.com/aida-public/AB6AXuCqh-DgV9_mjJ3PTEFtOtg6al5VHf7gqzyWpzLj6gtjJFpGXA3nn2qrNBmQ3QupCVRZY226qCkV1w08FErprrUmP27HfKWRJ3zCOxt7Vj2CxErfELqNNjXMWY440vYzSt-4b9DKhFnVJgUfyhV4gG5RQeNXjBwOvDLA6hA9sZExIXTmXwZ6kERiJtgT6Y0xPaci-scY5owU7JrdEqhFLcS2psGTygwyASLZDXPcP9ZP_yiG23a7WHecFfkXBmbCRhFiRwCYSKB3JXB3" class="" style="">
+</div>
+</div>
+</nav>
+<main class="max-w-7xl mx-auto px-8 py-12">
+<!-- Header Section -->
+<header class="mb-16">
+<h1 class="font-headline text-5xl md:text-6xl font-extrabold tracking-tight text-primary mb-4" style="">
+                Mes annonces
+            </h1>
+<p class="text-on-surface-variant text-lg max-w-2xl leading-relaxed" style="">
+                Gérez vos opportunités publiées et suivez la performance de vos appels d'offres en temps réel.
+            </p>
+</header>
+<!-- Main Content Bento Grid -->
+<div class="grid grid-cols-1 md:grid-cols-12 gap-8">
+<!-- Featured Ad: Refonte site e-commerce Shopify -->
+<div class="md:col-span-8 group relative overflow-hidden bg-surface-container-lowest rounded-lg p-10 transition-all duration-300 hover:bg-secondary-container/20 editorial-shadow">
+    <div class="flex flex-col h-full relative z-10">
+        <div class="flex justify-between items-start mb-8">
+            <span class="bg-secondary-fixed text-on-secondary-fixed text-[10px] font-bold tracking-widest uppercase py-1.5 px-4 rounded-full">
+                1 lead reçu
+            </span>
+            <div class="flex gap-2">
+                <button class="w-10 h-10 rounded-full bg-surface-container-high flex items-center justify-center hover:bg-surface-container-highest transition-colors">
+                    <span class="material-symbols-outlined text-sm" data-icon="edit">edit</span>
+                </button>
+            </div>
+        </div>
+
+        <div class="mb-12">
+            <h2 class="font-headline text-4xl font-bold text-primary mb-6 leading-tight">
+                Refonte site e-commerce Shopify
+            </h2>
+            
+            <a href="lead.html" class="inline-flex items-center gap-2 bg-primary text-on-primary px-8 py-4 rounded-full font-bold text-sm hover:scale-[1.02] active:scale-95 transition-all shadow-lg shadow-primary/20 group/btn">
+                Voir les leads
+                <span class="material-symbols-outlined text-sm transition-transform group-hover/btn:translate-x-1">arrow_forward</span>
+            </a>
+        </div>
+
+        <div class="grid grid-cols-3 gap-8 mt-auto pt-10 border-t border-outline-variant/20">
+            <div>
+                <p class="text-[10px] font-bold uppercase tracking-widest text-on-surface-variant mb-2">Vues</p>
+                <p class="text-3xl font-headline font-extrabold text-primary">1,248</p>
+            </div>
+            <div>
+                <p class="text-[10px] font-bold uppercase tracking-widest text-on-surface-variant mb-2">Leads</p>
+                <p class="text-3xl font-headline font-extrabold text-secondary">1</p>
+            </div>
+            <div>
+                <p class="text-[10px] font-bold uppercase tracking-widest text-on-surface-variant mb-2">Contactés</p>
+                <p class="text-3xl font-headline font-extrabold text-primary">5</p>
+            </div>
+        </div>
+    </div>
+
+    <div class="absolute -right-20 -top-20 w-64 h-64 bg-secondary-container/30 blur-3xl rounded-full"></div>
+</div>
+<!-- Stats Overview / Create New -->
+<div class="md:col-span-4 flex flex-col gap-8">
+<div class="bg-primary text-on-primary rounded-lg p-8 flex flex-col justify-between items-start h-full">
+<span class="material-symbols-outlined text-4xl" data-icon="add_circle" style="">add_circle</span>
+<div>
+<h3 class="font-headline text-2xl font-bold mb-4" style="">Publier une nouvelle annonce</h3>
+<button class="w-full bg-surface-container-lowest text-primary rounded-full py-4 font-bold text-sm transition-transform hover:scale-95 duration-200 ease-in-out" style="">
+                            Nouvelle campagne
+                        </button>
+</div>
+</div>
+</div>
+<!-- List of other ads -->
+<div class="md:col-span-12 grid grid-cols-1 md:grid-cols-3 gap-8">
+<!-- Ad Card 2 -->
+<div class="bg-surface-container-low rounded-lg p-8 hover:bg-surface-container-lowest transition-colors group">
+<div class="flex justify-between items-start mb-6">
+<span class="bg-surface-container-highest text-on-surface-variant text-[10px] font-bold tracking-widest uppercase py-1.5 px-4 rounded-full" style="">
+                            En ligne
+                        </span>
+<span class="material-symbols-outlined text-on-surface-variant group-hover:text-primary transition-colors" data-icon="more_vert" style="">more_vert</span>
+</div>
+<h3 class="font-headline text-xl font-bold text-primary mb-8" style="">
+                        Campagne SEO - Immobilier Luxe
+                    </h3>
+<div class="flex justify-between items-center text-on-surface-variant">
+<div class="flex flex-col">
+<span class="text-[10px] uppercase font-bold tracking-tighter" style="">Vues</span>
+<span class="text-lg font-bold text-primary" style="">452</span>
+</div>
+<div class="flex flex-col">
+<span class="text-[10px] uppercase font-bold tracking-tighter" style="">Leads</span>
+<span class="text-lg font-bold text-primary" style="">3</span>
+</div>
+<div class="flex flex-col">
+<span class="text-[10px] uppercase font-bold tracking-tighter" style="">Action</span>
+<span class="material-symbols-outlined" data-icon="arrow_forward" style="">arrow_forward</span>
+</div>
+</div>
+</div>
+<!-- Ad Card 3 -->
+<div class="bg-surface-container-low rounded-lg p-8 hover:bg-surface-container-lowest transition-colors group">
+<div class="flex justify-between items-start mb-6">
+<span class="bg-surface-container-highest text-on-surface-variant text-[10px] font-bold tracking-widest uppercase py-1.5 px-4 rounded-full" style="">
+                            En ligne
+                        </span>
+<span class="material-symbols-outlined text-on-surface-variant group-hover:text-primary transition-colors" data-icon="more_vert" style="">more_vert</span>
+</div>
+<h3 class="font-headline text-xl font-bold text-primary mb-8" style="">
+                        Stratégie Social Media TikTok
+                    </h3>
+<div class="flex justify-between items-center text-on-surface-variant">
+<div class="flex flex-col">
+<span class="text-[10px] uppercase font-bold tracking-tighter" style="">Vues</span>
+<span class="text-lg font-bold text-primary" style="">890</span>
+</div>
+<div class="flex flex-col">
+<span class="text-[10px] uppercase font-bold tracking-tighter" style="">Leads</span>
+<span class="text-lg font-bold text-primary" style="">12</span>
+</div>
+<div class="flex flex-col">
+<span class="text-[10px] uppercase font-bold tracking-tighter" style="">Action</span>
+<span class="material-symbols-outlined" data-icon="arrow_forward" style="">arrow_forward</span>
+</div>
+</div>
+</div>
+<!-- Ad Card 4 -->
+<div class="bg-surface-container-low rounded-lg p-8 hover:bg-surface-container-lowest transition-colors group">
+<div class="flex justify-between items-start mb-6">
+<span class="bg-tertiary-fixed text-on-tertiary-fixed text-[10px] font-bold tracking-widest uppercase py-1.5 px-4 rounded-full" style="">
+                            Brouillon
+                        </span>
+<span class="material-symbols-outlined text-on-surface-variant group-hover:text-primary transition-colors" data-icon="more_vert" style="">more_vert</span>
+</div>
+<h3 class="font-headline text-xl font-bold text-primary mb-8" style="">
+                        Maintenance Web App React
+                    </h3>
+<div class="flex justify-between items-center text-on-surface-variant">
+<div class="flex flex-col">
+<span class="text-[10px] uppercase font-bold tracking-tighter" style="">Vues</span>
+<span class="text-lg font-bold text-primary" style="">--</span>
+</div>
+<div class="flex flex-col">
+<span class="text-[10px] uppercase font-bold tracking-tighter" style="">Leads</span>
+<span class="text-lg font-bold text-primary" style="">--</span>
+</div>
+<div class="flex flex-col">
+<span class="text-[10px] uppercase font-bold tracking-tighter" style="">Action</span>
+<span class="material-symbols-outlined" data-icon="arrow_forward" style="">arrow_forward</span>
+</div>
+</div>
+</div>
+</div>
+</div>
+<!-- Educational/Support Section -->
+<section class="mt-20 p-12 rounded-xl bg-secondary-container/10 border border-secondary-container/20">
+<div class="grid grid-cols-1 md:grid-cols-2 gap-12 items-center">
+<div>
+<h4 class="font-headline text-3xl font-bold text-primary mb-4 italic" style="">Optimisez vos annonces</h4>
+<p class="text-on-surface-variant leading-relaxed mb-6" style="">
+                        Nos algorithmes analysent vos titres et descriptions pour maximiser votre taux de conversion. Une annonce bien structurée reçoit en moyenne 35% de leads supplémentaires.
+                    </p>
+<button class="text-primary font-bold border-b border-primary pb-1 hover:opacity-70 transition-opacity" style="">
+                        Consulter le guide de rédaction
+                    </button>
+</div>
+<div class="relative h-64 rounded-lg overflow-hidden">
+<img alt="Data analytics visualization" class="w-full h-full object-cover" data-alt="clean dashboard screen showing growth charts and bar graphs with a professional minimalist aesthetic in soft green and white tones" src="https://lh3.googleusercontent.com/aida-public/AB6AXuC5XXB6iKQlej0gDpNLylCNPRs12TlvS6d9V63fOdkPKraB2oTdEVONX4tFo7lGvoRk7vXFHBaTahy9sUkdq-T4eJfRFgHT5aa2cdjZ5_O8n_8vgQY76mM9ZUigtuzEO4PAcvYxNijZWA5qWNzBpTUXkJJLPsfztyREoFVYKsm9_mCkZoe51omAa2EhuX12JfMpsEY2tX9Yu_2hUvI0_xM3gS4J5siTrZ-TGbnPCegG-nTE7hQ5FUt-TeD9QKHt7mIMvJGsXTCVXyI7" style="">
+<div class="absolute inset-0 bg-secondary-container/20 backdrop-blur-[2px]"></div>
+</div>
+</div>
+</section>
+</main>
+<!-- Footer -->
+<footer class="mt-20 border-t border-zinc-200/20 dark:border-zinc-800/20 bg-[#fbf9f1] dark:bg-zinc-950 py-8">
+<div class="flex flex-col md:flex-row justify-between items-center px-8 w-full max-w-7xl mx-auto">
+<div class="font-['Manrope'] text-xs text-zinc-500 dark:text-zinc-400 mb-4 md:mb-0" style="">
+                © 2024 Propulse Enterprise. Tous droits réservés.
+            </div>
+<div class="flex gap-8">
+<a class="font-['Manrope'] text-xs text-zinc-500 dark:text-zinc-400 hover:text-[#141414] dark:hover:text-white transition-colors hover:underline" href="#" style="">Support</a>
+<a class="font-['Manrope'] text-xs text-zinc-500 dark:text-zinc-400 hover:text-[#141414] dark:hover:text-white transition-colors hover:underline" href="#" style="">Conditions</a>
+<a class="font-['Manrope'] text-xs text-zinc-500 dark:text-zinc-400 hover:text-[#141414] dark:hover:text-white transition-colors hover:underline" href="#" style="">Confidentialité</a>
+</div>
+</div>
+</footer>
+</body>
+</html>

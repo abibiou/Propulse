@@ -1,0 +1,196 @@
+<!DOCTYPE html>
+
+<html class="light" lang="fr"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>Confirmation de Publication | Propulse</title>
+<!-- Material Symbols -->
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<!-- Google Fonts: Plus Jakarta Sans & Manrope (Design System) + Poppins (User Request) -->
+<link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&amp;family=Manrope:wght@400;500;600;700&amp;family=Poppins:wght@400;500;600&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<script id="tailwind-config">
+      tailwind.config = {
+        darkMode: "class",
+        theme: {
+          extend: {
+            colors: {
+              "secondary-container": "#c8eae0",
+              "on-secondary-fixed-variant": "#2e4c45",
+              "surface-dim": "#dcdad2",
+              "primary-fixed-dim": "#c8c6c5",
+              "surface": "#fbf9f1",
+              "on-surface": "#1b1c17",
+              "tertiary-container": "#27180b",
+              "on-tertiary": "#ffffff",
+              "surface-container-lowest": "#ffffff",
+              "inverse-surface": "#30312c",
+              "on-tertiary-container": "#977f6d",
+              "surface-container": "#f0eee6",
+              "on-primary-fixed": "#1c1b1b",
+              "on-background": "#1b1c17",
+              "secondary": "#46645d",
+              "background": "#fbf9f1",
+              "on-tertiary-fixed-variant": "#574333",
+              "outline": "#747878",
+              "inverse-on-surface": "#f3f1e9",
+              "primary": "#000000",
+              "on-primary-fixed-variant": "#474646",
+              "surface-container-high": "#eae8e0",
+              "on-surface-variant": "#444748",
+              "error": "#ba1a1a",
+              "outline-variant": "#c4c7c7",
+              "inverse-primary": "#c8c6c5",
+              "on-error-container": "#93000a",
+              "on-primary": "#ffffff",
+              "secondary-fixed": "#c8eae0",
+              "tertiary-fixed": "#fbddc7",
+              "tertiary": "#000000",
+              "surface-bright": "#fbf9f1",
+              "primary-container": "#1c1b1b",
+              "on-secondary-fixed": "#00201b",
+              "surface-container-low": "#f5f4ec",
+              "on-primary-container": "#858383",
+              "on-secondary-container": "#4c6a63",
+              "surface-container-highest": "#e4e3db",
+              "tertiary-fixed-dim": "#dec1ac",
+              "secondary-fixed-dim": "#accdc4",
+              "primary-fixed": "#e5e2e1",
+              "on-error": "#ffffff",
+              "surface-tint": "#5f5e5e",
+              "on-secondary": "#ffffff",
+              "error-container": "#ffdad6",
+              "surface-variant": "#e4e3db",
+              "on-tertiary-fixed": "#27180b"
+            },
+            fontFamily: {
+              "headline": ["Plus Jakarta Sans"],
+              "body": ["Manrope"],
+              "label": ["Manrope"],
+              "poppins": ["Poppins"]
+            },
+            borderRadius: {"DEFAULT": "1rem", "lg": "2rem", "xl": "3rem", "full": "9999px"},
+          },
+        },
+      }
+    </script>
+<style>
+      .material-symbols-outlined {
+        font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24;
+      }
+      body {
+        background-color: #FFFDF5; /* Specific background from user prompt */
+        font-family: 'Poppins', sans-serif;
+      }
+    </style>
+</head>
+<body class="min-h-screen flex flex-col">
+<!-- TopNavBar (JSON Driven) -->
+<!-- Suppression Logic: Visible as this is a success state of a primary destination flow -->
+<nav class="fixed top-0 w-full z-50 bg-white/70 backdrop-blur-xl font-['Plus_Jakarta_Sans'] tracking-tight">
+<div class="flex justify-between items-center px-8 h-20 w-full max-w-[1440px] mx-auto">
+<div class="flex items-center gap-8">
+<span class="text-2xl font-bold tracking-tighter text-zinc-900">Propulse</span>
+<div class="hidden md:flex space-x-6">
+<a class="text-zinc-500 hover:text-zinc-800 transition-colors duration-200" href="#">Dashboard</a>
+<a class="text-zinc-900 font-semibold border-b-2 border-zinc-900 pb-1" href="#">Opportunities</a>
+<a class="text-zinc-500 hover:text-zinc-800 transition-colors duration-200" href="#">Network</a>
+<a class="text-zinc-500 hover:text-zinc-800 transition-colors duration-200" href="#">Analytics</a>
+</div>
+</div>
+<div class="flex items-center space-x-4">
+<button class="material-symbols-outlined text-zinc-500 p-2 hover:bg-zinc-100 rounded-full transition-colors">notifications</button>
+<button class="material-symbols-outlined text-zinc-500 p-2 hover:bg-zinc-100 rounded-full transition-colors">settings</button>
+<div class="h-10 w-10 rounded-full overflow-hidden bg-zinc-200">
+<img class="w-full h-full object-cover" data-alt="Professional headshot of a business executive in soft studio lighting with a neutral background" src="https://lh3.googleusercontent.com/aida-public/AB6AXuA9l4KpbnDBJw0QIG5guiyA8AFEcV0dbqK-pOQww5FvJj10lhiAelpUxyhZxELQu7l4BlhBFv6YzSjSDXsE4oUuo-mWMR177dZ8Ao9Firpp3P9T75lTkySQ7CIhXFZ0w5rGFffFZi9699mLRI0uD0B8AOjLGwrvvov8gvPQ-0shGjeW0A2VzPrdkLNjr9EdsbcqzA4iAcx77IhMmL_s6xdZpI0GVETw-Z3VtIPCxScnlzsmHI77h4b1FOAEn39bLYPR3NBXJHeAg6Uk"/>
+</div>
+</div>
+</div>
+</nav>
+<!-- Main Content Canvas -->
+<main class="flex-grow pt-32 pb-20 px-4">
+<div class="max-w-3xl mx-auto">
+<!-- Success Card -->
+<div class="bg-surface-container-lowest rounded-lg p-12 text-center shadow-[0px_24px_48px_rgba(27,28,23,0.04)] mb-8 border border-zinc-100/50">
+<div class="w-24 h-24 bg-[#D4F6EC] rounded-full flex items-center justify-center mx-auto mb-8">
+<span class="material-symbols-outlined text-secondary text-5xl" style="font-variation-settings: 'FILL' 1;">check_circle</span>
+</div>
+<h1 class="text-3xl md:text-4xl font-headline font-bold text-on-surface mb-6 tracking-tight">
+                    🎉 Votre annonce est en cours de validation !
+                </h1>
+<p class="text-lg text-on-surface-variant font-body leading-relaxed max-w-2xl mx-auto">
+                    Notre équipe vérifie votre annonce. Elle sera publiée sous 24h maximum. Vous recevrez un email de confirmation dès sa mise en ligne.
+                </p>
+</div>
+<!-- Next Steps Section (Editorial Asymmetry) -->
+<div class="grid md:grid-cols-12 gap-8 items-start">
+<div class="md:col-span-12">
+<h2 class="text-xl font-headline font-bold text-on-surface mb-8 ml-2">Prochaines étapes</h2>
+</div>
+<!-- Steps List -->
+<div class="md:col-span-7 space-y-4">
+<div class="flex items-center p-6 bg-surface-container-low rounded-xl transition-all duration-300 hover:translate-x-1 group">
+<div class="w-12 h-12 bg-[#DEF2FE] rounded-full flex items-center justify-center shrink-0 mr-4">
+<span class="material-symbols-outlined text-blue-600">mail</span>
+</div>
+<div class="flex-grow">
+<p class="font-poppins font-medium text-on-surface">Vérifiez votre boîte mail</p>
+</div>
+<span class="material-symbols-outlined text-zinc-300 group-hover:text-zinc-900 transition-colors">chevron_right</span>
+</div>
+<div class="flex items-center p-6 bg-surface-container-low rounded-xl transition-all duration-300 hover:translate-x-1 group">
+<div class="w-12 h-12 bg-[#D4F6EC] rounded-full flex items-center justify-center shrink-0 mr-4">
+<span class="material-symbols-outlined text-secondary">dashboard_customize</span>
+</div>
+<div class="flex-grow">
+<p class="font-poppins font-medium text-on-surface">Suivez vos leads depuis votre dashboard</p>
+</div>
+<span class="material-symbols-outlined text-zinc-300 group-hover:text-zinc-900 transition-colors">chevron_right</span>
+</div>
+<div class="flex items-center p-6 bg-surface-container-low rounded-xl transition-all duration-300 hover:translate-x-1 group">
+<div class="w-12 h-12 bg-[#FFE1CB] rounded-full flex items-center justify-center shrink-0 mr-4">
+<span class="material-symbols-outlined text-orange-600">notifications_active</span>
+</div>
+<div class="flex-grow">
+<p class="font-poppins font-medium text-on-surface">Activez les notifications pour ne rien manquer</p>
+</div>
+<span class="material-symbols-outlined text-zinc-300 group-hover:text-zinc-900 transition-colors">chevron_right</span>
+</div>
+</div>
+<!-- Action Buttons Area -->
+<div class="md:col-span-5 flex flex-col space-y-4">
+<a href="dashboardentreprise.html" class="block w-full">
+    <button class="w-full bg-[#141414] text-white py-5 px-8 rounded-full font-headline font-semibold text-lg hover:opacity-90 active:scale-95 transition-all shadow-lg shadow-black/10">
+        Retour au dashboard
+    </button>
+</a>
+<button class="w-full bg-surface-container-highest text-on-surface py-5 px-8 rounded-full font-headline font-semibold text-lg hover:bg-surface-container-high active:scale-95 transition-all">
+                        Publier une autre annonce
+                    </button>
+<!-- Supportive Image/Graphic -->
+<div class="mt-4 rounded-lg overflow-hidden h-40 relative group">
+<img class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-105" data-alt="A bright modern office workspace with a clean desk, laptop, and natural sunlight streaming through a window" src="https://lh3.googleusercontent.com/aida-public/AB6AXuA251a544R_oAsMNUKdxITMX3cPlI88CdFszjSX6eSEa4eH6_xy0XADIVr7zcJB_VfeCCPeqlHB4Knhy8Qvbo6GBPXToJsmzEaLf4HwvZdrpnfOeBg__0mUbU97QdOcxqwlcFTgjTua0myCHnwHabj2uolyXrcMEq3Zkk6bH55s9XpdZ8A121UfLecKOYU-ASuR9sBc9sCag8JlVrx2vBY5Ik8q_8xwbPattetZG8BtPj3M5hX_Te1bZGDNfJcpk9LhARXx5HGyVzhG"/>
+<div class="absolute inset-0 bg-gradient-to-t from-black/40 to-transparent flex items-end p-4">
+<span class="text-white text-xs font-label uppercase tracking-widest">Optimisez votre visibilité</span>
+</div>
+</div>
+</div>
+</div>
+</div>
+</main>
+<!-- Footer (JSON Driven) -->
+<footer class="w-full py-12 bg-zinc-50 border-t-0 font-['Manrope'] text-xs uppercase tracking-widest">
+<div class="flex flex-col md:flex-row justify-between items-center px-8 max-w-[1440px] mx-auto">
+<div class="mb-4 md:mb-0 text-zinc-400">
+                © 2024 Propulse Technologies. All rights reserved.
+            </div>
+<div class="flex space-x-8">
+<a class="text-zinc-400 hover:text-zinc-900 transition-colors" href="#">Privacy Policy</a>
+<a class="text-zinc-400 hover:text-zinc-900 transition-colors" href="#">Terms of Service</a>
+<a class="text-zinc-400 hover:text-zinc-900 transition-colors" href="#">Security</a>
+<a class="text-zinc-400 hover:text-zinc-900 transition-colors" href="#">Status</a>
+</div>
+</div>
+</footer>
+</body></html>
